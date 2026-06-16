@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
       isUser ? 'background:#003F87;color:white;text-align:right'
              : 'background:var(--md-default-fg-color--lightest)'
     ].join(';');
-    div.innerText = text;
+    div.innerHTML = isUser
+      ? text.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      : (typeof marked !== 'undefined' ? marked.parse(text) : text);
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
     return div;

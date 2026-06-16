@@ -139,3 +139,16 @@
   letter-spacing: 0.08em;
   margin-top: 0.3rem;
 }
+
+/* Markdown rendering inside chat responses */
+#messages div h2, #messages div h3 {
+  font-size: 0.9rem; font-weight: 700; margin: 0.7rem 0 0.3rem; }
+#messages div ul, #messages div ol { padding-left: 1.2rem; margin: 0.3rem 0; }
+#messages div li { margin: 0.15rem 0; }
+#messages div hr { border-color: rgba(255,255,255,0.15); margin: 0.5rem 0; }
+#messages div p { margin: 0.3rem 0; }
+#messages div p:first-child { margin-top: 0; }
+#messages div p:last-child { margin-bottom: 0; }
+#messages div strong { font-weight: 700; }
+#messages div code { 
+  background: rgba(0,0,0,0.3); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85em; }
