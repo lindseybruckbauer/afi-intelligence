@@ -1,27 +1,57 @@
-site_name: Team Wiki
-site_url: https://lindseybruckbauer.github.io/team-wiki
+site_name: AFI Policy Intelligence
+site_url: https://lindseybruckbauer.github.io/afi-intelligence
+site_description: >
+  AI-powered gap, overlap, and authority analysis across Air Force Instructions.
+  Unofficial tool — not affiliated with the U.S. Air Force or Department of Defense.
 
 theme:
   name: material
+  custom_dir: wiki/overrides
   features:
     - navigation.sections
+    - navigation.top
     - search.highlight
+    - search.suggest
+    - content.tooltips
   palette:
     scheme: slate
-    primary: indigo
+    primary: custom
+    accent: custom
+  font:
+    text: Inter
+    code: Roboto Mono
 
 docs_dir: wiki
 site_dir: site
 
 markdown_extensions:
   - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/chat.js
-  - javascripts/graph.js
 
 nav:
   - Home: index.md
-  - Graph: graph.md
+  - Analysis:
+    - Overlaps & Conflicts: ANALYSIS_overlaps.md
+    - Policy Gaps: ANALYSIS_gaps.md
+    - Authority Matrix: ANALYSIS_authority_matrix.md
+  - Publications:
+    - AFI 36-1301 — Acquisition Key Leadership: afi36-1301.md
+    - AFI 36-2109 — Senior Enlisted Leadership: afi36-2109.md
+    - AFI 36-2112 — Materiel Mgmt Career Broadening: afi36-2112.md
+    - AFI 36-2113 — The First Sergeant: afi36-2113.md
+    - AFI 36-2122 — Interservice Exchange: afi36-2122.md
+    - AFI 36-2129 — Logistics Plans Management: afi36-2129.md
+    - AFI 36-2135 — Joint Officer Management: afi36-2135.md
+    - AFI 36-2406 — Officer & Enlisted Evaluations: afi36-2406.md
+    - AFH 36-2647 — Competency Modeling: afh36-2647.md
+    - AFGM 2026-36-2033 — Warrant Officers: afgm2026-36-2033.md
   - Chat: chat.md
-  - Log: log.md

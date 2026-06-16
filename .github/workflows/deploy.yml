@@ -1,4 +1,4 @@
-name: Deploy Wiki
+name: Deploy AFI Intelligence
 
 on:
   push:
@@ -16,10 +16,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install mkdocs mkdocs-material
-
-      - name: Build knowledge graph
-        run: python3 build_graph.py
+        run: pip install mkdocs mkdocs-material pymdownx
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
