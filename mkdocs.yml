@@ -6,7 +6,6 @@ site_description: >
 
 theme:
   name: material
-  custom_dir: wiki/overrides
   features:
     - navigation.sections
     - navigation.top
