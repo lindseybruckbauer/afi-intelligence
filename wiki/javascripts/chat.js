@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify({message: question, history: history}),
       });
       const data = await res.json();
-      thinking.innerText = data.reply;
+      thinking.innerHTML = typeof marked !== "undefined" ? marked.parse(data.reply) : data.reply;
       history.push({role:'user', content:question});
       history.push({role:'assistant', content:data.reply});
       if (sourcesEl) {
