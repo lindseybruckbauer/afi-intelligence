@@ -1,45 +1,60 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const messages = document.getElementById('messages');
+document.addEventListener('DOMContentLoaded', function () {
+  const messages  = document.getElementById('messages');
   const sourcesEl = document.getElementById('sources');
-  const input = document.getElementById('chat-input');
-
+  const input     = document.getElementById('chat-input');
   if (!messages) return;
 
-  function append(text, isUser) {
+  const API_URL = 'https://afi-intelligence.onrender.com';
+  let history = [];
+
+  function appendMsg(text, isUser) {
     const div = document.createElement('div');
-    div.style.cssText = `margin-bottom:12px;padding:10px 14px;border-radius:6px;${isUser ? 'background:#5c6bc0;color:white;text-align:right' : 'background:var(--md-default-fg-color--lightest)'}`;
+    div.style.cssText = [
+      'margin-bottom:12px','padding:10px 14px','border-radius:6px',
+      'white-space:pre-wrap','line-height:1.5',
+      isUser ? 'background:#003F87;color:white;text-align:right'
+             : 'background:var(--md-default-fg-color--lightest)'
+    ].join(';');
     div.innerText = text;
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
+    return div;
   }
 
-  window.sendQuery = async function() {
+  window.sendQuery = async function () {
     const question = input.value.trim();
     if (!question) return;
     input.value = '';
-    append(question, true);
-    sourcesEl.innerText = 'Searching wiki...';
-
+    input.disabled = true;
+    appendMsg(question, true);
+    const thinking = appendMsg('Searching corpus…', false);
     try {
-      const res = await fetch('http://127.0.0.1:8002/query', {
+      const res = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({question})
+        body: JSON.stringify({message: question, history: history}),
       });
       const data = await res.json();
-      append(data.answer, false);
-      sourcesEl.innerText = data.sources.length
-        ? 'Sources: ' + data.sources.map(s => s.split('/').pop().replace('.md','')).join(', ')
-        : '';
+      thinking.innerText = data.reply;
+      history.push({role:'user', content:question});
+      history.push({role:'assistant', content:data.reply});
+      if (sourcesEl) {
+        const labels = (data.sources||[]).map(s => {
+          let l = s.pub_number||'';
+          if (s.section_number) l += ` §${s.section_number}`;
+          return l;
+        }).filter(Boolean);
+        sourcesEl.innerText = labels.length ? 'Sources: '+labels.join(' · ') : '';
+      }
     } catch(e) {
-      append('Could not reach the query server. Make sure query_server.py is running.', false);
-      sourcesEl.innerText = '';
+      thinking.innerText = 'Could not reach the API. It may be cold-starting — wait 20 seconds and try again.';
+    } finally {
+      input.disabled = false;
+      input.focus();
     }
-  }
+  };
 
-  if (input) {
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') window.sendQuery();
-    });
-  }
+  if (input) input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); window.sendQuery(); }
+  });
 });

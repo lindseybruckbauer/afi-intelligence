@@ -23,6 +23,7 @@ from pydantic import BaseModel
 
 # Make scripts/ importable when running from repo root
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).parent))
 
 from rag import query as rag_query, format_context, corpus_stats
 
