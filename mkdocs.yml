@@ -1,0 +1,27 @@
+site_name: Team Wiki
+site_url: https://lindseybruckbauer.github.io/team-wiki
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - search.highlight
+  palette:
+    scheme: slate
+    primary: indigo
+
+docs_dir: wiki
+site_dir: site
+
+markdown_extensions:
+  - md_in_html
+
+extra_javascript:
+  - javascripts/chat.js
+  - javascripts/graph.js
+
+nav:
+  - Home: index.md
+  - Graph: graph.md
+  - Chat: chat.md
+  - Log: log.md

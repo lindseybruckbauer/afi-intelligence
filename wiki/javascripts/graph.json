@@ -1,0 +1,456 @@
+{
+  "nodes": [
+    {
+      "id": "Redis",
+      "type": "concept",
+      "path": "concepts/Redis.md"
+    },
+    {
+      "id": "Obsidian",
+      "type": "concept",
+      "path": "concepts/Obsidian.md"
+    },
+    {
+      "id": "Tesseract",
+      "type": "concept",
+      "path": "concepts/Tesseract.md"
+    },
+    {
+      "id": "EvalHarness",
+      "type": "concept",
+      "path": "concepts/EvalHarness.md"
+    },
+    {
+      "id": "FastAPI",
+      "type": "concept",
+      "path": "concepts/FastAPI.md"
+    },
+    {
+      "id": "VectorDatabase",
+      "type": "concept",
+      "path": "concepts/VectorDatabase.md"
+    },
+    {
+      "id": "2026-06-02-sprint-planning",
+      "type": "source",
+      "path": "sources/2026-06-02-sprint-planning.md"
+    },
+    {
+      "id": "2026-05-19-adr-004-wiki-storage",
+      "type": "source",
+      "path": "sources/2026-05-19-adr-004-wiki-storage.md"
+    },
+    {
+      "id": "2026-05-28-project-nexus-overview",
+      "type": "source",
+      "path": "sources/2026-05-28-project-nexus-overview.md"
+    },
+    {
+      "id": "DariusOkafor",
+      "type": "entity",
+      "path": "entities/DariusOkafor.md"
+    },
+    {
+      "id": "MayaChen",
+      "type": "entity",
+      "path": "entities/MayaChen.md"
+    },
+    {
+      "id": "PriyaNair",
+      "type": "entity",
+      "path": "entities/PriyaNair.md"
+    },
+    {
+      "id": "Nexus",
+      "type": "entity",
+      "path": "entities/Nexus.md"
+    },
+    {
+      "id": "TomEscalante",
+      "type": "entity",
+      "path": "entities/TomEscalante.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Redis",
+      "target": "Nexus"
+    },
+    {
+      "source": "Redis",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "Redis",
+      "target": "FastAPI"
+    },
+    {
+      "source": "Redis",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "Obsidian",
+      "target": "Nexus"
+    },
+    {
+      "source": "Obsidian",
+      "target": "2026-05-28-project-nexus-overview"
+    },
+    {
+      "source": "Obsidian",
+      "target": "2026-05-19-adr-004-wiki-storage"
+    },
+    {
+      "source": "Tesseract",
+      "target": "Nexus"
+    },
+    {
+      "source": "Tesseract",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "Tesseract",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "EvalHarness",
+      "target": "Nexus"
+    },
+    {
+      "source": "EvalHarness",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "EvalHarness",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "EvalHarness",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "FastAPI",
+      "target": "Nexus"
+    },
+    {
+      "source": "FastAPI",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "FastAPI",
+      "target": "2026-05-28-project-nexus-overview"
+    },
+    {
+      "source": "VectorDatabase",
+      "target": "Nexus"
+    },
+    {
+      "source": "VectorDatabase",
+      "target": "2026-05-19-adr-004-wiki-storage"
+    },
+    {
+      "source": "VectorDatabase",
+      "target": "2026-05-19-adr-004-wiki-storage"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "Tesseract"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "Redis"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "Tesseract"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "Redis"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-06-02-sprint-planning",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "Nexus"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "Obsidian"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-05-19-adr-004-wiki-storage",
+      "target": "Obsidian"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "Tesseract"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "Redis"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "Obsidian"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "2026-05-19-adr-004-wiki-storage"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "FastAPI"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "MayaChen"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "2026-05-19-adr-004-wiki-storage"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "Redis"
+    },
+    {
+      "source": "2026-05-28-project-nexus-overview",
+      "target": "Tesseract"
+    },
+    {
+      "source": "DariusOkafor",
+      "target": "Nexus"
+    },
+    {
+      "source": "DariusOkafor",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "DariusOkafor",
+      "target": "Tesseract"
+    },
+    {
+      "source": "DariusOkafor",
+      "target": "Tesseract"
+    },
+    {
+      "source": "MayaChen",
+      "target": "Nexus"
+    },
+    {
+      "source": "MayaChen",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "MayaChen",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "MayaChen",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "PriyaNair",
+      "target": "Nexus"
+    },
+    {
+      "source": "PriyaNair",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "PriyaNair",
+      "target": "MayaChen"
+    },
+    {
+      "source": "Nexus",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "Nexus",
+      "target": "2026-05-19-adr-004-wiki-storage"
+    },
+    {
+      "source": "Nexus",
+      "target": "Tesseract"
+    },
+    {
+      "source": "Nexus",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "Nexus",
+      "target": "Redis"
+    },
+    {
+      "source": "Nexus",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "Nexus",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "Nexus",
+      "target": "FastAPI"
+    },
+    {
+      "source": "Nexus",
+      "target": "Redis"
+    },
+    {
+      "source": "Nexus",
+      "target": "Tesseract"
+    },
+    {
+      "source": "Nexus",
+      "target": "Obsidian"
+    },
+    {
+      "source": "Nexus",
+      "target": "MayaChen"
+    },
+    {
+      "source": "Nexus",
+      "target": "DariusOkafor"
+    },
+    {
+      "source": "Nexus",
+      "target": "PriyaNair"
+    },
+    {
+      "source": "Nexus",
+      "target": "TomEscalante"
+    },
+    {
+      "source": "TomEscalante",
+      "target": "Nexus"
+    },
+    {
+      "source": "TomEscalante",
+      "target": "2026-06-02-sprint-planning"
+    },
+    {
+      "source": "TomEscalante",
+      "target": "Redis"
+    },
+    {
+      "source": "TomEscalante",
+      "target": "Redis"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+.obsidian/*
+.trash/
+.DS_Store
+__pycache__/
+*.pyc
+.env
+site/
+
+# PDF pipeline additions
+chroma_db/
+raw/pdfs/
+corpus_index.json
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# MkDocs
+site/
