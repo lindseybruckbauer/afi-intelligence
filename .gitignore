@@ -7,7 +7,6 @@ __pycache__/
 site/
 
 # PDF pipeline additions
-chroma_db/
 raw/pdfs/
 corpus_index.json
 
