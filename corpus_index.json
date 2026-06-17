@@ -1,0 +1,344 @@
+{
+  "AFGM 2026-36-2033": {
+    "status": "ok",
+    "file": "afgm2026-36-2033.pdf",
+    "pub_number": "AFGM 2026-36-2033",
+    "title": "Air Force Guidance Memorandum Reimplementing Warrant Officers",
+    "opr": "Unknown",
+    "effective_date": "4 FEBRUARY 2026",
+    "implements": [
+      "DAFPD 36-20",
+      "DAFPD 36-21",
+      "DAFPD 36-24",
+      "DAFPD 36-25",
+      "DAFPD 36-26",
+      "DAFPD 36-29",
+      "DAFPD 36-30",
+      "DAFPD 36-32"
+    ],
+    "supersedes": [],
+    "references": [
+      "AFI 33-322",
+      "AFI 36-2406",
+      "AFI 36-2504",
+      "DAFI 36-2110",
+      "DAFI 36-2501",
+      "DAFI 36-2903",
+      "DAFI 36-2907",
+      "DAFI 36-3003",
+      "DAFI 36-3012",
+      "DAFI 36-3203",
+      "DAFI 36-3211",
+      "DAFI 52-201",
+      "DAFMAN 36-2032",
+      "DAFMAN 36-2905",
+      "DAFMAN 48-123",
+      "DAFMAN 90-161",
+      "DODI 1010.01",
+      "DODI 1145.01",
+      "DODI 1300.04",
+      "DODI 1300.06",
+      "DODI 1308.03",
+      "DODI 1315.18",
+      "DODI 1320.08",
+      "DODI 1320.14",
+      "DODI 1342.19"
+    ],
+    "section_count": 0,
+    "authority_statement_count": 3,
+    "chunk_count": 21,
+    "wiki_file": "afgm2026-36-2033.md"
+  },
+  "AFH 36-2647": {
+    "status": "ok",
+    "file": "afh36-2647.pdf",
+    "pub_number": "AFH 36-2647",
+    "title": "COMPETENCY MODELING",
+    "opr": "AETC/A3J",
+    "effective_date": "8 FEBRUARY 2022",
+    "implements": [
+      "DAFPD 36-26",
+      "DAFMAN 36-2689"
+    ],
+    "supersedes": [
+      "AFH36-2647, 19 April 2019"
+    ],
+    "references": [
+      "AFH 36-2647",
+      "AFI 33-322",
+      "DAFI 36-2670",
+      "DAFMAN 36-2689"
+    ],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 38,
+    "wiki_file": "afh36-2647.md"
+  },
+  "AFI 36-1301": {
+    "status": "ok",
+    "file": "afi36-1301.pdf",
+    "pub_number": "AFI 36-1301",
+    "title": "MANAGEMENT OF ACQUISITION KEY LEADERSHIP POSITIONS",
+    "opr": "SAF/AQH",
+    "effective_date": "23 JULY 2019",
+    "implements": [
+      "HAF MD 1-10"
+    ],
+    "supersedes": [
+      "AFI 36-1301, 19 October"
+    ],
+    "references": [
+      "AFI 33-360",
+      "AFI 36-1301",
+      "AFI 63-101",
+      "DODI 5000.66"
+    ],
+    "section_count": 29,
+    "authority_statement_count": 8,
+    "chunk_count": 22,
+    "wiki_file": "afi36-1301.md"
+  },
+  "AFI 36-2109": {
+    "status": "ok",
+    "file": "afi36-2109.pdf",
+    "pub_number": "AFI 36-2109",
+    "title": "CHIEF MASTER SERGEANT OF THE AIR FORCE, SENIOR ENLISTED",
+    "opr": "AF/CCC",
+    "effective_date": "7 FEBRUARY 2025",
+    "implements": [
+      "AFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI36-2109, 14 July 2014"
+    ],
+    "references": [
+      "AFI 32-6000",
+      "AFI 33-322",
+      "AFI 36-2109",
+      "AFI 36-2113",
+      "AFPD 36-21",
+      "DAFI \n36-2903",
+      "DAFI 36-2110",
+      "DAFI 36-2502",
+      "DAFI 36-2903",
+      "DAFI 90-160",
+      "DAFMAN 36-2806",
+      "DAFMAN 90-161"
+    ],
+    "section_count": 36,
+    "authority_statement_count": 3,
+    "chunk_count": 36,
+    "wiki_file": "afi36-2109.md"
+  },
+  "AFI 36-2112": {
+    "status": "ok",
+    "file": "afi36-2112.pdf",
+    "pub_number": "AFI 36-2112",
+    "title": "MATERIEL MANAGEMENT ENLISTED CAREER BROADENING PROGRAM",
+    "opr": "AF/A4LR",
+    "effective_date": "12 SEPTEMBER 2018",
+    "implements": [
+      "AFPD 36-26"
+    ],
+    "supersedes": [],
+    "references": [
+      "AFI 33-360",
+      "AFI 36-2107",
+      "AFI 36-2110",
+      "AFI 36-2406",
+      "AFI 36-2618",
+      "AFI 36-2805",
+      "AFI 36-2818",
+      "AFI 36-2905",
+      "AFI 63-101",
+      "AFPD 36-26",
+      "DODI 5000.66"
+    ],
+    "section_count": 22,
+    "authority_statement_count": 0,
+    "chunk_count": 22,
+    "wiki_file": "afi36-2112.md"
+  },
+  "AFI 36-2113": {
+    "status": "ok",
+    "file": "afi36-2113.pdf",
+    "pub_number": "AFI 36-2113",
+    "title": "THE FIRST SERGEANT",
+    "opr": "HQ",
+    "effective_date": "11 JUNE 2020",
+    "implements": [
+      "AFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI36-2113, 18 Nov 2014"
+    ],
+    "references": [
+      "AFH 36-2618",
+      "AFI \n34-223",
+      "AFI \n36-2101",
+      "AFI 33-360",
+      "AFI 34-223",
+      "AFI 36-2101",
+      "AFI 36-2109",
+      "AFI 36-2110",
+      "AFI 36-2502",
+      "AFI 36-2606",
+      "AFI 36-2806",
+      "AFI 36-2903",
+      "AFI 36-2905",
+      "AFI 36-2909",
+      "AFI 36-3012",
+      "AFI 36-3017",
+      "AFI 36-3101",
+      "AFI 36-8101",
+      "AFI 38-101",
+      "AFI 90-5001",
+      "AFMAN 33-363",
+      "AFPD 36-21",
+      "DODI 1342.19"
+    ],
+    "section_count": 43,
+    "authority_statement_count": 5,
+    "chunk_count": 43,
+    "wiki_file": "afi36-2113.md"
+  },
+  "AFI 36-2122": {
+    "status": "ok",
+    "file": "afi36-2122.pdf",
+    "pub_number": "AFI 36-2122",
+    "title": "INTERSERVICE OFFICERS ON EXCHANGE DUTY WITH UNITED",
+    "opr": "AFPC/DPM",
+    "effective_date": "30 JUNE 2025",
+    "implements": [
+      "DAFPD 36-21"
+    ],
+    "supersedes": [
+      "DAFI36-2122, 3 August 2018"
+    ],
+    "references": [
+      "AFI 32-6000",
+      "AFI 33-322",
+      "DAFI 36-3002",
+      "DAFMAN 11-401",
+      "DAFMAN 36-2806",
+      "DAFMAN 90-161"
+    ],
+    "section_count": 72,
+    "authority_statement_count": 1,
+    "chunk_count": 68,
+    "wiki_file": "afi36-2122.md"
+  },
+  "AFI 36-2129": {
+    "status": "ok",
+    "file": "afi36-2129.pdf",
+    "pub_number": "AFI 36-2129",
+    "title": "www.e-publishing.af.mil.",
+    "opr": "AF/A4LX",
+    "effective_date": "9 JULY 2019",
+    "implements": [
+      "AFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI 36-2129, 20 December 2011"
+    ],
+    "references": [
+      "AFI \n25-201",
+      "AFI \n25-301",
+      "AFI 10-401",
+      "AFI 10-403",
+      "AFI 10-404",
+      "AFI 13-103",
+      "AFI 25-101",
+      "AFI 25-201",
+      "AFI 25-301",
+      "AFI 33-360",
+      "AFI 36-2101",
+      "AFI 36-2129",
+      "AFI 36-2640",
+      "AFI 36-2651",
+      "AFI 38-101",
+      "AFI 90-201",
+      "AFMAN 10-409",
+      "AFPD 10-9",
+      "AFPD 25-1",
+      "AFPD 25-2",
+      "AFPD 25-3",
+      "AFPD 36-21"
+    ],
+    "section_count": 117,
+    "authority_statement_count": 1,
+    "chunk_count": 95,
+    "wiki_file": "afi36-2129.md"
+  },
+  "AFI 36-2135": {
+    "status": "ok",
+    "file": "afi36-2135.pdf",
+    "pub_number": "AFI 36-2135",
+    "title": "JOINT OFFICER MANAGEMENT",
+    "opr": "AF/A1P",
+    "effective_date": "4 NOVEMBER 2020",
+    "implements": [
+      "DAFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI36-2135, 26 July 2018"
+    ],
+    "references": [
+      "AFI 33-322",
+      "AFI 36-2135",
+      "DAFI 36-2110",
+      "DAFI 36-2670",
+      "DAFMAN 90-161",
+      "DODI \n1300.19",
+      "DODI 1300.19"
+    ],
+    "section_count": 28,
+    "authority_statement_count": 1,
+    "chunk_count": 27,
+    "wiki_file": "afi36-2135.md"
+  },
+  "AFI 36-2406": {
+    "status": "ok",
+    "file": "afi36-2406.pdf",
+    "pub_number": "AFI 36-2406",
+    "title": "OFFICER AND ENLISTED EVALUATIONS SYSTEMS",
+    "opr": "AF/A1PPP",
+    "effective_date": "22 AUGUST 2025",
+    "implements": [
+      "DAFPD 36-24"
+    ],
+    "supersedes": [
+      "AFI36-2406, 6 August 2024"
+    ],
+    "references": [
+      "AFI 33-322",
+      "AFI 33-332",
+      "AFI 36-2406",
+      "AFMAN 36-2905",
+      "DAFI \n36-2603",
+      "DAFI \n36-3211",
+      "DAFI \n51-508",
+      "DAFI 36-2110",
+      "DAFI 36-2501",
+      "DAFI 36-2504",
+      "DAFI 36-2603",
+      "DAFI 36-2608",
+      "DAFI 36-2710",
+      "DAFI 36-2907",
+      "DAFI 36-3026",
+      "DAFI 36-3211",
+      "DAFI 51-202",
+      "DAFI 51-508",
+      "DAFI 51-509",
+      "DAFI 90-302",
+      "DAFI 91-204",
+      "DAFMAN 90-161",
+      "DODI 5400.11",
+      "TITLE 10 U.S.C."
+    ],
+    "section_count": 82,
+    "authority_statement_count": 18,
+    "chunk_count": 83,
+    "wiki_file": "afi36-2406.md"
+  }
+}
