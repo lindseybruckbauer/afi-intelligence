@@ -1,11 +1,13 @@
 """
 run_pipeline.py — Agentic pipeline orchestrator.
 
-Wraps the full sequence:
-  1. Ingest new PDFs (or --force all)
-  2. Re-run analysis
-  3. Rebuild index
-  4. Optionally commit + push
+Full sequence:
+  1. Ingest PDFs (extract + classify + synthesize + embed)
+  2. Analyze corpus (gaps, overlaps, authority matrix)
+  3. Build home page index
+  4. Build publications page
+  5. Build knowledge graph
+  6. Optionally commit + push
 
 Usage:
   python3 scripts/run_pipeline.py                    # new PDFs only
@@ -13,11 +15,7 @@ Usage:
   python3 scripts/run_pipeline.py --commit           # also git commit + push
   python3 scripts/run_pipeline.py --force --commit   # full refresh + deploy
   python3 scripts/run_pipeline.py --dry-run          # extract only, no API calls
-
-Environment:
-  ANTHROPIC_API_KEY  — required
-  SKIP_ANALYSIS      — set to 1 to skip analysis step (faster iteration)
-  SKIP_COMMIT        — set to 1 to skip commit even if --commit passed
+  python3 scripts/run_pipeline.py --no-analysis      # skip analysis (faster iteration)
 """
 
 import argparse
@@ -40,10 +38,9 @@ def count_pdfs() -> int:
 
 
 def count_wiki_pages() -> int:
-    return len([f for f in (REPO_ROOT / "wiki").glob("afi*.md")] +
-               [f for f in (REPO_ROOT / "wiki").glob("afh*.md")] +
-               [f for f in (REPO_ROOT / "wiki").glob("afgm*.md")] +
-               [f for f in (REPO_ROOT / "wiki").glob("dafi*.md")])
+    wiki = REPO_ROOT / "wiki"
+    prefixes = ("afi", "afh", "afgm", "dafi", "afman", "afpd", "afji", "afva", "dafman")
+    return len([f for f in wiki.glob("*.md") if f.stem.lower().startswith(prefixes)])
 
 
 def git_status() -> str:
@@ -56,11 +53,11 @@ def git_status() -> str:
 
 def main():
     parser = argparse.ArgumentParser(description="AFI Intelligence pipeline orchestrator")
-    parser.add_argument("--force",    action="store_true", help="Re-ingest all PDFs")
-    parser.add_argument("--commit",   action="store_true", help="Git commit + push after pipeline")
-    parser.add_argument("--dry-run",  action="store_true", help="Extract only, no API calls")
-    parser.add_argument("--no-analysis", action="store_true", help="Skip analysis step")
-    parser.add_argument("--message",  type=str, default="", help="Custom commit message")
+    parser.add_argument("--force",       action="store_true", help="Re-ingest all PDFs")
+    parser.add_argument("--commit",      action="store_true", help="Git commit + push after pipeline")
+    parser.add_argument("--dry-run",     action="store_true", help="Extract only, no API calls")
+    parser.add_argument("--no-analysis", action="store_true", help="Skip analysis step (faster)")
+    parser.add_argument("--message",     type=str, default="", help="Custom commit message")
     args = parser.parse_args()
 
     # Validate environment
@@ -71,22 +68,20 @@ def main():
     print("=" * 60)
     print("AFI INTELLIGENCE PIPELINE")
     print("=" * 60)
-    print(f"PDFs in raw/pdfs/:  {count_pdfs()}")
+    print(f"PDFs in raw/pdfs/:   {count_pdfs()}")
     print(f"Existing wiki pages: {count_wiki_pages()}")
-    print(f"Mode: {'FORCE RE-INGEST' if args.force else 'NEW ONLY'}")
+    print(f"Mode:  {'FORCE RE-INGEST' if args.force else 'NEW ONLY'}")
     print(f"Commit: {'YES' if args.commit else 'NO'}")
     print()
 
     # Step 1: Ingest
     ingest_cmd = [sys.executable, "scripts/ingest_pdfs.py"]
-    if args.force:
-        ingest_cmd.append("--force")
-    if args.dry_run:
-        ingest_cmd.append("--dry-run")
+    if args.force:   ingest_cmd.append("--force")
+    if args.dry_run: ingest_cmd.append("--dry-run")
     run(ingest_cmd)
 
     if args.dry_run:
-        print("\nDry run complete — skipping analysis, index, and commit.")
+        print("\nDry run complete — skipping analysis, graph, and commit.")
         return
 
     # Step 2: Analysis
@@ -95,14 +90,20 @@ def main():
     else:
         print("\nSkipping analysis (--no-analysis or SKIP_ANALYSIS=1)")
 
-    # Step 3: Rebuild index
+    # Step 3: Build index (home page)
     run([sys.executable, "scripts/build_index.py"])
+
+    # Step 4: Build publications page
+    run([sys.executable, "scripts/build_publications.py"])
+
+    # Step 5: Build knowledge graph
+    run([sys.executable, "build_graph.py"])
 
     print("\n" + "=" * 60)
     print(f"Pipeline complete. Wiki pages: {count_wiki_pages()}")
     print("=" * 60)
 
-    # Step 4: Commit + push
+    # Step 6: Commit + push
     if args.commit and not os.environ.get("SKIP_COMMIT"):
         changes = git_status()
         if not changes:
@@ -110,21 +111,22 @@ def main():
             return
 
         print(f"\nChanged files:\n{changes}\n")
+        msg = args.message or f"Pipeline: {count_wiki_pages()} publications ingested and analyzed"
 
-        pub_count = count_wiki_pages()
-        msg = args.message or f"Pipeline: {pub_count} publications ingested and analyzed"
-
-        run(["git", "add", "wiki/", "chroma_db/", "corpus_index.json"])
+        run(["git", "add",
+             "wiki/", "chroma_db/", "corpus_index.json",
+             "scripts/", "build_graph.py"])
         run(["git", "commit", "-m", msg])
         run(["git", "push"])
-        print(f"\nPushed. Deploy will complete in ~60 seconds.")
+        print(f"\nPushed. Deploy in ~60 seconds.")
         print(f"Site: https://lindseybruckbauer.github.io/afi-intelligence/")
     elif args.commit:
         print("\nSKIP_COMMIT=1 set — skipping commit.")
     else:
         print("\nRun with --commit to push changes.")
-        print("Pending changes:")
-        print(git_status() or "  (none)")
+        changes = git_status()
+        if changes:
+            print(f"Pending:\n{changes}")
 
 
 if __name__ == "__main__":

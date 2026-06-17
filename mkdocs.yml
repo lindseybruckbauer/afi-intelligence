@@ -35,6 +35,9 @@ extra_css:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
+  - https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js
+  - https://d3js.org/d3.v7.min.js
+  - javascripts/graph.js
   - javascripts/chat.js
 
 nav:
@@ -43,15 +46,6 @@ nav:
     - Overlaps & Conflicts: ANALYSIS_overlaps.md
     - Policy Gaps: ANALYSIS_gaps.md
     - Authority Matrix: ANALYSIS_authority_matrix.md
-  - Publications:
-    - AFI 36-1301 — Acquisition Key Leadership: afi36-1301.md
-    - AFI 36-2109 — Senior Enlisted Leadership: afi36-2109.md
-    - AFI 36-2112 — Materiel Mgmt Career Broadening: afi36-2112.md
-    - AFI 36-2113 — The First Sergeant: afi36-2113.md
-    - AFI 36-2122 — Interservice Exchange: afi36-2122.md
-    - AFI 36-2129 — Logistics Plans Management: afi36-2129.md
-    - AFI 36-2135 — Joint Officer Management: afi36-2135.md
-    - AFI 36-2406 — Officer & Enlisted Evaluations: afi36-2406.md
-    - AFH 36-2647 — Competency Modeling: afh36-2647.md
-    - AFGM 2026-36-2033 — Warrant Officers: afgm2026-36-2033.md
+  - Publications:publications.md
+  - Graph: graph.md
   - Chat: chat.md

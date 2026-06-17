@@ -78,7 +78,7 @@
     "opr": "SAF/AQH",
     "effective_date": "23 JULY 2019",
     "implements": [
-      "HAFMD 1-10"
+      "HAF MD 1-10"
     ],
     "supersedes": [
       "AFI 36-1301, 19 October"
@@ -423,7 +423,9 @@
     "title": "Department of the Air Force Guidance Memorandum to DAFI 31-126, DoD Military",
     "opr": "Unknown",
     "effective_date": "15 APRIL 2026",
-    "implements": [],
+    "implements": [
+      "DAFPD 31-1"
+    ],
     "supersedes": [],
     "references": [
       "AFI 31-126",
@@ -486,7 +488,7 @@
     "opr": "AF/A4SP",
     "effective_date": "21 JUNE 2018",
     "implements": [
-      "DoDI 3025.13"
+      "DoD Directive 3025.13"
     ],
     "supersedes": [
       "Air Force Policy Directive"
@@ -518,5 +520,73 @@
     "authority_statement_count": 0,
     "chunk_count": 2,
     "wiki_file": "dafi31-218.md"
+  },
+  "AFVA31-106": {
+    "status": "stub",
+    "doc_type": "PLACEHOLDER_OPR",
+    "gap_reason": "near-empty text (171 chars) on 1 page(s)",
+    "file": "afva31-106.pdf",
+    "pub_number": "AFVA31-106",
+    "title": "[PLACEHOLDER_OPR]",
+    "opr": "AF/A4SP",
+    "effective_date": "30 MARCH 2016",
+    "implements": [],
+    "supersedes": [],
+    "references": [],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 0,
+    "wiki_file": "afva31-106.md"
+  },
+  "AFVA31-107": {
+    "status": "stub",
+    "doc_type": "PLACEHOLDER_PHYSICAL",
+    "gap_reason": "physical product \u2014 not digitally available",
+    "file": "afva31-107.pdf",
+    "pub_number": "AFVA31-107",
+    "title": "[PLACEHOLDER_PHYSICAL]",
+    "opr": "Unknown",
+    "effective_date": "16 MAY 2025",
+    "implements": [],
+    "supersedes": [],
+    "references": [],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 0,
+    "wiki_file": "afva31-107.md"
+  },
+  "RESTRICTED_ACCESS": {
+    "status": "stub",
+    "doc_type": "PLACEHOLDER_RESTRICTED",
+    "gap_reason": "restricted access \u2014 controlled distribution",
+    "file": "restricted_access.pdf",
+    "pub_number": "RESTRICTED_ACCESS",
+    "title": "[PLACEHOLDER_RESTRICTED]",
+    "opr": "Unknown",
+    "effective_date": "",
+    "implements": [],
+    "supersedes": [],
+    "references": [],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 0,
+    "wiki_file": "restricted_access.md"
+  },
+  "STOCKED_AND_ISSUED": {
+    "status": "stub",
+    "doc_type": "PLACEHOLDER_OPR",
+    "gap_reason": "stocked and issued \u2014 contact OPR for copy",
+    "file": "stocked_and_issued.pdf",
+    "pub_number": "STOCKED_AND_ISSUED",
+    "title": "[PLACEHOLDER_OPR]",
+    "opr": "Unknown",
+    "effective_date": "",
+    "implements": [],
+    "supersedes": [],
+    "references": [],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 0,
+    "wiki_file": "stocked_and_issued.md"
   }
 }

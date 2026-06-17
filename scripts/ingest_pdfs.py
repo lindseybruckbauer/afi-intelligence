@@ -409,9 +409,10 @@ def main():
                 force=args.force,
                 dry_run=args.dry_run,
             )
-            if result["status"] == "ok":
+            if result["status"] in ("ok", "stub"):
                 index[result["pub_number"]] = result
-                ok += 1
+                if result["status"] == "ok":
+                    ok += 1
             else:
                 skipped += 1
         except Exception as e:

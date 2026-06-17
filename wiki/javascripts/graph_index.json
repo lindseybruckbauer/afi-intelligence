@@ -1,0 +1,626 @@
+{
+  "AFGM 2026-36-2033": {
+    "implements": [
+      "DAFPD 36-20",
+      "DAFPD 36-21",
+      "DAFPD 36-24",
+      "DAFPD 36-25"
+    ],
+    "references": [
+      "AFI 36-2406",
+      "AFI 36-2504",
+      "DAFI 36-2110",
+      "DAFI 36-2501",
+      "DAFI 36-2903",
+      "DAFI 36-2907",
+      "DAFI 36-3003",
+      "DAFI 36-3012",
+      "DAFI 36-3203",
+      "DAFI 36-3211",
+      "DAFMAN 36-2032",
+      "DAFMAN 36-2905"
+    ]
+  },
+  "DAFPD 36-20": {
+    "implemented_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "DAFPD 36-21": {
+    "implemented_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2122",
+      "AFI 36-2135"
+    ]
+  },
+  "DAFPD 36-24": {
+    "implemented_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2406"
+    ]
+  },
+  "DAFPD 36-25": {
+    "implemented_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "AFI 36-2406": {
+    "referenced_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2112"
+    ],
+    "implements": [
+      "DAFPD 36-24"
+    ],
+    "supersedes": [
+      "AFI36-2406"
+    ],
+    "references": [
+      "AFMAN 36-2905",
+      "DAFI \n36-2603",
+      "DAFI \n36-3211",
+      "DAFI 36-2110",
+      "DAFI 36-2501",
+      "DAFI 36-2504",
+      "DAFI 36-2603",
+      "DAFI 36-2608",
+      "DAFI 36-2710",
+      "DAFI 36-2907",
+      "DAFI 36-3026",
+      "DAFI 36-3211"
+    ]
+  },
+  "AFI 36-2504": {
+    "referenced_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "DAFI 36-2110": {
+    "referenced_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2109",
+      "AFI 36-2135",
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-2501": {
+    "referenced_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-2903": {
+    "referenced_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2109"
+    ]
+  },
+  "DAFI 36-2907": {
+    "referenced_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-3003": {
+    "referenced_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "DAFI 36-3012": {
+    "referenced_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "DAFI 36-3203": {
+    "referenced_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "DAFI 36-3211": {
+    "referenced_by": [
+      "AFGM 2026-36-2033",
+      "AFI 36-2406"
+    ]
+  },
+  "DAFMAN 36-2032": {
+    "referenced_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "DAFMAN 36-2905": {
+    "referenced_by": [
+      "AFGM 2026-36-2033"
+    ]
+  },
+  "AFH 36-2647": {
+    "implements": [
+      "DAFPD 36-26",
+      "DAFMAN 36-2689"
+    ],
+    "supersedes": [
+      "AFH36-2647"
+    ],
+    "references": [
+      "DAFI 36-2670",
+      "DAFMAN 36-2689"
+    ]
+  },
+  "DAFPD 36-26": {
+    "implemented_by": [
+      "AFH 36-2647"
+    ]
+  },
+  "DAFMAN 36-2689": {
+    "implemented_by": [
+      "AFH 36-2647"
+    ],
+    "referenced_by": [
+      "AFH 36-2647"
+    ]
+  },
+  "AFH36-2647": {
+    "superseded_by": [
+      "AFH 36-2647"
+    ]
+  },
+  "DAFI 36-2670": {
+    "referenced_by": [
+      "AFH 36-2647",
+      "AFI 36-2135"
+    ]
+  },
+  "AFI 36-1301": {
+    "implements": [
+      "HAF MD 1-10"
+    ],
+    "supersedes": [
+      "AFI 36-1301"
+    ],
+    "superseded_by": [
+      "AFI 36-1301"
+    ]
+  },
+  "HAF MD 1-10": {
+    "implemented_by": [
+      "AFI 36-1301"
+    ]
+  },
+  "AFI 36-2109": {
+    "supersedes": [
+      "AFI36-2109"
+    ],
+    "references": [
+      "AFI 36-2113",
+      "AFPD 36-21",
+      "DAFI \n36-2903",
+      "DAFI 36-2110",
+      "DAFI 36-2502",
+      "DAFI 36-2903",
+      "DAFMAN 36-2806"
+    ],
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI36-2109": {
+    "superseded_by": [
+      "AFI 36-2109"
+    ]
+  },
+  "AFI 36-2113": {
+    "referenced_by": [
+      "AFI 36-2109"
+    ],
+    "implements": [
+      "AFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI36-2113"
+    ],
+    "references": [
+      "AFH 36-2618",
+      "AFI \n36-2101",
+      "AFI 36-2101",
+      "AFI 36-2109",
+      "AFI 36-2110",
+      "AFI 36-2502",
+      "AFI 36-2606",
+      "AFI 36-2806",
+      "AFI 36-2903",
+      "AFI 36-2905",
+      "AFI 36-2909",
+      "AFI 36-3012",
+      "AFI 36-3017",
+      "AFI 36-3101",
+      "AFI 36-8101",
+      "AFPD 36-21"
+    ]
+  },
+  "AFPD 36-21": {
+    "referenced_by": [
+      "AFI 36-2109",
+      "AFI 36-2113",
+      "AFI 36-2129"
+    ],
+    "implemented_by": [
+      "AFI 36-2113",
+      "AFI 36-2129"
+    ]
+  },
+  "DAFI \n36-2903": {
+    "referenced_by": [
+      "AFI 36-2109"
+    ]
+  },
+  "DAFI 36-2502": {
+    "referenced_by": [
+      "AFI 36-2109"
+    ]
+  },
+  "DAFMAN 36-2806": {
+    "referenced_by": [
+      "AFI 36-2109",
+      "AFI 36-2122"
+    ]
+  },
+  "AFI 36-2112": {
+    "implements": [
+      "AFPD 36-26"
+    ],
+    "references": [
+      "AFI 36-2107",
+      "AFI 36-2110",
+      "AFI 36-2406",
+      "AFI 36-2618",
+      "AFI 36-2805",
+      "AFI 36-2818",
+      "AFI 36-2905",
+      "AFPD 36-26"
+    ]
+  },
+  "AFPD 36-26": {
+    "implemented_by": [
+      "AFI 36-2112"
+    ],
+    "referenced_by": [
+      "AFI 36-2112"
+    ]
+  },
+  "AFI 36-2107": {
+    "referenced_by": [
+      "AFI 36-2112"
+    ]
+  },
+  "AFI 36-2110": {
+    "referenced_by": [
+      "AFI 36-2112",
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-2618": {
+    "referenced_by": [
+      "AFI 36-2112"
+    ]
+  },
+  "AFI 36-2805": {
+    "referenced_by": [
+      "AFI 36-2112"
+    ]
+  },
+  "AFI 36-2818": {
+    "referenced_by": [
+      "AFI 36-2112"
+    ]
+  },
+  "AFI 36-2905": {
+    "referenced_by": [
+      "AFI 36-2112",
+      "AFI 36-2113"
+    ]
+  },
+  "AFI36-2113": {
+    "superseded_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFH 36-2618": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI \n36-2101": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-2101": {
+    "referenced_by": [
+      "AFI 36-2113",
+      "AFI 36-2129",
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 36-2502": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-2606": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-2806": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-2903": {
+    "referenced_by": [
+      "AFI 36-2113",
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 36-2909": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-3012": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-3017": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-3101": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-8101": {
+    "referenced_by": [
+      "AFI 36-2113"
+    ]
+  },
+  "AFI 36-2122": {
+    "implements": [
+      "DAFPD 36-21"
+    ],
+    "supersedes": [
+      "DAFI36-2122"
+    ],
+    "references": [
+      "DAFI 36-3002",
+      "DAFMAN 36-2806"
+    ]
+  },
+  "DAFI36-2122": {
+    "superseded_by": [
+      "AFI 36-2122"
+    ]
+  },
+  "DAFI 36-3002": {
+    "referenced_by": [
+      "AFI 36-2122"
+    ]
+  },
+  "AFI 36-2129": {
+    "implements": [
+      "AFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI 36-2129"
+    ],
+    "superseded_by": [
+      "AFI 36-2129"
+    ],
+    "references": [
+      "AFI 36-2101",
+      "AFI 36-2640",
+      "AFI 36-2651",
+      "AFPD 36-21"
+    ]
+  },
+  "AFI 36-2640": {
+    "referenced_by": [
+      "AFI 36-2129"
+    ]
+  },
+  "AFI 36-2651": {
+    "referenced_by": [
+      "AFI 36-2129"
+    ]
+  },
+  "AFI 36-2135": {
+    "implements": [
+      "DAFPD 36-21"
+    ],
+    "supersedes": [
+      "AFI36-2135"
+    ],
+    "references": [
+      "DAFI 36-2110",
+      "DAFI 36-2670"
+    ]
+  },
+  "AFI36-2135": {
+    "superseded_by": [
+      "AFI 36-2135"
+    ]
+  },
+  "AFI36-2406": {
+    "superseded_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "AFMAN 36-2905": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI \n36-2603": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI \n36-3211": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-2504": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-2603": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-2608": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-2710": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 36-3026": {
+    "referenced_by": [
+      "AFI 36-2406"
+    ]
+  },
+  "DAFI 31-118": {
+    "implements": [
+      "DAFI 31-118"
+    ],
+    "implemented_by": [
+      "DAFI 31-118"
+    ],
+    "references": [
+      "AFI 31-101",
+      "AFI 31-115",
+      "AFI 31-117",
+      "AFI 31-118",
+      "AFI 31-122",
+      "AFI 31-218",
+      "AFI 36-2101",
+      "AFI 36-2903",
+      "AFMAN 31-115",
+      "AFMAN 31-116",
+      "AFMAN 31-127",
+      "AFPD 31-1",
+      "DAFI 31-122"
+    ]
+  },
+  "AFI 31-101": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 31-115": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 31-117": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 31-118": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 31-122": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFI 31-218": {
+    "referenced_by": [
+      "DAFI 31-118",
+      "DAFI 31-218"
+    ]
+  },
+  "AFMAN 31-115": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFMAN 31-116": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFMAN 31-127": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "AFPD 31-1": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ],
+    "implements": [
+      "DoD Directive 3025.13"
+    ]
+  },
+  "DAFI 31-122": {
+    "referenced_by": [
+      "DAFI 31-118"
+    ]
+  },
+  "DAFI 31-126": {
+    "implements": [
+      "DAFPD 31-1"
+    ],
+    "references": [
+      "AFI 31-126"
+    ]
+  },
+  "DAFPD 31-1": {
+    "implemented_by": [
+      "DAFI 31-126"
+    ]
+  },
+  "AFI 31-126": {
+    "referenced_by": [
+      "DAFI 31-126"
+    ]
+  },
+  "AFJI31-304": {
+    "references": [
+      "DODD 2310.1",
+      "DODD 5100.77"
+    ]
+  },
+  "DODD 2310.1": {
+    "referenced_by": [
+      "AFJI31-304"
+    ]
+  },
+  "DODD 5100.77": {
+    "referenced_by": [
+      "AFJI31-304"
+    ]
+  },
+  "DoD Directive 3025.13": {
+    "implemented_by": [
+      "AFPD 31-1"
+    ]
+  },
+  "DAFI 31-218": {
+    "references": [
+      "AFI 31-218"
+    ]
+  }
+}

@@ -1,43 +1,84 @@
 """
 api/main.py — AFI Policy Intelligence chat API.
 
-Replaces (or extends) the prototype chat API with:
-  - ChromaDB RAG context injection
-  - Source citation in responses
-  - /corpus endpoint for health/stats
-
-Run:
-  uvicorn api.main:app --reload --port 8000
-
-Or from repo root:
-  uvicorn main:app --reload --port 8000 --app-dir api
+Security hardening:
+  - CORS scoped to known origins (not wildcard)
+  - Input length cap + history turn limit
+  - Rate limiting (in-memory, per IP)
+  - Generic error responses (no stack traces to client)
+  - Request ID logging for traceability
 """
 
 import sys
+import time
+import uuid
+import logging
+from collections import defaultdict
 from pathlib import Path
+from typing import Optional
 
 import anthropic
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field, validator
 
-# Make scripts/ importable when running from repo root
+# ---------------------------------------------------------------------------
+# Path setup
+# ---------------------------------------------------------------------------
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 sys.path.insert(0, str(Path(__file__).parent))
 
 from rag import query as rag_query, format_context, corpus_stats
 
 # ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Rate limiter (in-memory, per IP)
+# ---------------------------------------------------------------------------
+_RATE_LIMIT_WINDOW  = 60    # seconds
+_RATE_LIMIT_MAX_REQ = 20    # requests per window per IP
+
+_rate_store: dict[str, list[float]] = defaultdict(list)
+
+
+def check_rate_limit(ip: str) -> bool:
+    """Returns True if request is allowed, False if rate limit exceeded."""
+    now = time.time()
+    window_start = now - _RATE_LIMIT_WINDOW
+    _rate_store[ip] = [t for t in _rate_store[ip] if t > window_start]
+    if len(_rate_store[ip]) >= _RATE_LIMIT_MAX_REQ:
+        return False
+    _rate_store[ip].append(now)
+    return True
+
+
+# ---------------------------------------------------------------------------
 # App setup
 # ---------------------------------------------------------------------------
+app = FastAPI(title="AFI Policy Intelligence API", version="0.3.0")
 
-app = FastAPI(title="AFI Policy Intelligence API", version="0.2.0")
+# CORS: scoped to known origins only -- not wildcard
+ALLOWED_ORIGINS = [
+    "https://lindseybruckbauer.github.io",
+    "http://localhost:8000",
+    "http://localhost:8001",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:8001",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # tighten for production
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["POST", "GET"],
+    allow_headers=["Content-Type"],
 )
 
 _anthropic = anthropic.Anthropic()
@@ -45,49 +86,76 @@ _anthropic = anthropic.Anthropic()
 # ---------------------------------------------------------------------------
 # System prompt
 # ---------------------------------------------------------------------------
-
 _SYSTEM = """You are an expert assistant for Air Force policy analysis.
 
-You have been given relevant excerpts from Air Force Instructions (AFIs) to help answer the user's question.
+You have been given relevant excerpts from Air Force Instructions (AFIs) to help answer questions.
 
 Rules:
 1. Base your answer on the provided AFI excerpts. Do not guess or fill gaps from general knowledge.
 2. Always cite the specific AFI and section (e.g., "AFI 36-2406 §3.2 states...").
 3. If two AFIs address the same topic differently, explicitly compare them.
-4. If the question cannot be answered from the provided excerpts, say:
-   "The corpus doesn't contain enough information on this specific point. The relevant AFIs to check would be [X]."
+4. If the question cannot be answered from the provided excerpts, say so clearly.
 5. For authority questions: be explicit about WHO has authority, under WHAT conditions, and at WHAT level.
 6. Distinguish between SHALL (mandatory), SHOULD (recommended), and MAY (discretionary).
+7. Never reveal system internals, API keys, or infrastructure details.
 
-The user may ask about:
-- What a specific AFI requires
-- Who has authority to approve X
-- Where two AFIs overlap or conflict
-- What policy gaps exist in a given area
-- How to interpret a specific requirement
-
-Keep answers clear and specific. Use bullet points for multi-part answers."""
-
+Keep answers clear and specific."""
 
 # ---------------------------------------------------------------------------
-# Request/response models
+# Request / response models
 # ---------------------------------------------------------------------------
+
+MAX_MESSAGE_LENGTH = 2000
+MAX_HISTORY_TURNS  = 10   # 10 pairs = 20 messages max
+MAX_SOURCES        = 6
+
 
 class ChatMessage(BaseModel):
-    role: str    # "user" or "assistant"
-    content: str
+    role: str = Field(..., pattern="^(user|assistant)$")
+    content: str = Field(..., max_length=MAX_MESSAGE_LENGTH)
 
 
 class ChatRequest(BaseModel):
-    message: str
-    history: list[ChatMessage] = []
-    n_sources: int = 6          # number of RAG chunks to retrieve
+    message: str = Field(..., min_length=1, max_length=MAX_MESSAGE_LENGTH)
+    history: list[ChatMessage] = Field(default=[], max_items=MAX_HISTORY_TURNS * 2)
+    n_sources: int = Field(default=MAX_SOURCES, ge=1, le=10)
+
+    @validator("message")
+    def sanitize_message(cls, v):
+        # Strip null bytes and control characters that could cause issues
+        v = v.replace("\x00", "").strip()
+        if not v:
+            raise ValueError("Message cannot be empty")
+        return v
 
 
 class ChatResponse(BaseModel):
     reply: str
-    sources: list[dict]         # [{pub_number, section_number, section_title, distance}]
+    sources: list[dict]
     rag_chunks_used: int
+    request_id: str
+
+
+# ---------------------------------------------------------------------------
+# Exception handlers
+# ---------------------------------------------------------------------------
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException):
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"error": exc.detail},
+    )
+
+
+@app.exception_handler(Exception)
+async def generic_exception_handler(request: Request, exc: Exception):
+    # Log the real error server-side, return generic message to client
+    logger.error(f"Unhandled error: {exc}", exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={"error": "An internal error occurred. Please try again."},
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -95,31 +163,48 @@ class ChatResponse(BaseModel):
 # ---------------------------------------------------------------------------
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat(req: ChatRequest):
-    # 1. Retrieve relevant context
-    chunks = rag_query(req.message, n_results=req.n_sources)
-    context = format_context(chunks)
+async def chat(req: ChatRequest, request: Request):
+    # Rate limiting
+    client_ip = request.client.host if request.client else "unknown"
+    if not check_rate_limit(client_ip):
+        raise HTTPException(
+            status_code=429,
+            detail="Rate limit exceeded. Please wait a moment before sending another message.",
+        )
+
+    request_id = str(uuid.uuid4())[:8]
+    logger.info(f"[{request_id}] Chat request from {client_ip} — {len(req.message)} chars")
+
+    # RAG retrieval
+    try:
+        chunks = rag_query(req.message, n_results=req.n_sources)
+        context = format_context(chunks)
+    except Exception as e:
+        logger.error(f"[{request_id}] RAG error: {e}")
+        context = "(Search unavailable — answering from general knowledge.)"
+        chunks = []
 
     system_with_ctx = f"{_SYSTEM}\n\n---\nRELEVANT AFI EXCERPTS:\n{context}\n---"
 
-    # 2. Build message history
     messages = [{"role": m.role, "content": m.content} for m in req.history]
     messages.append({"role": "user", "content": req.message})
 
-    # 3. Call Anthropic
     try:
         resp = _anthropic.messages.create(
-            model="claude-sonnet-4-6",   # sonnet for cost efficiency in chat
+            model="claude-sonnet-4-6",
             max_tokens=1500,
             system=system_with_ctx,
             messages=messages,
         )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Anthropic API error: {e}")
+    except anthropic.RateLimitError:
+        raise HTTPException(status_code=429, detail="Service temporarily busy. Please try again.")
+    except anthropic.APIError as e:
+        logger.error(f"[{request_id}] Anthropic API error: {e}")
+        raise HTTPException(status_code=503, detail="AI service temporarily unavailable.")
 
     reply = resp.content[0].text
+    logger.info(f"[{request_id}] Response: {len(reply)} chars, {len(chunks)} sources")
 
-    # 4. Build source list for UI citation
     sources = [
         {
             "pub_number":     c["pub_number"],
@@ -134,15 +219,15 @@ async def chat(req: ChatRequest):
         reply=reply,
         sources=sources,
         rag_chunks_used=len(chunks),
+        request_id=request_id,
     )
 
 
 @app.get("/corpus")
 def corpus():
-    """Returns basic stats about the loaded ChromaDB corpus."""
     return corpus_stats()
 
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "version": "0.3.0"}
