@@ -1,6 +1,6 @@
 # AFI Policy Intelligence — 36-Series Corpus
 
-*16 publications ingested · last updated 17 June 2026*
+*20 publications ingested · last updated 17 June 2026*
 
 ---
 
@@ -36,6 +36,10 @@ Individual wiki pages synthesized from source PDFs.
 | [AFH 36-2647](afh36-2647.md) | Incorporating Change 1, 8 JULY 2025 | AETC/A3J | 8 FEBRUARY 2022 |
 | [AFGM 2026-36-2033](afgm2026-36-2033.md) | Air Force Guidance Memorandum Reimplementing Warrant Officers | Unknown | 4 FEBRUARY 2026 |
 | [AFJI31-304](afji31-304.md) | MCO 3461.1 | Unknown | 1 OCTOBER 1997 |
+| [AFVA31-106](afva31-106.md) | [PLACEHOLDER_OPR] | AF/A4SP | 30 MARCH 2016 |
+| [AFVA31-107](afva31-107.md) | [PLACEHOLDER_PHYSICAL] | Unknown | 16 MAY 2025 |
+| [RESTRICTED_ACCESS](restricted_access.md) | [PLACEHOLDER_RESTRICTED] | Unknown |  |
+| [STOCKED_AND_ISSUED](stocked_and_issued.md) | [PLACEHOLDER_OPR] | Unknown |  |
 
 ---
 
