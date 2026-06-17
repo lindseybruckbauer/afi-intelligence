@@ -16,6 +16,7 @@ Usage:
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 try:
@@ -30,7 +31,13 @@ SCRIPTS_DIR = Path(__file__).parent
 REPO_ROOT = SCRIPTS_DIR.parent
 
 sys.path.insert(0, str(SCRIPTS_DIR))
-from extract_pdf import extract, chunk_document, AFIDocument
+from extract_pdf import (
+    extract, chunk_document, AFIDocument,
+    classify_document,
+    DOCTYPE_POLICY_FULL, DOCTYPE_POLICY_SPARSE,
+    DOCTYPE_PLACEHOLDER_PHYSICAL, DOCTYPE_PLACEHOLDER_RESTRICTED,
+    DOCTYPE_PLACEHOLDER_OPR, DOCTYPE_VISUAL_AID, DOCTYPE_UNKNOWN,
+)
 
 RAW_PDFS    = REPO_ROOT / "raw" / "pdfs"
 WIKI_DIR    = REPO_ROOT / "wiki"
@@ -135,8 +142,8 @@ Return ONLY a JSON array of strings. Examples:
 Do not include explanatory text. Return [] if nothing found.
 
 Publication: {doc.pub_number}
-Text (first 1500 chars):
-{doc.full_text[:1500]}"""
+Text (first 800 chars):
+{doc.full_text[:800]}"""
 
     try:
         resp = client.messages.create(
@@ -152,6 +159,89 @@ Text (first 1500 chars):
         print(f"(implements LLM fallback: {e})")
         return doc.implements  # fall back to regex result
 
+
+
+
+# ---------------------------------------------------------------------------
+# Stub page generator for non-standard documents
+# ---------------------------------------------------------------------------
+
+_STUB_LABELS = {
+    DOCTYPE_PLACEHOLDER_PHYSICAL: (
+        "⚠️ Physical Product Only",
+        "This publication is only available as a physical product through the "
+        "Air Force Publishing Distribution Center. Digital text cannot be analyzed.",
+    ),
+    DOCTYPE_PLACEHOLDER_RESTRICTED: (
+        "🔒 Restricted Access",
+        "This publication has restricted access — it is either served from the "
+        "Warehouse Management System or stocked and issued by the OPR. "
+        "Content cannot be publicly accessed or analyzed.",
+    ),
+    DOCTYPE_PLACEHOLDER_OPR: (
+        "📋 Stocked and Issued",
+        "This publication is stocked and issued by the OPR. "
+        "Contact the OPR directly to request a copy. "
+        "Digital text is not publicly available.",
+    ),
+    DOCTYPE_VISUAL_AID: (
+        "🖼️ Visual Aid",
+        "This is an image-based visual aid (e.g. poster, chart). "
+        "Text extraction was insufficient for policy analysis.",
+    ),
+    DOCTYPE_UNKNOWN: (
+        "❓ Unknown Format",
+        "This document could not be classified. Manual review recommended.",
+    ),
+}
+
+
+def generate_stub_page(doc: AFIDocument, doc_type: str, reason: str) -> str:
+    """
+    Generate a structured stub wiki page for non-standard documents.
+    The stub is recorded as a gap finding, not silently dropped.
+    """
+    import re as _re
+    label, description = _STUB_LABELS.get(
+        doc_type, ("⚠️ Non-Standard", reason)
+    )
+    m = _re.search(r"(\d{2})-", doc.pub_number)
+    series = m.group(1) if m else "??"
+
+    return f"""# {doc.pub_number}: {label}
+
+**Status:** {label}
+**OPR:** {doc.opr}
+**Detected:** {date.today().strftime("%d %B %Y")}
+**Series:** {series}-series
+
+---
+
+> ⚠️ **Coverage Gap — {doc_type}**
+>
+> {description}
+>
+> This publication appears in the AF e-Publishing catalog but its content
+> **cannot be analyzed** by this tool. It represents a gap in corpus coverage.
+
+## What This Means
+
+- **Policy domain:** {series}-series has content that is inaccessible to AI analysis
+- **Gap type:** {doc_type}
+- **Reason:** {reason}
+- **Impact:** Any authority assignments, requirements, or cross-references
+  in this publication are NOT captured in gap, overlap, or authority analysis.
+
+## Recommended Action
+
+1. Note this as a coverage gap in the analysis
+2. Contact OPR ({doc.opr}) for access if this content is relevant
+3. If a digital version becomes publicly available, re-run the ingest pipeline
+
+---
+
+*Auto-generated stub. Not a summary of publication content.*
+"""
 
 
 # ---------------------------------------------------------------------------
@@ -204,6 +294,41 @@ def ingest_one(
     doc = extract(pdf_path)
     print(f"→ {doc.pub_number} | {len(doc.sections)} sections | {len(doc.authority_statements)} auth stmts")
 
+    # Step 1b: Classify document type
+    doc_type, class_reason = classify_document(doc)
+    print(f"  CLASSIFY {doc_type} — {class_reason}")
+
+    # Handle non-standard documents: generate stub, don't ingest to ChromaDB
+    STUB_TYPES = (
+        DOCTYPE_PLACEHOLDER_PHYSICAL,
+        DOCTYPE_PLACEHOLDER_RESTRICTED,
+        DOCTYPE_PLACEHOLDER_OPR,
+        DOCTYPE_VISUAL_AID,
+        DOCTYPE_UNKNOWN,
+    )
+    if doc_type in STUB_TYPES:
+        if not dry_run:
+            stub_content = generate_stub_page(doc, doc_type, class_reason)
+            wiki_path.write_text(stub_content, encoding="utf-8")
+            print(f"  STUB     → {wiki_path.name}")
+        return {
+            "status": "stub",
+            "doc_type": doc_type,
+            "gap_reason": class_reason,
+            "file": pdf_path.name,
+            "pub_number": doc.pub_number,
+            "title": f"[{doc_type}]",
+            "opr": doc.opr,
+            "effective_date": doc.effective_date,
+            "implements": doc.implements,
+            "supersedes": doc.supersedes,
+            "references": doc.references,
+            "section_count": 0,
+            "authority_statement_count": 0,
+            "chunk_count": 0,
+            "wiki_file": wiki_path.name,
+        }
+
     if dry_run:
         print(f"  DRY-RUN  skipping API calls")
         return {
@@ -213,7 +338,7 @@ def ingest_one(
             "title": doc.title,
         }
 
-    # Step 1b: LLM-based implements extraction (handles any prose format)
+    # Step 1c: LLM-based implements extraction (handles any prose format)
     print(f"  IMPLEMENTS extracting ...", end=" ", flush=True)
     doc.implements = extract_implements_llm(doc, anthropic_client)
     print(f"→ {doc.implements or '(none found)'}")
@@ -298,6 +423,13 @@ def main():
 
     print(f"\n{'='*50}")
     print(f"Done.  ok={ok}  skipped={skipped}  errors={errors}")
+    # Count stubs
+    stubs = sum(1 for v in index.values() if v.get("status") == "stub")
+    if stubs:
+        print(f"Stubs (coverage gaps): {stubs}")
+        for pub, meta in index.items():
+            if meta.get("status") == "stub":
+                print(f"  {pub}: {meta.get('doc_type')} — {meta.get('gap_reason')}")
     if not args.dry_run:
         print(f"Corpus index:  {INDEX_PATH}")
         print(f"Wiki pages:    {WIKI_DIR}/")

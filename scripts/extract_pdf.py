@@ -76,7 +76,7 @@ def extract(pdf_path: Path) -> AFIDocument:
         opr=_opr(header),
         certified_by=_field(header, r"Certified\s+by\s*:\s*([^\n;(]+)"),
         supersedes=_list_field(header, r"Supersedes\s*:\s*([^\n]+(?:\n[ \t]+[^\n]+)*)"),
-        implements=_extract_implements(header),
+        implements=_list_field(header, r"Implements\s*:\s*([^\n]+(?:\n[ \t]+[^\n]+)*)"),
         references=_all_references(full_text),
         effective_date=_effective_date(header),
         full_text=full_text,
@@ -207,13 +207,13 @@ def _title(text: str) -> str:
         r'|ACQUISITION|MANPOWER|SPACE|CYBER|MAINTENANCE|CIVIL ENGINEERING'
         r'|SECURITY FORCES|FORCE MANAGEMENT|NUCLEAR|INFORMATION'
         r'|COMPLIANCE WITH THIS PUBLICATION|ACCESSIBILITY|RELEASABILITY'
-        r'|BY ORDER OF|ADMINISTRATIVE|OPR|CERTIFIED|SUPERSEDES|PAGES?\s*:|INCORPORATING'
+        r'|BY ORDER OF|ADMINISTRATIVE|OPR|CERTIFIED|SUPERSEDES|PAGES?\s*:'
         r'|CERTIFIED BY|AIR FORCE GUIDANCE).*$',
         re.IGNORECASE,
     )
 
     in_header = False
-    for i, line in enumerate(lines):
+    for line in lines:
         # Trigger ONLY when the line STARTS with a pub type prefix + number.
         # This avoids firing on body references like "Supersedes: AFI36-2406".
         if re.match(
@@ -229,13 +229,6 @@ def _title(text: str) -> str:
             if _NOISE.match(line):
                 continue
             if len(line) > 8:
-                # If short, peek at next line — AF titles often wrap across two lines
-                if len(line) < 50 and i + 1 < len(lines):
-                    next_line = lines[i + 1].strip()
-                    if (len(next_line) > 4 and 
-                        not _FULL_DATE.match(next_line) and 
-                        not _NOISE.match(next_line)):
-                        return f"{line} {next_line}"
                 return line
     return "Unknown Title"
 
@@ -258,40 +251,13 @@ def _list_field(text: str, pattern: str) -> list:
     # Split on semicolons or commas followed by a pub prefix
     items = re.split(r';\s*|,\s*(?=(?:DAFI|AFI|AFMAN|DoDI|DoDD|AFPD)\s)', raw)
     return [i.strip() for i in items if len(i.strip()) > 3]
-def _extract_implements(text: str) -> list:
-    """
-    AF pubs use prose: 'This publication implements DAFPD 36-24, ...'
-    Extract all referenced directives from that sentence.
-    """
-    refs = []
-    m = re.search(
-        r'(?:This publication |This instruction )?implements?\s+([^.]{10,400})\.',
-        text, re.IGNORECASE
-    )
-    if m:
-        raw = m.group(1)
-        for pat in [
-            r'(?:DAFI|AFI|AFMAN|AFPD|DAFPD|AFH|DAFMAN)[)\s]+\d{2}-\d+',
-            r'\bDoD[ID]\s+\d{4}\.\d+(?:,?\s*Vol(?:ume)?\s*\d+)?',
-            r'\bDoDD\s+\d{4}\.\d+',
-        ]:
-            for hit in re.finditer(pat, raw, re.IGNORECASE):
-                refs.append(hit.group(0).strip())
-    # header field fallback
-    if not refs:
-        m2 = re.search(r'Implements\s*:\s*([^\n]+)', text, re.IGNORECASE)
-        if m2:
-            for pat in [r'\b(?:DAFI|AFI|AFMAN|AFPD|DAFPD)\s+\d{2}-\d+',
-                        r'\bDoD[ID]\s+\d{4}\.\d+']:
-                for hit in re.finditer(pat, m2.group(1), re.IGNORECASE):
-                    refs.append(hit.group(0).strip())
-    return sorted(set(r.replace(') ', ' ').strip() for r in refs))
+
 
 def _effective_date(text: str) -> str:
     m = re.search(
         r'\b(\d{1,2}\s+(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST'
         r'|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)\s+\d{4})\b',
-        text, re.IGNORECASE | re.DOTALL
+        text, re.IGNORECASE
     )
     return m.group(1).upper() if m else ""
 
@@ -423,3 +389,89 @@ if __name__ == "__main__":
 
     chunks = chunk_document(doc)
     print(f"\nChunks (for ChromaDB): {len(chunks)}")
+
+
+# ---------------------------------------------------------------------------
+# Document classification
+# ---------------------------------------------------------------------------
+
+# Document type constants
+DOCTYPE_POLICY_FULL        = "POLICY_FULL"
+DOCTYPE_POLICY_SPARSE      = "POLICY_SPARSE"
+DOCTYPE_PLACEHOLDER_PHYSICAL   = "PLACEHOLDER_PHYSICAL"
+DOCTYPE_PLACEHOLDER_RESTRICTED = "PLACEHOLDER_RESTRICTED"
+DOCTYPE_PLACEHOLDER_OPR        = "PLACEHOLDER_OPR"
+DOCTYPE_VISUAL_AID         = "VISUAL_AID"
+DOCTYPE_UNKNOWN            = "UNKNOWN"
+
+
+def classify_document(doc: "AFIDocument") -> tuple:
+    """
+    Classify a document by type for appropriate ingest handling.
+    Returns (doc_type: str, reason: str).
+
+    Types:
+      POLICY_FULL        — standard policy doc, full ingest
+      POLICY_SPARSE      — short/thin policy doc, ingest with caveat
+      PLACEHOLDER_PHYSICAL   — physical product only, not digitally available
+      PLACEHOLDER_RESTRICTED — restricted access / WMS-gated
+      PLACEHOLDER_OPR        — stocked and issued, contact OPR
+      VISUAL_AID         — image-based (AFVA, poster, etc.)
+      UNKNOWN            — could not classify, flag for review
+    """
+    text_upper = doc.full_text[:2000].upper()
+    text_len   = len(doc.full_text.strip())
+
+    # --- Placeholder: physical product ---
+    PHYSICAL_PHRASES = [
+        "PHYSICAL PRODUCT",
+        "THIS PHYSICAL PRODUCT IS AVAILABLE",
+        "AIR FORCE PUBLISHING DISTRIBUTION CENTER",
+        "PASTE THE FOLLOWING URL INTO THE BROWSER",
+    ]
+    if any(p in text_upper for p in PHYSICAL_PHRASES):
+        return DOCTYPE_PLACEHOLDER_PHYSICAL, "physical product — not digitally available"
+
+    # --- Placeholder: restricted access ---
+    RESTRICTED_PHRASES = [
+        "RESTRICTED ACCESS",
+        "OPR HAS RESTRICTED ACCESS",
+        "WAREHOUSE MANAGEMENT SYSTEM",
+        "THE OPR HAS RESTRICTED",
+    ]
+    if any(p in text_upper for p in RESTRICTED_PHRASES):
+        return DOCTYPE_PLACEHOLDER_RESTRICTED, "restricted access — controlled distribution"
+
+    # --- Placeholder: stocked and issued ---
+    OPR_PHRASES = [
+        "STOCKED AND ISSUED",
+        "CONTACT THEM TO REQUEST A COPY",
+        "STOCKED AND ISSUED BY THE OPR",
+    ]
+    if any(p in text_upper for p in OPR_PHRASES):
+        return DOCTYPE_PLACEHOLDER_OPR, "stocked and issued — contact OPR for copy"
+
+    # --- Visual aid: AFVA prefix or image-heavy ---
+    if re.match(r'^(?:AFVA|AF VA)\b', doc.pub_number, re.IGNORECASE):
+        return DOCTYPE_VISUAL_AID, "visual aid — image-based format"
+
+    # --- Near-empty text (image-only or 1-page placeholder) ---
+    if text_len < 300:
+        if doc.page_count <= 2:
+            return DOCTYPE_PLACEHOLDER_OPR, (
+                f"near-empty text ({text_len} chars) on {doc.page_count} page(s)"
+            )
+        return DOCTYPE_VISUAL_AID, (
+            f"insufficient text ({text_len} chars) — likely image-heavy"
+        )
+
+    # --- Sparse but processable ---
+    if text_len < 1200 and doc.page_count < 4:
+        return DOCTYPE_POLICY_SPARSE, (
+            f"sparse content ({text_len} chars, {doc.page_count} pages)"
+        )
+
+    # --- Standard policy document ---
+    return DOCTYPE_POLICY_FULL, (
+        f"{doc.page_count} pages, {len(doc.sections)} sections"
+    )

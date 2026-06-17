@@ -10,11 +10,7 @@
       "DAFPD 36-20",
       "DAFPD 36-21",
       "DAFPD 36-24",
-      "DAFPD 36-25",
-      "DAFPD 36-26",
-      "DAFPD 36-29",
-      "DAFPD 36-30",
-      "DAFPD 36-32"
+      "DAFPD 36-25"
     ],
     "supersedes": [],
     "references": [
@@ -53,7 +49,7 @@
     "status": "ok",
     "file": "afh36-2647.pdf",
     "pub_number": "AFH 36-2647",
-    "title": "COMPETENCY MODELING",
+    "title": "Incorporating Change 1, 8 JULY 2025",
     "opr": "AETC/A3J",
     "effective_date": "8 FEBRUARY 2022",
     "implements": [
@@ -78,11 +74,11 @@
     "status": "ok",
     "file": "afi36-1301.pdf",
     "pub_number": "AFI 36-1301",
-    "title": "MANAGEMENT OF ACQUISITION KEY LEADERSHIP POSITIONS",
+    "title": "MANAGEMENT OF ACQUISITION KEY",
     "opr": "SAF/AQH",
     "effective_date": "23 JULY 2019",
     "implements": [
-      "HAF MD 1-10"
+      "HAFMD 1-10"
     ],
     "supersedes": [
       "AFI 36-1301, 19 October"
@@ -102,12 +98,10 @@
     "status": "ok",
     "file": "afi36-2109.pdf",
     "pub_number": "AFI 36-2109",
-    "title": "CHIEF MASTER SERGEANT OF THE AIR FORCE, SENIOR ENLISTED",
+    "title": "Incorporating Change 2, 1 February 2023",
     "opr": "AF/CCC",
     "effective_date": "7 FEBRUARY 2025",
-    "implements": [
-      "AFPD 36-21"
-    ],
+    "implements": [],
     "supersedes": [
       "AFI36-2109, 14 July 2014"
     ],
@@ -134,7 +128,7 @@
     "status": "ok",
     "file": "afi36-2112.pdf",
     "pub_number": "AFI 36-2112",
-    "title": "MATERIEL MANAGEMENT ENLISTED CAREER BROADENING PROGRAM",
+    "title": "MATERIEL MANAGEMENT ENLISTED",
     "opr": "AF/A4LR",
     "effective_date": "12 SEPTEMBER 2018",
     "implements": [
@@ -206,7 +200,7 @@
     "status": "ok",
     "file": "afi36-2122.pdf",
     "pub_number": "AFI 36-2122",
-    "title": "INTERSERVICE OFFICERS ON EXCHANGE DUTY WITH UNITED",
+    "title": "INTERSERVICE OFFICERS ON",
     "opr": "AFPC/DPM",
     "effective_date": "30 JUNE 2025",
     "implements": [
@@ -274,7 +268,7 @@
     "status": "ok",
     "file": "afi36-2135.pdf",
     "pub_number": "AFI 36-2135",
-    "title": "JOINT OFFICER MANAGEMENT",
+    "title": "Incorporating Change 1, 12 November 2024",
     "opr": "AF/A1P",
     "effective_date": "4 NOVEMBER 2020",
     "implements": [
@@ -301,7 +295,7 @@
     "status": "ok",
     "file": "afi36-2406.pdf",
     "pub_number": "AFI 36-2406",
-    "title": "OFFICER AND ENLISTED EVALUATIONS SYSTEMS",
+    "title": "Incorporating Change 1, 27 MAY 2026",
     "opr": "AF/A1PPP",
     "effective_date": "22 AUGUST 2025",
     "implements": [
@@ -340,5 +334,189 @@
     "authority_statement_count": 18,
     "chunk_count": 83,
     "wiki_file": "afi36-2406.md"
+  },
+  "DAFI 31-118": {
+    "status": "ok",
+    "file": "afi31-118.pdf",
+    "pub_number": "DAFI 31-118",
+    "title": "Department of the Air Force Guidance Memorandum to DAFI 31-118, Security",
+    "opr": "Unknown",
+    "effective_date": "15 JANUARY 2026",
+    "implements": [
+      "DAFI 31-118"
+    ],
+    "supersedes": [],
+    "references": [
+      "AFI \n36-2654",
+      "AFI \n36-401",
+      "AFI \n48-123",
+      "AFI 10-1302",
+      "AFI 16-1404",
+      "AFI 24-301",
+      "AFI 24-302",
+      "AFI 31-101",
+      "AFI 31-115",
+      "AFI 31-117",
+      "AFI 31-118",
+      "AFI 31-122",
+      "AFI 31-218",
+      "AFI 33-363",
+      "AFI 36-1401",
+      "AFI 36-205",
+      "AFI 36-2101",
+      "AFI 36-2626",
+      "AFI 36-2646",
+      "AFI 36-2654",
+      "AFI 36-2706",
+      "AFI 36-2903",
+      "AFI 36-401",
+      "AFI 36-703",
+      "AFI 36-704",
+      "AFI 38-101",
+      "AFI 38-201",
+      "AFI 41-210",
+      "AFI 44-108",
+      "AFI 44-110",
+      "AFI 48-110",
+      "AFI 48-123",
+      "AFI 48-127",
+      "AFI 48-133",
+      "AFI 48-137",
+      "AFMAN 31-115",
+      "AFMAN 31-116",
+      "AFMAN 31-127",
+      "AFMAN 33-363",
+      "AFMAN 36-203",
+      "AFMAN 36-2203",
+      "AFMAN 36-2655",
+      "AFMAN 36-2806",
+      "AFMAN 41-210",
+      "AFPD 31-1",
+      "AFPD 36-1",
+      "AFPD 36-27",
+      "AFPD 38-1",
+      "DAFI 31-118",
+      "DAFI 31-122",
+      "DODD 7730.47",
+      "DODI \n1400.25",
+      "DODI 1010.09",
+      "DODI 1400.25",
+      "DODI 1400.25, VOL 591",
+      "DODI 3020.50",
+      "DODI 5200.08",
+      "DODI 5505.17",
+      "DODI 5525.12",
+      "DODI 5525.13",
+      "DODI 5525.14",
+      "DODI 5525.15",
+      "TITLE 5 U.S.C."
+    ],
+    "section_count": 87,
+    "authority_statement_count": 14,
+    "chunk_count": 88,
+    "wiki_file": "afi31-118.md"
+  },
+  "DAFI 31-126": {
+    "status": "ok",
+    "file": "afi31-126.pdf",
+    "pub_number": "DAFI 31-126",
+    "title": "Department of the Air Force Guidance Memorandum to DAFI 31-126, DoD Military",
+    "opr": "Unknown",
+    "effective_date": "15 APRIL 2026",
+    "implements": [],
+    "supersedes": [],
+    "references": [
+      "AFI 31-126",
+      "AFI 33-360",
+      "AFI 48-131",
+      "DAFI 31-126",
+      "DODD 3025.13",
+      "DODD 5200.31",
+      "DODD 6400.04",
+      "DODI 3025.21",
+      "DODI 3216.01",
+      "DODI 5015.02",
+      "TITLE 10 U.S.C."
+    ],
+    "section_count": 0,
+    "authority_statement_count": 3,
+    "chunk_count": 85,
+    "wiki_file": "afi31-126.md"
+  },
+  "AFI 31-213": {
+    "status": "ok",
+    "file": "afji31-213_cover_letter.pdf",
+    "pub_number": "AFI 31-213",
+    "title": "MCO 1620.2D",
+    "opr": "Unknown",
+    "effective_date": "27 JULY 2006",
+    "implements": [],
+    "supersedes": [],
+    "references": [
+      "AFI 31-213"
+    ],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 1,
+    "wiki_file": "afji31-213_cover_letter.md"
+  },
+  "AFJI31-304": {
+    "status": "ok",
+    "file": "afji31-304.pdf",
+    "pub_number": "AFJI31-304",
+    "title": "MCO 3461.1",
+    "opr": "Unknown",
+    "effective_date": "1 OCTOBER 1997",
+    "implements": [],
+    "supersedes": [],
+    "references": [
+      "DODD 2310.1",
+      "DODD 5100.77"
+    ],
+    "section_count": 0,
+    "authority_statement_count": 4,
+    "chunk_count": 155,
+    "wiki_file": "afji31-304.md"
+  },
+  "AFPD 31-1": {
+    "status": "ok",
+    "file": "afpd31-1.pdf",
+    "pub_number": "AFPD 31-1",
+    "title": "Unknown Title",
+    "opr": "AF/A4SP",
+    "effective_date": "21 JUNE 2018",
+    "implements": [
+      "DoDI 3025.13"
+    ],
+    "supersedes": [
+      "Air Force Policy Directive"
+    ],
+    "references": [
+      "AFPD 10-26"
+    ],
+    "section_count": 71,
+    "authority_statement_count": 0,
+    "chunk_count": 69,
+    "wiki_file": "afpd31-1.md"
+  },
+  "DAFI 31-218": {
+    "status": "ok",
+    "file": "dafi31-218.pdf",
+    "pub_number": "DAFI 31-218",
+    "title": "Department of the Air Force Guidance Memorandum to DAFI 31-218, Motor",
+    "opr": "Unknown",
+    "effective_date": "10 DECEMBER 2021",
+    "implements": [],
+    "supersedes": [],
+    "references": [
+      "AFI 31-218",
+      "AFI 33-322",
+      "DAFI 31-218",
+      "DAFI 33-360"
+    ],
+    "section_count": 0,
+    "authority_statement_count": 0,
+    "chunk_count": 2,
+    "wiki_file": "dafi31-218.md"
   }
 }

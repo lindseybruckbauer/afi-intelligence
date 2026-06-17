@@ -49,6 +49,29 @@ def load_index() -> dict:
     return json.loads(INDEX_PATH.read_text())
 
 
+def split_index(index: dict) -> tuple:
+    """Separate full policy docs from stubs (coverage gaps)."""
+    full_docs = {k: v for k, v in index.items() if v.get("status") != "stub"}
+    stubs     = {k: v for k, v in index.items() if v.get("status") == "stub"}
+    return full_docs, stubs
+
+
+def format_stub_summary(stubs: dict) -> str:
+    """Format stub records as confirmed gap context for analysis prompts."""
+    if not stubs:
+        return ""
+    lines = ["\n## CONFIRMED COVERAGE GAPS (inaccessible publications)\n"]
+    lines.append("The following publications were found in the AF e-Publishing catalog")
+    lines.append("but CANNOT be analyzed because they are not publicly available as text:\n")
+    for pub_num, meta in sorted(stubs.items()):
+        lines.append(
+            f"- **{pub_num}** [{meta.get('doc_type', 'UNKNOWN')}] "
+            f"— {meta.get('gap_reason', 'unknown reason')} "
+            f"(OPR: {meta.get('opr', 'unknown')})"
+        )
+    return "\n".join(lines)
+
+
 def load_wiki(meta: dict) -> str:
     """Load the synthesized wiki page for a publication."""
     path = WIKI_DIR / meta.get("wiki_file", f"{Path(meta['file']).stem}.md")
@@ -72,10 +95,11 @@ def _ask(prompt: str, max_tokens: int = 3500) -> str:
 
 def analyze_overlaps(index: dict) -> str:
     print("  Building overlap context...")
+    full_docs, stubs = split_index(index)
 
     pub_blobs = []
-    for pub_num in sorted(index):
-        meta = index[pub_num]
+    for pub_num in sorted(full_docs):
+        meta = full_docs[pub_num]
         wiki = load_wiki(meta)
         pub_blobs.append(
             f"### {pub_num}: {meta['title']}\n"
@@ -133,22 +157,23 @@ CORPUS WIKI PAGES:
 
 def analyze_gaps(index: dict) -> str:
     print("  Building gap context...")
+    full_docs, stubs = split_index(index)
 
     # Cross-reference: which DoDIs are referenced but potentially under-implemented
     dodi_to_pubs = defaultdict(list)
-    for pub_num, meta in index.items():
+    for pub_num, meta in full_docs.items():
         for ref in meta.get("implements", []) + meta.get("references", []):
             if "DoDI" in ref.upper() or "DoDD" in ref.upper():
                 dodi_to_pubs[ref].append(pub_num)
 
     series_present = sorted(set(
         pub.split()[1].split("-")[0]
-        for pub in index
+        for pub in full_docs
         if len(pub.split()) > 1 and "-" in pub.split()[1]
     ))
 
     titles_json = json.dumps(
-        {k: {"title": v["title"], "opr": v["opr"]} for k, v in index.items()},
+        {k: {"title": v["title"], "opr": v["opr"]} for k, v in full_docs.items()},
         indent=2
     )
 
@@ -195,6 +220,10 @@ Format as markdown:
 
 ## DoDI Coverage Assessment
 [Table or bullets assessing each DoDI reference: well-covered / thin / unclear]
+
+## Confirmed Inaccessible Publications
+[List any publications from the CONFIRMED COVERAGE GAPS section above that represent
+meaningful policy gaps — i.e. their absence affects the completeness of this analysis]
 
 ## Notes
 [Caveats, corpus limitations, recommended follow-on analysis]"""
