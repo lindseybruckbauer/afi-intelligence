@@ -1,6 +1,6 @@
 # Wiki Assistant
 
-Ask anything about this knowledge base. The assistant searches wiki pages and cites its sources.
+Ask anything about the 36-series AFI corpus. The assistant searches the full text of 10 Air Force Instructions plus cross-publication gap, overlap, and authority analysis — and cites its sources.
 
 <div id="chat-container" style="max-width:700px;margin:0 auto">
   <div id="messages" style="min-height:200px;padding:16px;border-radius:8px;background:var(--md-code-bg-color);margin-bottom:16px;font-size:14px;line-height:1.6"></div>
