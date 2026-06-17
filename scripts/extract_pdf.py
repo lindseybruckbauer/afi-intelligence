@@ -76,7 +76,7 @@ def extract(pdf_path: Path) -> AFIDocument:
         opr=_opr(header),
         certified_by=_field(header, r"Certified\s+by\s*:\s*([^\n;(]+)"),
         supersedes=_list_field(header, r"Supersedes\s*:\s*([^\n]+(?:\n[ \t]+[^\n]+)*)"),
-        implements=_list_field(header, r"Implements\s*:\s*([^\n]+(?:\n[ \t]+[^\n]+)*)"),
+        implements=_extract_implements(header),
         references=_all_references(full_text),
         effective_date=_effective_date(header),
         full_text=full_text,
@@ -258,13 +258,40 @@ def _list_field(text: str, pattern: str) -> list:
     # Split on semicolons or commas followed by a pub prefix
     items = re.split(r';\s*|,\s*(?=(?:DAFI|AFI|AFMAN|DoDI|DoDD|AFPD)\s)', raw)
     return [i.strip() for i in items if len(i.strip()) > 3]
-
+def _extract_implements(text: str) -> list:
+    """
+    AF pubs use prose: 'This publication implements DAFPD 36-24, ...'
+    Extract all referenced directives from that sentence.
+    """
+    refs = []
+    m = re.search(
+        r'(?:This publication |This instruction )?implements?\s+([^.]{10,400})\.',
+        text, re.IGNORECASE
+    )
+    if m:
+        raw = m.group(1)
+        for pat in [
+            r'(?:DAFI|AFI|AFMAN|AFPD|DAFPD|AFH|DAFMAN)[)\s]+\d{2}-\d+',
+            r'\bDoD[ID]\s+\d{4}\.\d+(?:,?\s*Vol(?:ume)?\s*\d+)?',
+            r'\bDoDD\s+\d{4}\.\d+',
+        ]:
+            for hit in re.finditer(pat, raw, re.IGNORECASE):
+                refs.append(hit.group(0).strip())
+    # header field fallback
+    if not refs:
+        m2 = re.search(r'Implements\s*:\s*([^\n]+)', text, re.IGNORECASE)
+        if m2:
+            for pat in [r'\b(?:DAFI|AFI|AFMAN|AFPD|DAFPD)\s+\d{2}-\d+',
+                        r'\bDoD[ID]\s+\d{4}\.\d+']:
+                for hit in re.finditer(pat, m2.group(1), re.IGNORECASE):
+                    refs.append(hit.group(0).strip())
+    return sorted(set(r.replace(') ', ' ').strip() for r in refs))
 
 def _effective_date(text: str) -> str:
     m = re.search(
         r'\b(\d{1,2}\s+(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST'
         r'|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)\s+\d{4})\b',
-        text, re.IGNORECASE
+        text, re.IGNORECASE | re.DOTALL
     )
     return m.group(1).upper() if m else ""
 

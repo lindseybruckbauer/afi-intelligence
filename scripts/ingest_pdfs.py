@@ -113,6 +113,48 @@ def synthesize_wiki(doc: AFIDocument, client: anthropic.Anthropic) -> str:
 
 
 # ---------------------------------------------------------------------------
+# LLM-based implements extraction (handles any prose format)
+# ---------------------------------------------------------------------------
+
+def extract_implements_llm(doc: AFIDocument, client: anthropic.Anthropic) -> list:
+    """
+    Use Haiku to extract 'Implements' references from any prose format.
+    Handles: 'implements DAFPD 36-24', 'implements Air Force Policy Directive 36-21',
+             'implements the requirements of HQ AF Mission Directive 1-10', etc.
+    """
+    import json as _json
+
+    prompt = f"""You are extracting policy references from an Air Force publication header.
+
+Find all directives, instructions, or policy documents that this publication IMPLEMENTS
+(not just references or supersedes — only what it formally implements).
+
+Return ONLY a JSON array of strings. Examples:
+["DAFPD 36-24"] or ["AFPD 36-21", "DoDI 1400.25"] or []
+
+Do not include explanatory text. Return [] if nothing found.
+
+Publication: {doc.pub_number}
+Text (first 1500 chars):
+{doc.full_text[:1500]}"""
+
+    try:
+        resp = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=150,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = resp.content[0].text.strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+        result = _json.loads(raw)
+        return [str(r).strip() for r in result if r] if isinstance(result, list) else []
+    except Exception as e:
+        print(f"(implements LLM fallback: {e})")
+        return doc.implements  # fall back to regex result
+
+
+
+# ---------------------------------------------------------------------------
 # ChromaDB helpers
 # ---------------------------------------------------------------------------
 
@@ -170,6 +212,11 @@ def ingest_one(
             "pub_number": doc.pub_number,
             "title": doc.title,
         }
+
+    # Step 1b: LLM-based implements extraction (handles any prose format)
+    print(f"  IMPLEMENTS extracting ...", end=" ", flush=True)
+    doc.implements = extract_implements_llm(doc, anthropic_client)
+    print(f"→ {doc.implements or '(none found)'}")
 
     # Step 2: Wiki synthesis
     print(f"  WIKI     synthesizing {doc.pub_number} ...", end=" ", flush=True)

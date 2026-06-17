@@ -1,207 +1,199 @@
-# Team Wiki
+# AFI Policy Intelligence
 
-An AI-maintained knowledge base for teams. Based on [Andrej Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
+AI-powered gap, overlap, and authority analysis across Air Force Instructions.
 
-Drop documents into `raw/`. Run one command. The LLM reads them, extracts entities and concepts, writes interconnected wiki pages, and keeps everything cross-referenced. Knowledge compounds instead of rotting.
+**Live site:** https://lindseybruckbauer.github.io/afi-intelligence/
+**Chat API:** https://afi-intelligence.onrender.com
 
-No vector database. No SaaS. No special tooling. Just Python, markdown, and Git.
-
-**Live demo:** https://lindseybruckbauer.github.io/team-wiki/
-
----
-
-## What it does
-
-- **Ingests** any markdown document and extracts people, projects, technologies, and decisions
-- **Writes** interconnected wiki pages automatically — entities, concepts, source summaries
-- **Cross-references** everything — every entity page knows which sources mention it
-- **Visualizes** the knowledge graph in the browser (no Obsidian required)
-- **Answers questions** via a chat assistant that searches the wiki and cites sources
-- **Auto-deploys** to GitHub Pages on every push via GitHub Actions
-- **Syncs** to SharePoint via OneDrive for non-technical teammates
+> **Disclaimer:** Unofficial tool. Not affiliated with the U.S. Air Force or Department of Defense.
+> All source documents are publicly available via [AF e-Publishing](https://www.e-publishing.af.mil).
+> Analysis is AI-generated and should be validated against official sources before operational use.
 
 ---
 
-## Prerequisites
+## What It Does
 
-- Python 3.9+
-- An Anthropic API key — [console.anthropic.com](https://console.anthropic.com)
-- Git
-- [Obsidian](https://obsidian.md) (optional — for local graph view)
+Ingests Air Force Instructions (PDFs) and produces:
 
----
+- **Per-publication wiki pages** — synthesized summaries with authority statements, cross-references, gaps, and key requirements
+- **Cross-publication analysis** — overlap findings, policy gaps, and an authority matrix across the full corpus
+- **Chat interface** — natural language queries over the full corpus with source citations
 
-## Setup
-
-### 1. Clone the repo
-
-```bash
-git clone git@github.com:lindseybruckbauer/team-wiki.git
-cd team-wiki
-```
-
-### 2. Install dependencies
-
-```bash
-pip3 install anthropic python-dotenv mkdocs mkdocs-material fastapi uvicorn
-```
-
-If `mkdocs` is not on your PATH after install (common on Mac):
-
-```bash
-echo 'export PATH="$HOME/Library/Python/3.9/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-### 3. Add your API key
-
-```bash
-echo "ANTHROPIC_API_KEY=your_key_here" > .env
-```
-
-The `.env` file is in `.gitignore` — it will never be committed.
-
-### 4. Open in Obsidian (optional)
-
-Obsidian → Open Vault → Open folder as vault → select the `team-wiki` folder.
-Install the **Git** community plugin for auto-sync.
-Open Graph view (left sidebar) to see the knowledge graph.
+Current corpus: 10 AFIs from the 36-series (Personnel). Target: all 3-series AFIs (31–38).
 
 ---
 
-## Usage
+## Using the Site
 
-### Ingesting a document
+**Analysis pages** (no setup required):
+- [Overlaps & Conflicts](https://lindseybruckbauer.github.io/afi-intelligence/ANALYSIS_overlaps/) — where publications assign conflicting authority
+- [Policy Gaps](https://lindseybruckbauer.github.io/afi-intelligence/ANALYSIS_gaps/) — missing coverage and thin DoDI implementation
+- [Authority Matrix](https://lindseybruckbauer.github.io/afi-intelligence/ANALYSIS_authority_matrix/) — who can approve what, by publication and section
 
-Drop any markdown file into `raw/` and run:
+**Chat** — ask anything about the corpus:
+> "Who has authority to approve a waiver under AFI 36-2406?"
+> "What overlaps exist between AFI 36-2113 and AFI 36-2109?"
+> "What DoDI implementation gaps exist in the 36-series?"
 
-```bash
-python3 ingest.py raw/your-document.md
-```
-
-The script prints every file it writes. Commit and push when done:
-
-```bash
-git add . && git commit -m "Ingest: your-document" && git push
-```
-
-GitHub Actions automatically rebuilds the graph and deploys to GitHub Pages.
-
-### Rebuilding the knowledge graph
-
-Run this any time after ingesting new documents:
-
-```bash
-python3 build_graph.py
-```
-
-This generates `wiki/javascripts/graph.json` from all wikilinks in the wiki.
-
-### Running the chat assistant locally
-
-Open two terminals:
-
-```bash
-# Terminal 1 — wiki site
-python3 -m mkdocs serve -a 127.0.0.1:8003
-
-# Terminal 2 — query server
-python3 -m uvicorn query_server:app --port 8002
-```
-
-Open `http://127.0.0.1:8003` and navigate to the Chat page.
-
-### Publishing to SharePoint via OneDrive
-
-Make sure OneDrive is running and syncing. Then:
-
-```bash
-python3 -m mkdocs build && cp -r site/ ~/Library/CloudStorage/OneDrive-BOOZALLENHAMILTON/team-wiki/
-```
-
-OneDrive syncs the files to SharePoint automatically. Teammates open `index.html` from their synced OneDrive folder.
+Note: the chat API cold-starts after 15 minutes of inactivity. First response may take 20–30 seconds.
 
 ---
 
-## Repo structure
+## Adding More Publications
 
+```bash
+# 1. Drop PDFs into raw/pdfs/
+cp path/to/new-afis/*.pdf raw/pdfs/
+
+# 2. Ingest (extract + synthesize + embed)
+export ANTHROPIC_API_KEY=sk-ant-...
+python3 scripts/ingest_pdfs.py
+
+# 3. Re-run analysis (improves with larger corpus)
+python3 scripts/analyze_corpus.py
+
+# 4. Rebuild home page index
+python3 scripts/build_index.py
+
+# 5. Deploy
+git add wiki/ chroma_db/
+git commit -m "Add [X] publications"
+git push
 ```
-team-wiki/
-├── AGENTS.md              # LLM rules and schema
-├── ingest.py              # Ingest script — calls Anthropic API
-├── query_server.py        # FastAPI query backend for chat
-├── build_graph.py         # Generates graph.json from wikilinks
-├── mkdocs.yml             # MkDocs config
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # Auto-deploy to GitHub Pages on push
-├── .env                   # API key — never committed
-├── raw/                   # Source documents — add yours here
-└── wiki/                  # LLM-maintained — do not edit manually
-    ├── index.md           # Auto-updated catalog
-    ├── log.md             # Append-only activity log
-    ├── graph.md           # Knowledge graph page
-    ├── chat.md            # Chat assistant page
-    ├── javascripts/
-    │   ├── chat.js        # Chat UI
-    │   ├── graph.js       # D3 force graph
-    │   └── graph.json     # Generated graph data
-    ├── entities/          # People, projects, teams
-    ├── concepts/          # Technologies, methodologies, terms
-    └── sources/           # One summary per ingested document
-```
+
+PDF naming: `afi36-2406.pdf`, `afman33-361.pdf`, `afgm2026-36-2033.pdf` etc. The pub number is
+also extracted from the document header so exact naming is not required.
 
 ---
 
-## How the chat works
+## Local Development
 
-Two-step context reduction:
+**Requirements:** Python 3.9+, an Anthropic API key
 
-1. Claude reads `wiki/index.md` and selects the most relevant pages (max 5)
-2. Claude reads only those pages and answers with inline citations
+```bash
+git clone https://github.com/lindseybruckbauer/afi-intelligence
+cd afi-intelligence
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY=sk-ant-...
 
-This keeps the context window small regardless of wiki size — a precursor to full GraphRAG.
+# Run chat API locally
+uvicorn api.main:app --port 8001
+
+# Serve docs locally (separate terminal)
+mkdocs serve
+# → http://localhost:8000
+```
+
+For local chat, update the API_URL in `wiki/javascripts/chat.js` to `http://127.0.0.1:8001`.
 
 ---
 
-## Team collaboration
-
-- Anyone clones the repo, adds their `.env`, and can ingest immediately
-- **Convention:** always `git pull` before running `ingest.py` to avoid merge conflicts
-- No limit on team size
-- For multiple teams in the same org, partition the wiki by team folder:
+## Architecture
 
 ```
-wiki/
-  team-a/entities/
-  team-a/concepts/
-  team-b/entities/
-  team-b/concepts/
+afi-intelligence/
+├── raw/pdfs/              ← drop source PDFs here (gitignored)
+├── scripts/
+│   ├── extract_pdf.py     ← PyMuPDF extraction with AF-aware metadata parser
+│   ├── ingest_pdfs.py     ← extract → wiki synthesis (Claude Opus) → ChromaDB
+│   ├── analyze_corpus.py  ← gap / overlap / authority matrix analysis
+│   └── build_index.py     ← regenerates wiki/index.md from corpus_index.json
+├── api/
+│   ├── main.py            ← FastAPI: /chat and /health endpoints
+│   └── rag.py             ← ChromaDB semantic search layer
+├── wiki/                  ← MkDocs docs_dir (all generated content)
+│   ├── ANALYSIS_*.md      ← cross-publication analysis pages
+│   ├── afi36-*.md         ← per-publication wiki pages
+│   ├── stylesheets/       ← USAF color theme CSS
+│   └── javascripts/       ← chat interface JS
+├── chroma_db/             ← local vector store (committed, ~4MB)
+├── mkdocs.yml             ← MkDocs Material config
+└── render.yaml            ← Render.com API deployment config
 ```
 
-The chat assistant searches across all teams automatically.
+**Data flow:**
+```
+PDF → extract_pdf.py → AFIDocument
+                     ↓                    ↓
+              wiki synthesis         chunk + embed
+              (Claude Opus)          (ChromaDB)
+                     ↓                    ↓
+              wiki/{slug}.md       chroma_db/ (committed)
+                     ↓                    ↓
+              analyze_corpus.py    api/rag.py → /chat endpoint
+                     ↓
+              ANALYSIS_*.md
+```
+
+**Deploy flow:**
+- `git push main` → GitHub Actions → MkDocs build → GitHub Pages
+- Same push → Render auto-redeploy of FastAPI backend
+- ChromaDB is committed to the repo; Render uses it directly (no re-ingest on deploy)
+
+---
+
+## Key Scripts
+
+| Script | What it does | When to run |
+|--------|-------------|-------------|
+| `ingest_pdfs.py` | Extract + synthesize + embed all PDFs in `raw/pdfs/` | After adding new PDFs |
+| `ingest_pdfs.py --force` | Re-ingest everything (overwrites existing wiki pages) | After changing extraction logic |
+| `ingest_pdfs.py --dry-run` | Extract only, no API calls | Testing extraction on new pub types |
+| `analyze_corpus.py` | Run all three analyses | After ingest or adding pubs |
+| `analyze_corpus.py --only gaps` | Run single analysis | Faster iteration |
+| `build_index.py` | Regenerate home page | After any ingest or analysis |
+
+---
+
+## Known Issues & Debt
+
+| Issue | Severity | Fix |
+|-------|----------|-----|
+| `Implements: []` on all pubs | Medium | `_list_field()` regex in `extract_pdf.py` |
+| AFH/AFGM: 0 sections parsed | Low | These doc types use non-standard structure; falls back to sliding-window chunking |
+| Render cold start (~20s) | Low | Upgrade to paid Render tier for production use |
+| Chat gives thin answers on specific authority questions | Medium | Chunk size / re-chunking strategy; authority statements need larger context windows |
 
 ---
 
 ## Roadmap
 
-- [ ] GraphRAG — store entity relationships as a proper graph, cut context per query from ~2500 to ~200 tokens
-- [ ] Public query server — deploy `query_server.py` so chat works from any machine
-- [ ] GitHub Actions to SharePoint publish via Microsoft Graph API (requires Azure AD app registration)
-- [ ] Multi-format intake — Jupyter notebooks, Notion exports, PDFs, meeting transcripts
-- [ ] Slack / email intake — drop a message or forward an email to ingest
-- [ ] Cross-team discovery — "what other teams are working on X"
+**Phase 2 — Full 3-Series Corpus**
+Acquire and ingest all active AFIs in series 31–38 (~80–150 publications).
+The pipeline handles any volume; this is purely an acquisition task.
+
+**Phase 3 — DoDI Cross-Reference Layer**
+Cross-walk AFI "Implements" citations against actual DoDI requirements.
+Requires fixing `Implements` extraction (see Known Issues) and acquiring DoDI source docs.
+
+**Phase 4 — Knowledge Graph**
+Graph layer over the authority chain and cross-reference relationships.
+ChromaDB RAG finds semantically similar content but doesn't traverse relationships.
+Target: authority delegation chains, DoDI→AFI→supplement hierarchies.
+
+**Phase 5 — SharePoint Native Hosting**
+Current delivery: GitHub Pages link from a SharePoint page (no IT approval needed).
+Full native hosting requires Azure AD app registration (IT/ISSO approval path).
 
 ---
 
-## Why not Confluence?
+## Environment Variables
 
-Confluence rots because maintenance is manual and nobody does it. This wiki is maintained by the LLM — every cross-reference, every update, every contradiction flag happens automatically on ingest. The human job is to curate sources and ask good questions.
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `ANTHROPIC_API_KEY` | Yes | Used by ingest, analysis, and chat API |
 
-The wiki is also just markdown in Git. You can read it without a browser, diff it like code, and it works with every editor.
+Set locally: `export ANTHROPIC_API_KEY=sk-ant-...`
+Set on Render: Dashboard → Environment → Add Variable
 
 ---
 
-## Credits
+## Tech Stack
 
-Built on [Andrej Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) (April 2026).
+- **Extraction:** PyMuPDF (`fitz`)
+- **Wiki synthesis:** Claude Opus 4.6
+- **Vector store:** ChromaDB (local persistent, `all-MiniLM-L6-v2` embeddings)
+- **Chat API:** FastAPI + Uvicorn on Render.com
+- **Chat model:** Claude Sonnet 4.6
+- **Site:** MkDocs Material with USAF color theme
+- **Deploy:** GitHub Actions → GitHub Pages + Render auto-deploy
