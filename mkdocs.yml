@@ -46,6 +46,6 @@ nav:
     - Overlaps & Conflicts: ANALYSIS_overlaps.md
     - Policy Gaps: ANALYSIS_gaps.md
     - Authority Matrix: ANALYSIS_authority_matrix.md
-  - Publications:publications.md
+  - Publications: publications.md
   - Graph: graph.md
   - Chat: chat.md
