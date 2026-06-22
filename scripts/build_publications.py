@@ -33,13 +33,13 @@ SERIES_LABELS = {
 }
 
 STATUS_BADGES = {
-    "POLICY_FULL":             "✅ Full",
-    "POLICY_SPARSE":           "⚠️ Sparse",
-    "PLACEHOLDER_PHYSICAL":    "📦 Physical only",
-    "PLACEHOLDER_RESTRICTED":  "🔒 Restricted",
-    "PLACEHOLDER_OPR":         "📋 Contact OPR",
-    "VISUAL_AID":              "🖼️ Visual aid",
-    "UNKNOWN":                 "❓ Unknown",
+    "POLICY_FULL":             "Full",
+    "POLICY_SPARSE":           "Sparse",
+    "PLACEHOLDER_PHYSICAL":    "Physical only",
+    "PLACEHOLDER_RESTRICTED":  "Restricted",
+    "PLACEHOLDER_OPR":         "Contact OPR",
+    "VISUAL_AID":              "Visual aid",
+    "UNKNOWN":                 "Unknown",
 }
 
 
@@ -82,7 +82,7 @@ def build_publications_page(index: dict) -> str:
         "<div class='usaf-disclaimer'>",
         "All source documents are publicly available via "
         "<a href='https://www.e-publishing.af.mil'>AF e-Publishing</a>. "
-        "Coverage gaps (🔒📦📋) indicate publications that exist in the catalog "
+        "Coverage gaps (Restricted, Physical only, Contact OPR) indicate publications that exist in the catalog "
         "but are not digitally accessible for analysis.",
         "</div>",
         "",
@@ -126,7 +126,7 @@ def build_publications_page(index: dict) -> str:
                 title = ""
             title = title[:55] + "…" if len(title) > 55 else title
 
-            badge = STATUS_BADGES.get(doc_type, "✅ Full")
+            badge = STATUS_BADGES.get(doc_type, "Full")
             opr = meta.get("opr", "")
 
             # Link to wiki page if it exists
