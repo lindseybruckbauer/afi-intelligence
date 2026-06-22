@@ -6,192 +6,191 @@
 
 ## Summary
 
-This corpus of 16 publications (not 20 as stated—only 16 are enumerated) provides fragmented coverage across three AFI series: **36-xxx (Personnel/Force Management)**, **31-xxx (Security Forces/Force Protection)**, and a novel **2026-xxx** series. The collection exhibits significant irregularities: several publications have garbled or incomplete titles suggesting poor metadata extraction, no DoDI/DoDD implementing references were captured, several publications appear to be joint or Marine Corps orders (MCO references), and the presence of an "AFGM 2026-36-2033" referencing warrant officer reimplementation suggests a future/speculative policy document. Overall, this corpus has **substantial gaps** in both series, with only selective topics addressed and numerous foundational policy areas unrepresented. The absence of any captured DoDI references is itself a major red flag—either the corpus extraction failed to identify them or these publications lack proper traceability to higher-level DoD directives.
+This corpus provides a narrow and fragmentary view of three AFI series (2026-xxx, 31-xxx, and 36-xxx). Of the 20 publications present, many have truncated or garbled titles (suggesting OCR or metadata extraction issues), several are guidance memoranda rather than full instructions, and the corpus contains no DoDI/DoDD references whatsoever — a significant red flag indicating either incomplete metadata extraction or publications that fail to cite their implementing authority. The 36-series coverage focuses heavily on enlisted/officer management niches but misses major personnel policy pillars. The 31-series is thin, with only policy-directive-level and a few narrow security/motor vehicle topics. The 2026-series is represented by a single guidance memorandum. Overall, this corpus has substantial gaps in breadth, depth, and traceability to higher-level DoD directives.
 
 ---
 
 ## Gap Findings
 
-### Gap 1 — Missing Enlisted/Officer Promotion and Evaluation Framework
+### Gap 1 — No Implementing DoDI/DoDD References Found Anywhere in Corpus
+**Type:** Thin DoDI Coverage / Missing Authority
+**Affected Series/Pubs:** All 20 publications
+**Description:** The corpus extraction found zero DoDI or DoDD references across all publications. Every AFI is required to cite the higher-level directive it implements (typically in the opening paragraph or header). The complete absence of such references means either: (a) the metadata/text extraction process failed to capture these citations, or (b) these publications are not properly citing their implementing authority. Key expected references that should appear include:
+- **DoDI 1300.17** (Religious Liberty) — expected in 36-series
+- **DoDI 1315.18** (Military Personnel Assignments) — expected in 36-series
+- **DoDI 1320.04** (Military Officer Actions Requiring Approval of SecDef) — expected in 36-series
+- **DoDI 1320.14** (Commissioned Officer Promotion Program) — expected in 36-series
+- **DoDI 1400.25** (DoD Civilian Personnel Management) — expected in 36-series
+- **DoDI 5200.08** (Security of DoD Installations) — expected in 31-series
+- **DoDD 5210.56** (Arming and Use of Force) — expected in 31-series
+- **DoDI 5525.15** (Law Enforcement Standards) — expected in 31-series
+
+**Recommended Action:** Re-extract full text of all publications to capture "Implements" and "References" sections. Validate that each AFI properly traces to its parent DoD issuance. Flag any publication that genuinely lacks an implementing reference for compliance review.
+
+---
+
+### Gap 2 — Missing Core 36-Series Personnel Management Publications
 **Type:** Series Gap
-**Affected Series/Pubs:** AFI 36-xxxx series
-**Description:** The 36-series corpus includes AFI 36-2406 (likely Officer and Enlisted Evaluation Systems based on the known AFI number) but is missing critical companion publications:
-- **AFI 36-2502** (Enlisted Airman Promotion/Demotion Programs)
-- **AFI 36-2501** (Officer Promotions and Selective Continuation)
-- **AFI 36-2606** (Reenlistment and Extension of Enlistment in the USAF)
-- **AFI 36-2504** (Officer Promotion, Continuation, and Selective Early Removal in the Reserve)
+**Affected Series/Pubs:** AFI 36-series
+**Description:** The 36-series is the Air Force's primary personnel management series, yet this corpus is missing critical foundational publications that would be expected in any comprehensive audit:
+- **AFI 36-2501 / DAFI 36-2502** — Officer Promotions and Selective Continuation (or equivalent)
+- **AFI 36-2606 / DAFI 36-2606** — Reenlistment and Extension of Enlistment in the U.S. Air Force
+- **AFI 36-2608** — Military Personnel Records Systems
+- **AFI 36-2706 / DAFI 36-2710** — Equal Opportunity Program
+- **AFI 36-2903 / DAFI 36-2903** — Dress and Personal Appearance of Air Force Personnel
+- **AFI 36-2905 / DAFI 36-2905** — Fitness Program
+- **AFI 36-3003** — Military Leave Program
+- **AFI 36-3208 / DAFI 36-3211** — Administrative Separation of Airmen
+- **AFI 36-3212** — Physical Evaluation for Retention, Retirement, and Separation
+- **AFI 36-2110 / DAFI 36-2110** — Total Force Assignments
 
-Without these, the corpus cannot address the full lifecycle of enlisted and officer career management, which is the core function of the 36-2xxx sub-series.
-**Recommended Action:** Obtain and incorporate all active AFIs in the 36-25xx and 36-26xx ranges to ensure complete promotion, evaluation, and retention policy coverage.
+These represent core personnel authorities affecting every Airman and Guardian. Their absence means this audit cannot assess whether fundamental personnel management functions are properly governed.
+
+**Recommended Action:** Obtain and incorporate all active DAFI/AFI 36-series publications. Prioritize promotions, separations, fitness, assignments, and EO as highest-risk gaps.
 
 ---
 
-### Gap 2 — No Recruiting, Accessions, or Commissioning Policy
-**Type:** Series Gap / Missing Authority
-**Affected Series/Pubs:** AFI 36-xxxx series
-**Description:** The corpus contains no publications addressing military accessions, recruiting operations, or officer commissioning programs (e.g., **AFI 36-2002** Enlisted Accessions, **AFI 36-2005** Officer Commissioning Programs, **AFI 36-2011** AFROTC, **AFI 36-2013** OTS). These are fundamental 36-series functions without which the "front door" of personnel management is entirely unaddressed.
-**Recommended Action:** Include all active 36-20xx accession and commissioning AFIs in the audit corpus.
+### Gap 3 — 31-Series Security Forces Coverage Is Skeletal
+**Type:** Series Gap
+**Affected Series/Pubs:** AFI/DAFI 31-series
+**Description:** The 31-series governs Security Forces, law enforcement, and installation security — critical force protection functions. This corpus contains only:
+- **AFPD 31-1** (policy directive, not an instruction)
+- **DAFI 31-118** (Security — appears to be a AFGM, not full pub)
+- **DAFI 31-126** (DoD Military — AFGM only)
+- **AFI 31-213** (title shows "MCO 1620.2D" — likely a joint pub on military working dogs or confinement)
+- **AFJI 31-304** (title shows "MCO 3461.1" — joint instruction, possibly chemical/biological defense)
+- **DAFI 31-218** (Motor Vehicle — AFGM only)
+
+Missing critical publications include:
+- **DAFI 31-101** — Integrated Defense (installation security planning)
+- **DAFI 31-117** — Arming and Use of Force
+- **AFI 31-115** — Law Enforcement Operations (or successor)
+- **DAFI 31-501** — Personnel Security Program Management
+- **Any publication addressing:** antiterrorism (may cross to 10-series), resource protection, nuclear security, or corrections/confinement as a standalone instruction
+
+The presence of only AFGMs for DAFI 31-118, 31-126, and 31-218 without the underlying base instructions means the foundational policy text is absent — only the modifications are present.
+
+**Recommended Action:** Obtain the base instructions for all three DAFIs where only AFGMs are present. Acquire DAFI 31-101, 31-117, and 31-501 at minimum. Assess whether AFJI 31-304 has been superseded by a DAFI.
 
 ---
 
-### Gap 3 — Warrant Officer Reimplementation Without Foundational Framework
+### Gap 4 — AFGM 2026-36-2033 (Warrant Officers) — Novel Series with No Established Framework
 **Type:** Missing Authority
 **Affected Series/Pubs:** AFGM 2026-36-2033
-**Description:** The AFGM "Reimplementing Warrant Officers" introduces a significant new personnel category. However:
-- The publication number "2026-36-2033" uses a non-standard numbering convention (the "2026" prefix does not correspond to any established AFI series).
-- There is no companion AFI establishing the warrant officer career field structure, appointment criteria, promotion system, pay and allowances, or training pipeline.
-- The OPR is listed as "Unknown," meaning no office has clear accountability.
-- A single AFGM (guidance memorandum) is inherently temporary (typically 180 days) and cannot sustain a program of this magnitude without a full AFI or DAFI.
+**Description:** This publication, titled "Air Force Guidance Memorandum Reimplementing Warrant Officers," uses the unusual series designator "2026" which does not correspond to any traditional AFI series. The title indicates a major force management initiative (reintroduction of warrant officers to the Air Force). As a guidance memorandum, it is inherently temporary (typically valid for 180 days unless extended or codified). Critical concerns:
+1. **No parent AFI identified** — An AFGM must modify an existing instruction; the "36-2033" portion suggests it should modify a 36-series pub, but no AFI 36-2033 exists in the corpus.
+2. **No OPR identified** — Unknown accountability for this significant policy change.
+3. **No implementing DoDI cited** — Warrant officer programs require alignment with DoDI 1310.01 (Rank and Seniority of Commissioned Officers) and potentially new DoD-level authority.
+4. **Permanence risk** — If this AFGM expires without codification into a permanent AFI, there will be a governance vacuum for any warrant officers already appointed.
 
-This creates a **critical authority gap**: a major personnel program potentially being governed by a temporary memorandum with no identified OPR and no supporting regulatory framework.
-**Recommended Action:** (1) Verify the legitimacy and currency of this AFGM. (2) Identify the OPR. (3) Ensure a full DAFI is in development to codify warrant officer management, appointment, training, utilization, promotion, and separation policies. (4) Cross-reference with DoDI 1310.01 and relevant Title 10 USC authorities.
-
----
-
-### Gap 4 — Security Forces Core Operations and Law Enforcement Policy
-**Type:** Series Gap
-**Affected Series/Pubs:** AFI/DAFI 31-xxx series
-**Description:** The 31-series publications present are narrowly focused:
-- **DAFI 31-118** — Security (likely security forces standards)
-- **DAFI 31-126** — DoD Military (likely working dog or military justice-adjacent)
-- **DAFI 31-218** — Motor (likely motor vehicle traffic supervision)
-- **AFI 31-213** — Joint with MCO (likely armed forces disciplinary control boards)
-- **AFJI 31-304** — Joint with MCO (likely environmental protection/off-limits establishments)
-- **AFPD 31-1** — Policy directive (Integrated Defense)
-
-**Critically absent** from the corpus:
-- **DAFI 31-101** (Integrated Defense) — the foundational installation security instruction
-- **AFI 31-117** (Arming and Use of Force)
-- **DAFI 31-115** (Law and Order/Security Forces Investigations)
-- **AFI 31-501** (Personnel Security Program Management) — or its successor
-- **AFI 31-401** (Information Security Program Management)
-- **DAFI 31-103** (Security Forces Standards, Organization, and Resources)
-
-The absence of arming/use-of-force policy and integrated defense operations guidance represents a **significant operational gap** for any Security Forces audit.
-**Recommended Action:** Expand the 31-series corpus to include all active DAFI 31-1xx publications, particularly those governing use of force, integrated defense, and installation security.
+**Recommended Action:** Identify the parent instruction this AFGM modifies. Confirm the OPR (likely AF/A1 or SAF/MR). Verify DoD-level authorization for AF warrant officer reintroduction. Track the AFGM expiration date and ensure a permanent DAFI is in development.
 
 ---
 
-### Gap 5 — Garbled/Incomplete Publication Metadata Indicating Extraction Failures
-**Type:** Expired/Superseded Reference (Data Quality)
-**Affected Series/Pubs:** AFI 36-2129, AFH 36-2647, AFI 36-2122, AFI 36-2112, AFI 36-2135, AFI 36-2109
-**Description:** Multiple publications have titles that are clearly not actual titles but rather fragments of headers, URLs, or change notices:
-- **AFI 36-2129**: Title listed as "www.e-publishing.af.mil" — this is a URL, not a title. The actual AFI 36-2129 likely covers Logistics Readiness Officer/Enlisted Special Duty assignments.
-- **AFH 36-2647**: Title is "Incorporating Change 1, 8 JULY 2025" — the actual handbook title is missing.
-- **AFI 36-2135**: Title is "Incorporating Change 1, 12 November 2024" — likely the Joint Officer Management instruction.
-- **AFI 36-2109**: Title is "Incorporating Change 2, 1 February 2023" — likely Chief Master Sergeant of the Air Force, Command Chiefs, and Group/Wing Senior Enlisted roles (based on OPR AF/CCC).
-- **AFI 36-2122**: Title truncated to "INTERSERVICE OFFICERS ON" — likely "Interservice Officers on Exchange Duty."
-- **AFI 36-2112**: Title truncated to "MATERIEL MANAGEMENT ENLISTED" — likely covers materiel management enlisted career progression.
-
-This metadata corruption means the audit **cannot reliably determine what topics these publications actually address**, undermining the entire gap analysis.
-**Recommended Action:** Re-extract metadata from source PDFs with improved parsing. Verify each publication's actual title, date, certifying/approving authority, and implementing directive against the AF e-Publishing catalog.
-
----
-
-### Gap 6 — No Separation, Retirement, or Transition Policy
-**Type:** Series Gap / Missing Authority
-**Affected Series/Pubs:** AFI 36-xxxx series
-**Description:** The 36-series corpus contains no publications addressing:
-- **AFI 36-3203** (Service Retirements)
-- **AFI 36-3208** (Administrative Separation of Airmen)
-- **AFI 36-3207** (Separating Commissioning Airmen)
-- **AFI 36-3209** (Separation and Retirement Procedures for ANG/Reserve)
-- **DAFI 36-3211** (Military Separations)
-
-These represent the "back door" of personnel management — without them, there is no policy coverage for how members exit service, whether voluntarily or involuntarily.
-**Recommended Action:** Include all active 36-32xx separation and retirement AFIs.
-
----
-
-### Gap 7 — Joint Publications with Marine Corps May Be Outdated
+### Gap 5 — Potentially Expired/Superseded Joint Publications
 **Type:** Expired/Superseded Reference
-**Affected Series/Pubs:** AFI 31-213 (MCO 1620.2D), AFJI 31-304 (MCO 3461.1)
+**Affected Series/Pubs:** AFI 31-213, AFJI 31-304
 **Description:**
-- **AFI 31-213 / MCO 1620.2D**: The "AFJI" and "MCO" cross-references suggest these are joint Air Force/Marine Corps instructions. The AFJI designation itself is **legacy** — the Air Force discontinued the "AFJI" prefix years ago in favor of AFI or DAFI designations. AFJI 31-304 may be superseded.
-- **MCO 1620.2D** references suggest the Armed Forces Disciplinary Control Boards instruction, which has been updated at the DoD level. The "D" revision suffix may be outdated.
-- The OPR for both is listed as "Unknown," further suggesting these may be orphaned or unmaintained.
-**Recommended Action:** (1) Verify both publications against current AF e-Publishing and Marines.mil catalogs. (2) Determine if AFJI 31-304 has been superseded by a DAFI or DoDI. (3) Assign OPRs or formally rescind if no longer applicable.
+- **AFI 31-213** has a title field showing "MCO 1620.2D" — a Marine Corps Order. This strongly suggests this is a legacy joint instruction. The "AFJI" designation was largely discontinued in favor of joint/multi-service publications or separate service instructions. If this publication still references MCO 1620.2D, the Marine Corps order itself may have been updated or superseded.
+- **AFJI 31-304** similarly shows "MCO 3461.1" as its title. The "AFJI" prefix (Air Force Joint Instruction) has been largely phased out. This publication may be superseded or orphaned.
+
+Both publications have "Unknown" OPRs, which further suggests they may be legacy documents without active management.
+
+**Recommended Action:** Verify currency of both publications against the Air Force e-Publishing catalog. Check whether the referenced MCOs are still active. Determine if successor DAFI publications have been issued. If these are still active, assign current OPRs.
 
 ---
 
-### Gap 8 — Absence of DoDI/DoDD Implementing References
-**Type:** Thin DoDI Coverage
-**Affected Series/Pubs:** Entire corpus
-**Description:** The extraction captured **zero** DoDI/DoDD references from any publication in the corpus. This is highly anomalous — virtually every AFI includes an "Implements" or "References" block citing the higher-level DoD directive it carries out. Possible explanations:
-1. The extraction algorithm failed to parse the references sections.
-2. The PDFs are corrupted or non-OCR'd scans.
-3. The publications genuinely lack proper traceability (a compliance failure).
+### Gap 6 — AFI 36-2406 (Officer and Enlisted Evaluation Systems) — Critical Policy with Only Change Captured
+**Type:** Thin Coverage
+**Affected Series/Pubs:** AFI 36-2406
+**Description:** AFI 36-2406 governs the evaluation (performance report) system for all Air Force military personnel — one of the most consequential personnel management functions. The corpus entry shows "Incorporating Change 1, 27 MAY 2026," suggesting this is a recently modified document. However:
+1. The 2026 date is notably recent/future-dated, raising questions about document currency and version control.
+2. This single instruction must implement requirements from multiple DoDIs (including DoDI 1320.04 for officers, DoDI 1304.30 for enlisted), yet no DoDI references were captured.
+3. There is no companion publication visible for enlisted promotion testing (DAFI 36-2502) or promotion board procedures, which are tightly coupled to the evaluation system.
 
-Without DoDI traceability, it is **impossible to assess** whether Air Force policy adequately implements OSD-level requirements — which is a primary function of this audit.
-**Recommended Action:** (1) Re-process all PDFs specifically targeting "Implements," "Compliance with this publication is," and "References" sections. (2) If references are genuinely absent, flag as a compliance deficiency to SAF/AA (Air Force publications management).
+**Recommended Action:** Verify the publication date and ensure the most current version is in the corpus. Cross-reference with promotion and assignment instructions to ensure evaluation policy is coherent with downstream personnel actions.
 
 ---
 
-### Gap 9 — No Civilian Personnel Management Coverage
+### Gap 7 — AFI 36-2129 — Garbled Title Indicates Metadata/Extraction Failure
+**Type:** Missing Authority / Data Quality
+**Affected Series/Pubs:** AFI 36-2129
+**Description:** The title field for AFI 36-2129 contains only "www.e-publishing.af.mil." — this is clearly a metadata extraction error where the URL was captured instead of the publication title. The OPR is AF/A4LX (a logistics readiness office), which is unusual for a 36-series (personnel) publication. This suggests either:
+1. A mis-numbered publication (possibly should be in the 23-series for materiel management), or
+2. A logistics-related personnel management instruction (e.g., logistics readiness officer development).
+
+Without the actual title and content, it is impossible to assess what policy this covers or what gaps its absence creates.
+
+**Recommended Action:** Re-extract metadata for AFI 36-2129. Verify the publication number and title against e-Publishing. Determine if this is correctly categorized in the 36-series.
+
+---
+
+### Gap 8 — No Civilian Personnel Management Coverage
 **Type:** Series Gap
-**Affected Series/Pubs:** AFI 36-xxxx series
-**Description:** The 36-series governs both military and civilian personnel. This corpus contains no publications addressing:
-- **AFI 36-1001** (Managing the Civilian Personnel System) or equivalent DAFI
-- **AFI 36-1004** (Managing the Civilian Recognition Program)
-- Civilian hiring, classification, performance management, adverse actions, or labor relations
+**Affected Series/Pubs:** AFI 36-series (36-7xx and 36-1xxx sub-series)
+**Description:** The 36-series encompasses civilian personnel management (traditionally in the 36-7xx range and 36-1xxx range), including:
+- **AFI 36-703 / DAFI 36-703** — Civilian Conduct and Responsibility
+- **AFI 36-704** — Discipline and Adverse Actions of Civilian Employees
+- **AFI 36-1004** — Managing the Civilian Recognition Program
+- **AFI 36-802** — Pay Setting
+- **AFI 36-807** — Hours of Work and Overtime
 
-Given that DAF civilians constitute approximately 25-30% of the total force, this is a major coverage gap.
-**Recommended Action:** Determine whether the audit scope intentionally excludes civilian HR policy. If not, add all active 36-1xxx civilian management publications.
+The Air Force civilian workforce is a critical component of readiness. The complete absence of civilian personnel policy from this corpus means labor relations, conduct standards, pay administration, and workforce management cannot be assessed.
+
+**Recommended Action:** If civilian personnel policy was within the intended audit scope, acquire all active 36-7xx and 36-1xxx publications. If out of scope, document this limitation.
 
 ---
 
-### Gap 10 — Missing AFPD 36-series Policy Directives
-**Type:** Missing Authority
-**Affected Series/Pubs:** AFI 36-xxxx series
-**Description:** The corpus includes **AFPD 31-1** (the policy directive for the 31-series) but contains **no AFPD for the 36-series** (e.g., AFPD 36-20, AFPD 36-21, AFPD 36-26). Policy directives establish the overarching authority and intent that AFIs implement. Without them, there is no way to verify that the 36-series AFIs in the corpus are properly nested under current senior-leader policy direction.
-**Recommended Action:** Include all active AFPD 36-xx publications in the corpus.
+### Gap 9 — AFI 36-1301 (Acquisition Key Leadership Positions) — Incomplete Title, Narrow Scope
+**Type:** Thin Coverage
+**Affected Series/Pubs:** AFI 36-1301
+**Description:** The truncated title "MANAGEMENT OF ACQUISITION KEY" (likely "Management of Acquisition Key Leadership Positions") with OPR SAF/AQH indicates this covers a narrow workforce management function. This should implement DoDI 5000.66 (Defense Acquisition Workforce Education, Training, Experience, and Career Development Program), but no such reference is captured. The acquisition workforce management framework also requires coverage from:
+- **DoDI 1300.19** — DoD Joint Officer Management
+- **10 USC Chapter 87** — Defense Acquisition Workforce statutory requirements
+
+**Recommended Action:** Verify DoDI 5000.66 implementation. Ensure companion publications for acquisition workforce certification, training requirements, and career development are identified.
+
+---
+
+### Gap 10 — No Physical Security or Resource Protection Coverage
+**Type:** Series Gap
+**Affected Series/Pubs:** DAFI 31-series
+**Description:** While DAFI 31-118 is titled "Security" (likely physical security or security forces operations), it appears only as an AFGM without the base instruction. The corpus lacks dedicated coverage for:
+- **Priority resource protection** (nuclear weapons, conventional arms/ammunition/explosives)
+- **Information security** overlap with 31-series (DAFI 31-501 Personnel Security)
+- **Industrial security** requirements
+- **Integrated defense** planning (DAFI 31-101)
+
+These are critical force protection and national security functions that must have clear, current policy authority.
+
+**Recommended Action:** Obtain DAFI 31-101 (Integrated Defense), the full DAFI 31-118, and any applicable arms/ammunition/explosives security instructions (potentially in the 21-series but cross-referenced in the 31-series).
 
 ---
 
 ## DoDI Coverage Assessment
 
-| DoDI/DoDD | Referenced In | Coverage Assessment |
-|-----------|--------------|-------------------|
-| *(No DoDI/DoDD references captured)* | N/A | **UNABLE TO ASSESS** — The extraction process returned zero DoD directive references. This is the single largest analytical limitation of this audit. |
+| Expected DoDI | Topic | Likely Implementing AFI | Coverage Status |
+|---|---|---|---|
+| DoDI 1320.04 | Officer Promotion Actions | AFI 36-2406, missing promotion AFIs | **Unclear** — evaluation pub present but promotion pubs absent |
+| DoDI 5000.66 | Acquisition Workforce | AFI 36-1301 | **Thin** — single narrow pub, no DoDI reference captured |
+| DoDI 5200.08 | Security of Installations | DAFI 31-118 (AFGM only) | **Thin** — only guidance memo present, not base instruction |
+| DoDD 5210.56 | Arming and Use of Force | None in corpus | **Not covered** |
+| DoDI 5525.15 | Law Enforcement Standards | None in corpus | **Not covered** |
+| DoDI 1315.18 | Military Personnel Assignments | None in corpus | **Not covered** |
+| DoDI 1304.30 | Enlisted Accessions | None in corpus | **Not covered** |
+| DoDI 1310.01 | Rank and Seniority | AFGM 2026-36-2033 (temporary) | **Unclear** — only AFGM, no permanent instruction |
+| DoDI 6055.04 | DoD Traffic Safety | DAFI 31-218 (AFGM only) | **Thin** — only guidance memo present |
 
-**Expected DoDI linkages that should be present but cannot be verified:**
-
-| Expected DoDI | Expected AFI Implementor | Status |
-|---------------|--------------------------|--------|
-| DoDI 1310.01 (Rank/Grade Authorization) | AFGM 2026-36-2033 (Warrant Officers) | **Unknown — cannot verify** |
-| DoDI 1320.08 (Promotions) | AFI 36-2406 (Evaluations) | **Unknown** |
-| DoDI 1320.14 (Commissioned Officer Promotion) | Missing from corpus | **Gap** |
-| DoDI 5200.08 (Physical Security) | DAFI 31-118 | **Unknown** |
-| DoDI 5525.04 (Law Enforcement/Criminal Investigations) | Missing from corpus | **Gap** |
-| DoDI 6055.04 (Traffic Safety) | DAFI 31-218 (Motor Vehicle) | **Unknown** |
-| DoDI 1315.18 (Military Personnel Assignments) | AFI 36-2122 (Interservice Exchange) | **Unknown** |
+*Note: Because zero DoDI references were extracted from the corpus, this assessment is based entirely on expected mappings between DoD issuances and AFI series. Actual coverage cannot be confirmed without full-text review.*
 
 ---
 
 ## Confirmed Inaccessible Publications
 
-The following publications are **not in the corpus** and their absence materially degrades the completeness of this analysis:
+The following publications are absent from the corpus and represent meaningful policy gaps:
 
-| Publication | Probable Title | Impact of Absence |
-|-------------|---------------|-------------------|
-| **DAFI 31-101** | Integrated Defense | Cannot assess installation security posture policy |
-| **AFI 31-117** | Arming and Use of Force | Cannot assess critical life-safety/legal authority policy |
-| **DAFI 31-115** | Law and Order Operations | Cannot assess law enforcement and investigations policy |
-| **AFI 36-2502** | Enlisted Airman Promotion/Demotion | Cannot assess enlisted career progression policy |
-| **DAFI 36-3211** | Military Separations | Cannot assess separation/discharge policy |
-| **AFI 36-2002** | Enlisted Accessions | Cannot assess recruiting/accessions policy |
-| **AFI 36-2670** | Total Force Development | Cannot assess PME, training, and development policy |
-| **AFI 36-2903** | Dress and Personal Appearance | Cannot assess standards and discipline framework |
-| **AFI 31-401** | Information Security Program | Cannot assess classified information protection policy |
-
----
-
-## Notes
-
-1. **Corpus Representativeness:** The stated "20 publications" does not match the 16 enumerated entries. Four publications may have been lost in extraction or are phantom entries. This discrepancy should be resolved.
-
-2. **Temporal Anomalies:** Several publications reference dates in 2025 and 2026 (AFH 36-2647 — July 2025; AFI 36-2406 — May 2026; AFI 36-2135 — November 2024; AFGM 2026-36-2033 — warrant officer reimplementation). If this audit is being conducted in mid-2025, some of these may be pre-decisional or draft documents that should not be treated as authoritative policy.
-
-3. **The Warrant Officer AFGM Requires Special Scrutiny:** The reimplementation of warrant officers in the Air Force would be one of the most significant personnel structure changes in decades. A single AFGM with an unknown OPR is wholly insufficient to govern such a transformation. This warrants immediate escalation to AF/A1 and SAF/MR for verification.
-
-4. **AFJI Prefix is Obsolete:** The presence of AFJI 31-304 suggests the corpus contains at least one publication that may predate the DAFI transition (2020+) and possibly the AFI transition from AFR (1990s). This
+1. **DAFI 31-101** — Integrated Defense: Foundational installation security planning document
+2. **DAFI 31-117** — Arming and Use of Force: Life-safety policy with legal implications
+3. **DAFI 31-501** — Personnel Security Program Management: Critical for clearance adjudication
+4. **DAFI 36-2110** — Total Force Assignments: Governs all military assignment actions
+5. **DAFI 36-2502** —
