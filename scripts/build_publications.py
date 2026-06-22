@@ -45,8 +45,15 @@ STATUS_BADGES = {
 
 def get_series(pub_number: str) -> str:
     import re
-    m = re.search(r"(\d{2})-", pub_number)
-    return m.group(1) if m else "??"
+    # AFGM 2026-36-2033 → series 36 (skip the year component)
+    m = re.match(r'^(?:AFGM|DAFGM)\s+\d{4}-(\d{2})-', pub_number, re.IGNORECASE)
+    if m:
+        return m.group(1)
+    # Standard: AFI 36-2406, DAFI 31-118 → first XX- pattern after the prefix
+    m = re.search(r'(?:^|\s)(\d{2})-', pub_number)
+    if m:
+        return m.group(1)
+    return "??"
 
 
 def build_publications_page(index: dict) -> str:
@@ -83,7 +90,10 @@ def build_publications_page(index: dict) -> str:
 
     for series in sorted(by_series.keys()):
         pubs = by_series[series]
-        label = SERIES_LABELS.get(series, f"{series}-series")
+        if series == "??":
+            label = "Coverage Gaps — Unknown Series"
+        else:
+            label = SERIES_LABELS.get(series, f"{series}-series")
         series_full = sum(
             1 for _, m in pubs
             if m.get("doc_type", "POLICY_FULL") in ("POLICY_FULL", "POLICY_SPARSE")
@@ -108,6 +118,12 @@ def build_publications_page(index: dict) -> str:
             # Clean up title for display
             if title.startswith("[") and "]" in title:
                 title = ""  # stub titles are just doc_type markers
+            # Clean up common bad title patterns from extraction
+            if any(title.startswith(x) for x in [
+                "Incorporating Change", "Department of the Air Force Guidance Memorandum to",
+                "MCO ", "www.e-publishing", "[www", "Unknown Title",
+            ]):
+                title = ""
             title = title[:55] + "…" if len(title) > 55 else title
 
             badge = STATUS_BADGES.get(doc_type, "✅ Full")
@@ -115,7 +131,7 @@ def build_publications_page(index: dict) -> str:
 
             # Link to wiki page if it exists
             if wiki_file:
-                page_link = wiki_file.replace(".md", "/")
+                page_link = wiki_file  # MkDocs converts .md links to correct HTML paths
                 pub_cell = f"[{pub_num}]({page_link})"
             else:
                 pub_cell = pub_num
