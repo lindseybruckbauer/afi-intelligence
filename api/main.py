@@ -16,6 +16,8 @@ import logging
 from collections import defaultdict
 from pathlib import Path
 from typing import Optional
+import os
+import httpx  
 
 import anthropic
 from fastapi import FastAPI, HTTPException, Request
@@ -135,6 +137,14 @@ class ChatResponse(BaseModel):
     rag_chunks_used: int
     request_id: str
 
+class FeedbackRequest(BaseModel):
+    rating: int = Field(..., ge=1, le=5)
+    comment: str = Field(default="", max_length=1000)
+    session_id: str = Field(default="", max_length=64)
+ 
+    @validator("comment")
+    def sanitize_comment(cls, v):
+        return v.replace("\x00", "").strip()
 
 # ---------------------------------------------------------------------------
 # Exception handlers
@@ -165,7 +175,8 @@ async def generic_exception_handler(request: Request, exc: Exception):
 @app.post("/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest, request: Request):
     # Rate limiting
-    client_ip = request.client.host if request.client else "unknown"
+    forwarded_for = request.headers.get("x-forwarded-for", "").split(",")[0].strip()
+    client_ip = forwarded_for or (request.client.host if request.client else "unknown")
     if not check_rate_limit(client_ip):
         raise HTTPException(
             status_code=429,
@@ -231,3 +242,49 @@ def corpus():
 @app.get("/health")
 def health():
     return {"status": "ok", "version": "0.3.0"}
+
+@app.post("/feedback")
+async def feedback(req: FeedbackRequest, request: Request):
+    """Store user feedback in Airtable. Client never sees the API key."""
+ 
+    forwarded_for = request.headers.get("x-forwarded-for", "").split(",")[0].strip()
+    client_ip = forwarded_for or (request.client.host if request.client else "unknown")
+ 
+    if not check_rate_limit(client_ip):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded.")
+ 
+    airtable_key  = os.environ.get("AIRTABLE_API_KEY")
+    airtable_base = os.environ.get("AIRTABLE_BASE_ID")
+    airtable_table = os.environ.get("AIRTABLE_TABLE_NAME", "Feedback")
+ 
+    if not airtable_key or not airtable_base:
+        # Silently log and return OK — don't expose missing config to client
+        logger.warning("Feedback received but AIRTABLE_API_KEY/BASE_ID not configured")
+        return {"status": "ok"}
+ 
+    payload = {
+        "fields": {
+            "Rating":    req.rating,
+            "Comment":   req.comment,
+            "Timestamp": __import__("datetime").datetime.utcnow().isoformat() + "Z",
+            "Session":   req.session_id[:64],
+        }
+    }
+ 
+    try:
+        async with httpx.AsyncClient(timeout=5.0) as client:
+            resp = await client.post(
+                f"https://api.airtable.com/v0/{airtable_base}/{airtable_table}",
+                headers={
+                    "Authorization": f"Bearer {airtable_key}",
+                    "Content-Type": "application/json",
+                },
+                json=payload,
+            )
+            resp.raise_for_status()
+    except Exception as e:
+        logger.error(f"Airtable write failed: {e}")
+        # Don't surface Airtable errors to client
+        return {"status": "ok"}
+ 
+    return {"status": "ok"}

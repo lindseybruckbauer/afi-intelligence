@@ -155,45 +155,51 @@ CORPUS WIKI PAGES:
 # Analysis 2: Gaps
 # ---------------------------------------------------------------------------
 
+ 
 def analyze_gaps(index: dict) -> str:
     print("  Building gap context...")
     full_docs, stubs = split_index(index)
-
+ 
+    # Build stub context — was defined but never called before this fix
+    stub_context = format_stub_summary(stubs)
+ 
     # Cross-reference: which DoDIs are referenced but potentially under-implemented
     dodi_to_pubs = defaultdict(list)
     for pub_num, meta in full_docs.items():
         for ref in meta.get("implements", []) + meta.get("references", []):
             if "DoDI" in ref.upper() or "DoDD" in ref.upper():
                 dodi_to_pubs[ref].append(pub_num)
-
+ 
     series_present = sorted(set(
         pub.split()[1].split("-")[0]
         for pub in full_docs
         if len(pub.split()) > 1 and "-" in pub.split()[1]
     ))
-
+ 
     titles_json = json.dumps(
         {k: {"title": v["title"], "opr": v["opr"]} for k, v in full_docs.items()},
         indent=2
     )
-
+ 
     references_json = json.dumps(dict(dodi_to_pubs), indent=2)
-
+ 
     prompt = f"""You are a DoD policy analyst auditing a set of Air Force Instructions for coverage gaps.
-
+ 
 CORPUS OVERVIEW:
 - Series present: {', '.join(f'AFI {s}-xxx' for s in series_present)}
 - Publications in corpus: {len(index)}
 - Note: This may be a SUBSET of all active AFIs in these series.
-
+ 
 PUBLICATION TITLES & OPRs:
 {titles_json}
-
+ 
 DoDI/DoDD REFERENCES FOUND IN CORPUS:
 {references_json}
-
+ 
+{stub_context}
+ 
 Your task: identify GAPS — areas where policy coverage is missing, thin, or unclear.
-
+ 
 Gap types to look for:
 1. MISSING AUTHORITY: A common military function within these series (personnel management,
    security forces, civil engineering, etc.) where no AFI clearly assigns authority.
@@ -202,71 +208,86 @@ Gap types to look for:
 3. SERIES GAPS: Topic areas that belong in a given series but appear unaddressed
    by any pub in this corpus (accounting for the possibility of pubs not in this corpus).
 4. EXPIRED/SUPERSEDED REFERENCES: Signs that pubs reference outdated higher-level directives.
-
+ 
 Format as markdown:
-
+ 
 ## Summary
 [Brief characterization of the corpus's coverage overall]
-
+ 
 ## Gap Findings
-
+ 
 ### Gap 1 — [Short title]
 **Type:** Missing Authority / Thin DoDI Coverage / Series Gap / Expired Reference
 **Affected Series/Pubs:** ...
 **Description:** ...
 **Recommended Action:** ...
-
+ 
 [repeat]
-
+ 
 ## DoDI Coverage Assessment
 [Table or bullets assessing each DoDI reference: well-covered / thin / unclear]
-
+ 
 ## Confirmed Inaccessible Publications
 [List any publications from the CONFIRMED COVERAGE GAPS section above that represent
 meaningful policy gaps — i.e. their absence affects the completeness of this analysis]
-
+ 
 ## Notes
 [Caveats, corpus limitations, recommended follow-on analysis]"""
-
+ 
     return _ask(prompt, max_tokens=4000)
-
+ 
 
 # ---------------------------------------------------------------------------
 # Analysis 3: Authority Matrix
 # ---------------------------------------------------------------------------
 
 def analyze_authority_matrix(index: dict) -> str:
-    print("  Extracting authority statements from PDFs...")
-
+    print("  Building authority statement context from index...")
+ 
     all_statements = []
     for pub_num, meta in sorted(index.items()):
-        pdf_path = RAW_PDFS / meta["file"]
+        # Read from index (populated by ingest_pdfs.py or migrate_authority_statements.py)
+        # This eliminates the PDF dependency at analysis time.
+        stored = meta.get("authority_statements")
+        if stored is not None:
+            for stmt in stored[:20]:
+                all_statements.append({"pub": pub_num, "statement": stmt})
+            continue
+ 
+        # Fallback: PDF extraction if field missing from index.
+        # Run scripts/migrate_authority_statements.py to eliminate this path.
+        pdf_path = RAW_PDFS / meta.get("file", "")
         if not pdf_path.exists():
-            print(f"    WARN: PDF not found for {pub_num}, skipping authority extraction")
+            print(f"    WARN: no authority_statements in index and PDF not found for {pub_num}")
             continue
         try:
             doc = extract(pdf_path)
             for stmt in doc.authority_statements[:20]:
                 all_statements.append({"pub": pub_num, "statement": stmt})
+            print(f"    FALLBACK PDF extraction: {pub_num} ({len(doc.authority_statements)} stmts)")
         except Exception as e:
             print(f"    WARN: could not re-extract {pub_num}: {e}")
-
+ 
     if not all_statements:
-        return "No authority statements could be extracted. Check that PDFs are in raw/pdfs/."
-
+        return (
+            "No authority statements found in index. "
+            "Run `python3 scripts/migrate_authority_statements.py` to backfill, "
+            "then re-run this analysis."
+        )
+ 
     stmts_json = json.dumps(all_statements, indent=2)
-
+ 
     prompt = f"""You are a DoD policy analyst building an authority matrix from Air Force Instructions.
-
+ 
 Below are sentences extracted from AFIs that grant, delegate, restrict, or describe authority.
-
+ 
 Your task: organize these into a structured authority matrix.
-
+ 
 PART 1 — AUTHORITY MATRIX TABLE
 Produce a markdown table:
 | Role / Office | Action / Function | Conditions or Limits | Source AFI | Section |
 |---------------|-------------------|----------------------|------------|---------|
-
+ 
 Rules:
 - Each row = one discrete authority grant
 - "Role/Office" = specific role (e.g., Wing Commander, MAJCOM/CC, SAF/MR, Installation Commander)
@@ -274,25 +295,26 @@ Rules:
 - "Conditions/Limits" = any stated restrictions, thresholds, or delegation conditions
 - "Source AFI" = publication number
 - Include only statements that are specific enough to be actionable
-
+ 
 PART 2 — CONFLICTING OR AMBIGUOUS AUTHORITIES
 Identify cases where:
 - Two different roles are both assigned the same authority in different pubs
 - A statement is vague about WHICH commander level has the authority
 - Delegation chains are unclear
-
+ 
 Format as bullets:
 - [Issue description] — See [AFI X] vs [AFI Y]
-
+ 
 PART 3 — AUTHORITY GAPS
 Functions that appear in the corpus but where no clear authority is assigned.
-
+ 
 ---
 EXTRACTED AUTHORITY STATEMENTS:
 {stmts_json}"""
-
+ 
     return _ask(prompt, max_tokens=5000)
-
+ 
+ 
 
 # ---------------------------------------------------------------------------
 # Main

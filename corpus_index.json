@@ -43,7 +43,12 @@
     "section_count": 0,
     "authority_statement_count": 3,
     "chunk_count": 21,
-    "wiki_file": "afgm2026-36-2033.md"
+    "wiki_file": "afgm2026-36-2033.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of command \nto the appropriate tier waiver approval authority, or alternately, to the AFGM OPR for non-\ntiered compliance items, as applicable.",
+      "In accordance with, DAFI 52-201, Religious Freedom in the \nDepartment of the Air Force, the AF will approve pre-accession requests for accommodation of \nreligious practices unless accommodation adversely affects military necessity, including unit \nreadiness, individual readiness, unit cohesion, good order, discipline, health, and/or safety for \nAirmen and squadrons.",
+      "Members wishing to participate in training prior to 6 months postpartum must sign the \nappropriate contractual statement in accordance with DAFMAN 36-2032, Military Recruiting \nand Accessions, and must receive written approval to participate in all physical requirements, to \ninclude fitness assessment, from the applicant\u2019s attending physician with concurrence from the \nwaiver authority."
+    ]
   },
   "AFH 36-2647": {
     "status": "ok",
@@ -68,7 +73,8 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 38,
-    "wiki_file": "afh36-2647.md"
+    "wiki_file": "afh36-2647.md",
+    "authority_statements": []
   },
   "AFI 36-1301": {
     "status": "ok",
@@ -92,7 +98,17 @@
     "section_count": 29,
     "authority_statement_count": 8,
     "chunk_count": 22,
-    "wiki_file": "afi36-1301.md"
+    "wiki_file": "afi36-1301.md",
+    "authority_statements": [
+      "Submit \nrequests for waivers through the chain of command to the appropriate Tier waiver authority, or \nalternatively, to the requestor\u2019s commander for non-tiered compliance items.",
+      "For all other key leadership positions, the \nappropriate senior level official within the command will approve position and tenure waivers.",
+      "The Service Acquisition Executive will approve selection of Program Executive \nOfficer, Deputy Program Executive Officer, Acquisition and Business Systems Category I \nProgram Manager, Acquisition and Business Systems Category I Deputy Program Manager, \nand Acquisition Category II Program Managers.",
+      "For all other key leadership positions covered in this AFI that are not identified in \nparagraph 1.4.4, the hiring authority retains final selection approval authority. \n1.4.6.",
+      "Service Acquisition Executive will approve all position waivers for Program \nExecutive Officers, Deputy Program Executive Officers, Program Managers and Deputy \nProgram Managers of Acquisition and Business Systems Category I programs, and \nProgram Managers for Acquisition Category II programs.",
+      "For all other key leadership \npositions, the appropriate senior level official within the command will approve position \nwaivers and provide a copy of the approved waiver to SAF/AQH.",
+      "If warranted, the Service Acquisition Executive may approve a waiver to release an \nindividual from the tenure agreement before it ends. \n1.7.2.1.",
+      "Service Acquisition Executive will approve all tenure waivers for Program \nExecutive Officers, Deputy Program Executive Officers, Program Managers and Deputy \nProgram Managers of Acquisition and Business Systems Category I programs, and \nProgram Managers for Acquisition Category II programs."
+    ]
   },
   "AFI 36-2109": {
     "status": "ok",
@@ -122,7 +138,12 @@
     "section_count": 36,
     "authority_statement_count": 3,
     "chunk_count": 36,
-    "wiki_file": "afi36-2109.md"
+    "wiki_file": "afi36-2109.md",
+    "authority_statements": [
+      "It \nestablishes the selection and approval authority for the position of Chief Master Sergeant of the \nAir Force (CMSAF), Command Chief Master Sergeant (CCM) positions, and group senior enlisted \nleader (SEL) positions.",
+      "Submit requests for waivers \nthrough the chain of command to the appropriate Tier waiver approval authority, or alternately, \nthrough the chain of command to the CMSAF for non-tiered compliance items.",
+      "Each 12 OAY is authorized to bring their spouse, family member, or one person of their \nchoosing."
+    ]
   },
   "AFI 36-2112": {
     "status": "ok",
@@ -151,7 +172,8 @@
     "section_count": 22,
     "authority_statement_count": 0,
     "chunk_count": 22,
-    "wiki_file": "afi36-2112.md"
+    "wiki_file": "afi36-2112.md",
+    "authority_statements": []
   },
   "AFI 36-2113": {
     "status": "ok",
@@ -194,7 +216,14 @@
     "section_count": 43,
     "authority_statement_count": 5,
     "chunk_count": 43,
-    "wiki_file": "afi36-2113.md"
+    "wiki_file": "afi36-2113.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of command to the \nappropriate Tier waiver approval authority, or alternately, to the requestor\u2019s commander for non-\ntiered compliance items.",
+      "Serves as the approval authority for RegAF requests to serve beyond four years in the \n8F000 SDI. \n2.1.14.",
+      "Serves as the approval authority for RegAF applications for members currently serving \nin another SDI. \n2.1.15.",
+      "If an over-grade is requested during rotation, it falls under the FY manning policy \nin effect at the time with a recommendation by the CCM, approval authority, WG/CC or \nequivalent. \n6.4.7.",
+      "AFPC/DP2OSS may waive codes to facilitate needs of the Air Force. \n6.8.3."
+    ]
   },
   "AFI 36-2122": {
     "status": "ok",
@@ -220,7 +249,10 @@
     "section_count": 72,
     "authority_statement_count": 1,
     "chunk_count": 68,
-    "wiki_file": "afi36-2122.md"
+    "wiki_file": "afi36-2122.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of \ncommand to the appropriate Tier waiver approval authority, or alternately, through the applicable \nMAJCOM for staffing to AFPC/DPM for final decision on non-tiered compliance items. \n\n2 \nAFI36-2122  30 JUNE 2025 \nSUMMARY OF CHANGES \nThis publication has been revised."
+    ]
   },
   "AFI 36-2129": {
     "status": "ok",
@@ -262,7 +294,10 @@
     "section_count": 117,
     "authority_statement_count": 1,
     "chunk_count": 95,
-    "wiki_file": "afi36-2129.md"
+    "wiki_file": "afi36-2129.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of command to the appropriate \nTier waiver approval authority, or alternately to the publication office of primary responsibility for \nnon-tiered compliance items."
+    ]
   },
   "AFI 36-2135": {
     "status": "ok",
@@ -289,7 +324,10 @@
     "section_count": 28,
     "authority_statement_count": 1,
     "chunk_count": 27,
-    "wiki_file": "afi36-2135.md"
+    "wiki_file": "afi36-2135.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of command to \nthe appropriate Tier waiver approval authority, or alternately, through the applicable MAJCOM to \n\n2 \nAFI36-2135  4 NOVEMBER 2020 \nthe Air Force Personnel Center, Military Assignments Branch (AFPC/DP3AM) for non-tiered \ncompliance items."
+    ]
   },
   "AFI 36-2406": {
     "status": "ok",
@@ -333,7 +371,27 @@
     "section_count": 82,
     "authority_statement_count": 18,
     "chunk_count": 83,
-    "wiki_file": "afi36-2406.md"
+    "wiki_file": "afi36-2406.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of command to the appropriate Tier \nwaiver approval authority; for non-tiered items AFPC/DPPSP is the approval authority with \nconcurrence of AF/A1P (or Air Force Reserve Directorate of Personnel (AF/REP) and National \nGuard Bureau Force Management Division (NGB/A1P) as applicable).",
+      "The documentation and/or approval authority required will vary depending on the nature of the \ncircumstances.",
+      "If the approval authority recommends disapproval, they must provide \njustification and forward the request to the member\u2019s wing commander or equivalent \n(delegable no lower than the deputy wing commander or equivalent) for final approval \nor disapproval.",
+      "See paragraph \n1.4.11.1.2 for the approval authority. \n\n18 \nAFI36-2406  22 AUGUST 2025 \n1.4.11.3.",
+      "AFPC/DPPSP serves as the approval authority for \nRegAF members and ARPC/DPTSE serves as the approval authority for ARC \nmembers for courses requesting consideration for non-rated periods of supervision.",
+      "The final \napproval authority will either approve or deny the request. \n1.8.1.1.1.3.1.",
+      "The decision of the approval authority is the final decision for such \nwaiver requests and may not be appealed or considered further.",
+      "In order to approve any waiver requests, the approval authority \nmust issue a written finding that the mandatory comments for the specific \ncriminal conviction are not in the best interests of the Air Force and that the \ninclusion of any such comments would unduly harm the ratee.",
+      "(T-1) If the ratee needs additional time, e.g., due to the non-\navailability of an Area Defense Counsel or the referral reviewer has returned the \nrebuttal because it is more than 10 pages, the referral reviewer may grant an extension.",
+      "The ratee may grant access to the completed forms at their discretion. \n2.9.3.",
+      "In such \ncases, when the stratification statement comes from someone between the rater and the \nHLR, either the rater or the HLR is authorized to use it. \n3.15.6.7.2.",
+      "(T-1) Exception: In joint agencies, the Air Force element (AFELM)/CC \non G-series orders is authorized to sign ALQ evaluations in lieu of the forced distributor \nwhen the forced distributor signs the MEL. \n4.12.5.4.",
+      "The AFPC MLR office will approve exceptions in order to maintain \nintegrity in the Officer Evaluation System and to ensure fair and proper consideration is \ngiven to all affected officers.",
+      "However, \nin extreme circumstances and on a case-by-case basis, the AFPC MLR office may approve changes \nup to one duty day prior to the central selection board.",
+      "However, in extreme circumstances, and on \na case-by-case basis, ARPC/PB may approve changes up to one duty day prior to the central \nselection board.",
+      "The ERAB is authorized to modify evaluations that differ from the applicant's request \n(e.g., the applicant requests the report be voided because the feedback date is incorrect; \nthe ERAB may deny voiding the report and instead direct the feedback date be \ncorrected). \n10.2.4.",
+      "R \nU \nL \nE \nMinor Errors \nNote:  Once a digitally signed evaluation has been transmitted to AFPC or ARPC, only \nAFPC or ARPC is authorized to make the correction.",
+      "Only \nthe CSAF may approve exceptions; however, the HAF Deputy Chief of Staff, Personnel, may \nexercise similar authority in cases involving the management levels of general officers."
+    ]
   },
   "DAFI 31-118": {
     "status": "ok",
@@ -414,7 +472,23 @@
     "section_count": 87,
     "authority_statement_count": 14,
     "chunk_count": 88,
-    "wiki_file": "afi31-118.md"
+    "wiki_file": "afi31-118.md",
+    "authority_statements": [
+      "(ADDED) Approve the meeting minutes/decision sheet and is authorized to call \nupon other attendees/subject matter experts as necessary. \n \n3.3.5.2.2.2.",
+      "Waiver Authority for Mandatory Training Requirements--Civilians. .....................  \n80 \nTable 6.2.",
+      "SF has the authority to enforce other aspects of federal law not covered \nby the UCMJ. \n3.1.2.1.",
+      "The SB chair retains authority over all SB permanent voting \nmembership changes.",
+      "The SFEC chair will approve the meeting minutes/decision sheet and call upon other \nattendees/subject matter experts as necessary.",
+      "The SWG chair retains authority over all SWG permanent voting membership \nchanges.",
+      "The SFTWG chair retains authority over all SFTWG permanent voting \nmembership changes.",
+      "The EWG chair retains authority over all EWG permanent voting membership \nchanges.",
+      "Policies \nwhere waiver authority is not otherwise defined will be processed and coordinated with HQ \nAF/A4S/CFM, Security (Law Enforcement).",
+      "Approval authority and procedures to request waivers are outlined below in Tables 6.1 and \n6.2 A waiver request must start with the individual or the individual\u2019s immediate supervisor.",
+      "Waiver Authority for Mandatory Training Requirements--Civilians.",
+      "Approval authority for AFCS GS-0083 is HQ AF/A4S/CFM, Security (Law Enforcement). \n3.",
+      "A4S/CFM, \nSecurity (Law \nEnforcement) \nAir Force \nevaluate request and either approve or disapprove those \nthat are within your approval authority (see Table 6.1.).",
+      "The Civilian \nDefender is authorized to take the test twice; the second PAT must be accomplished within 90 \ndays of the original test date."
+    ]
   },
   "DAFI 31-126": {
     "status": "ok",
@@ -443,7 +517,12 @@
     "section_count": 0,
     "authority_statement_count": 3,
     "chunk_count": 85,
-    "wiki_file": "afi31-126.md"
+    "wiki_file": "afi31-126.md",
+    "authority_statements": [
+      "Submit requests for waivers through the chain of command to the appropriate Tier waiver \napproval authority, or alternately, to the requestors commander for non-tiered compliance items.",
+      "Only the CCB Chairperson, \nor designated representative, has the authority to approve or disapprove the actions of the CCB.",
+      "(T-0)  When an MWD is experiencing undue \nsuffering with a poor prognosis for return to duty, the attending veterinarian is authorized to \neuthanize the MWD without prior consultation with DoD MWD VS personnel."
+    ]
   },
   "AFI 31-213": {
     "status": "ok",
@@ -460,7 +539,8 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 1,
-    "wiki_file": "afji31-213_cover_letter.md"
+    "wiki_file": "afji31-213_cover_letter.md",
+    "authority_statements": []
   },
   "AFJI31-304": {
     "status": "ok",
@@ -478,7 +558,13 @@
     "section_count": 0,
     "authority_statement_count": 4,
     "chunk_count": 155,
-    "wiki_file": "afji31-304.md"
+    "wiki_file": "afji31-304.md",
+    "authority_statements": [
+      "The proponent has the authority to approve\nexceptions to this regulation that are consis-\ntent with controlling law and regulation.",
+      "Pro-\nponents may delegate the approval authority,\nin writing, to a division chief within the pro-\nponent agency in the grade of colonel or the\ncivilian equivalent.",
+      "These items are not to be considered a part of the 55 pounds of\npersonal effects and property that each EPW is authorized to take.\nk.",
+      "The EPW\u2019s command,\nwith the advice of military medical authority, is authorized to trans-\nfer injured, sick, and wounded EPW to other commands.\nq."
+    ]
   },
   "AFPD 31-1": {
     "status": "ok",
@@ -499,7 +585,8 @@
     "section_count": 71,
     "authority_statement_count": 0,
     "chunk_count": 69,
-    "wiki_file": "afpd31-1.md"
+    "wiki_file": "afpd31-1.md",
+    "authority_statements": []
   },
   "DAFI 31-218": {
     "status": "ok",
@@ -519,7 +606,8 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 2,
-    "wiki_file": "dafi31-218.md"
+    "wiki_file": "dafi31-218.md",
+    "authority_statements": []
   },
   "AFVA31-106": {
     "status": "stub",
@@ -536,7 +624,8 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 0,
-    "wiki_file": "afva31-106.md"
+    "wiki_file": "afva31-106.md",
+    "authority_statements": []
   },
   "AFVA31-107": {
     "status": "stub",
@@ -553,7 +642,8 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 0,
-    "wiki_file": "afva31-107.md"
+    "wiki_file": "afva31-107.md",
+    "authority_statements": []
   },
   "RESTRICTED_ACCESS": {
     "status": "stub",
@@ -570,7 +660,8 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 0,
-    "wiki_file": "restricted_access.md"
+    "wiki_file": "restricted_access.md",
+    "authority_statements": []
   },
   "STOCKED_AND_ISSUED": {
     "status": "stub",
@@ -587,6 +678,7 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 0,
-    "wiki_file": "stocked_and_issued.md"
+    "wiki_file": "stocked_and_issued.md",
+    "authority_statements": []
   }
 }

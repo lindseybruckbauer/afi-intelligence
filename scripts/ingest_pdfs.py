@@ -366,6 +366,7 @@ def ingest_one(
         "references":              doc.references,
         "section_count":           len(doc.sections),
         "authority_statement_count": len(doc.authority_statements),
+        "authority_statements":      doc.authority_statements,
         "chunk_count":             n_chunks,
         "wiki_file":               wiki_path.name,
     }
