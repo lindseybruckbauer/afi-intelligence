@@ -5,84 +5,89 @@
 
 
 ## Summary
-Total findings: 14 | HIGH: 3 | MEDIUM: 8 | LOW: 3
+Total findings: 15 | HIGH: 3 | MEDIUM: 8 | LOW: 4
 
 ## Findings
 
-### Finding 1 — Enlisted Evaluation Policy Authority Overlap [MEDIUM]
-**Pubs:** AFI 36-2406 vs AFGM 2026-36-2033
-**Issue:** AFI 36-2406 establishes the comprehensive Officer and Enlisted Evaluations Systems under AF/A1PPP, while AFGM 2026-36-2033 prescribes evaluation procedures for the new warrant officer corps as part of the full personnel life cycle. The AFGM states it prevails over inconsistent publications, but it is unclear how warrant officer evaluations integrate with the established evaluation forms, processes, and approval chains in AFI 36-2406, creating potential confusion about which evaluation instruments and rating chains apply.
-**Resolution:** AFI 36-2406 should be updated via interim change to incorporate warrant officer evaluation provisions, or the AFGM should explicitly defer to AFI 36-2406's processes and identify only the delta requirements unique to warrant officers.
-
-### Finding 2 — Warrant Officer Promotion vs Enlisted Promotion Authority Overlap [HIGH]
-**Pubs:** AFGM 2026-36-2033 vs AFI 36-2109
-**Issue:** AFGM 2026-36-2033 establishes a full grade structure and promotion system for warrant officers under AF/A1, while AFI 36-2109 governs senior enlisted leadership management including the pipeline from which warrant officer candidates will likely be drawn (CMSgts, senior NCOs). The AFGM's accession and selection board processes (e.g., AFRC/A6 conducting WO selection boards) may conflict with or duplicate existing senior enlisted management authorities and talent pipelines described in AFI 36-2109, particularly regarding who controls the flow of senior enlisted talent.
-**Resolution:** AFI 36-2109 should be updated to acknowledge the warrant officer pathway and deconflict senior enlisted management authorities. AFGM 2026-36-2033 should cross-reference AFI 36-2109 to clarify the relationship between senior enlisted positions and WO accessions.
-
-### Finding 3 — AF/A1 Personnel Policy Development Authority Overlap [MEDIUM]
-**Pubs:** AFGM 2026-36-2033 vs AFI 36-2135 vs AFI 36-2109 vs AFI 36-2406
-**Issue:** AF/A1 is assigned as the central policy development authority for warrant officer management (AFGM 2026-36-2033), joint officer management (AFI 36-2135), senior enlisted leadership (AFI 36-2109), and evaluation systems (AFI 36-2406). While this is organizationally logical, the AFGM creates a parallel personnel management framework (accessions, classification, promotions, separations) that substantially duplicates the structural authorities already distributed across the other AFIs without clearly subordinating to or cross-referencing them.
-**Resolution:** The permanent publication replacing AFGM 2026-36-2033 should explicitly identify which existing AFIs govern each life-cycle function for warrant officers and only prescribe WO-unique deviations, rather than restating parallel authorities.
-
-### Finding 4 — Competency Modeling vs Career Field Management Authority [MEDIUM]
-**Pubs:** AFH 36-2647 vs AFI 36-2112 vs AFI 36-2129
-**Issue:** AFH 36-2647 assigns AETC/CC and AETC/A3J responsibility for developing and executing competency modeling across all career fields, including occupational competency models built with Career Field Managers (CFMs). Meanwhile, AFI 36-2112 and AFI 36-2129 assign their respective CFMs (2S0X1 under AF/A4LR and 2G0X1 under AF/A4LX) authority over career-long training plans, career path construction, and training effectiveness evaluation—functions that overlap with AETC's competency modeling responsibilities. The boundary between AETC's competency modeling authority and CFM-driven career development is unclear.
-**Resolution:** AFH 36-2647 should clarify that AETC's role is to provide the methodology and framework, while CFMs retain ownership of career field-specific content. AFIs 36-2112 and 36-2129 should reference AFH 36-2647 as the governing methodology for competency model development.
-
-### Finding 5 — Security Forces Governance and Integrated Defense Authority Overlap [MEDIUM]
-**Pubs:** AFPD 31-1 vs DAFI 31-118
-**Issue:** AFPD 31-1 assigns integrated defense responsibilities broadly across multiple HAF two-letters (AF/A1, A2, A3, A4) and installation commanders, while DAFI 31-118's DAFGM establishes the Security Forces Enterprise Governance (SFEG) structure with AF/A4S as the SFEG Lead having veto authority on SF Executive Board decisions. The SFEG governance construct in DAFI 31-118 creates a parallel decision-making body for security forces that may conflict with the multi-functional integrated defense framework envisioned by AFPD 31-1, where AF/A3, A2, and others have co-equal roles.
-**Resolution:** AFPD 31-1 should be updated to acknowledge the SFEG governance structure or DAFI 31-118 should explicitly scope SFEG authority to Security Forces-internal matters, deferring integrated defense coordination to the AFPD 31-1 framework.
-
-### Finding 6 — Motor Vehicle Supervision Publication Hierarchy Conflict [LOW]
-**Pubs:** DAFI 31-218 vs AFPD 31-1
-**Issue:** DAFI 31-218 is re-designated from AFI 31-218 (a joint-service publication AR 190-5/OPNAV 11200.5D/MCO 5110.1D/DLAR 5720.1) to a DAF Instruction. However, the underlying joint publication remains in effect for other services. The DAFGM states it prevails over inconsistent DAF publications per DAFI 33-360, but the base publication implements a joint regulation, creating ambiguity about whether unilateral DAF changes are consistent with joint-service obligations.
-**Resolution:** AF/A4 should coordinate with the Army (proponent for AR 190-5) to ensure DAF-specific changes are reflected in or do not conflict with the joint publication, or formally withdraw from the joint publication and publish a standalone DAF instruction.
-
-### Finding 7 — Off-Installation Law Enforcement Authority Overlap [MEDIUM]
-**Pubs:** AFI 31-213 vs AFPD 31-1 vs DAFI 31-118
-**Issue:** AFI 31-213 (a joint-service publication) governs Armed Forces Disciplinary Control Boards and off-installation liaison and operations, assigning responsibilities to installation commanders and military police. AFPD 31-1 defines integrated defense including operations within the "base security zone" (which extends beyond the installation boundary), and DAFI 31-118 governs Security Forces standards and procedures. The off-installation operations authorities in AFI 31-213 potentially overlap with base security zone operations under AFPD 31-1 and SF operational procedures under DAFI 31-118.
-**Resolution:** DAFI 31-118 or a future revision of AFPD 31-1 should explicitly reference AFI 31-213 as the governing authority for AFDCB matters and delineate the boundary between base security zone operations and off-installation disciplinary control activities.
-
-### Finding 8 — Warrant Officer Classification vs Existing Career Field Structures [HIGH]
-**Pubs:** AFGM 2026-36-2033 vs AFI 36-2112 vs AFI 36-2129
-**Issue:** AFGM 2026-36-2033 establishes warrant officer classification across the Air Force, including in career fields that currently have dedicated enlisted career broadening and professional development programs (e.g., Materiel Management under AFI 36-2112 and Logistics Plans under AFI 36-2129). Neither AFI 36-2112 nor AFI 36-2129 contemplates warrant officers in their career field management structures, creating ambiguity about whether existing CFM authorities, career paths, and selection processes apply to warrant officers or whether the AFGM completely supersedes them for WO personnel.
-**Resolution:** AFIs 36-2112 and 36-2129 should be reviewed and updated to address warrant officer integration into their respective career fields. The permanent WO publication should identify which existing career field AFIs are affected and prescribe transition guidance.
-
-### Finding 9 — First Sergeant Program vs Warrant Officer Senior Enlisted Pipeline [MEDIUM]
-**Pubs:** AFI 36-2113 vs AFGM 2026-36-2033
-**Issue:** AFI 36-2113 governs first sergeant selection, classification, and tenure, drawing from the senior enlisted force. AFGM 2026-36-2033 establishes warrant officer accession from the enlisted force. Both publications compete for the same senior NCO talent pool, but neither cross-references the other. There is no guidance on whether first sergeants are eligible for WO accession, whether WO selection affects first sergeant tenure obligations, or how the special duty identifier (8F000) interacts with WO classification.
-**Resolution:** AFI 36-2113 should be updated to address the interaction between first sergeant duty and warrant officer eligibility. AFGM 2026-36-2033 (or its successor) should address special duty personnel explicitly.
-
-### Finding 10 — DAFPD 36-21 Implementation Redundancy [LOW]
-**Pubs:** AFI 36-2109, AFI 36-2113, AFI 36-2122, AFI 36-2129, AFI 36-2135
-**Issue:** Five separate AFIs in this corpus all implement DAFPD 36-21 (Utilization and Classification of Air Force Military Personnel), each establishing separate authorities for AF/A1 and its subordinate directorates to manage different slices of military personnel. While each addresses a distinct population or program, there is substantial redundancy in the boilerplate authority language for AF/A1, applicability statements, and waiver procedures across these publications.
-**Resolution:** Consider consolidating related personnel utilization AFIs (particularly AFI 36-2122 and portions of AFI 36-2129) into a single omnibus publication or creating a DAFMAN 36-21 that houses common procedures, with individual AFIs containing only program-unique requirements.
-
-### Finding 11 — Acquisition KLP vs Joint Officer Management Position Tracking [MEDIUM]
-**Pubs:** AFI 36-1301 vs AFI 36-2135
-**Issue:** AFI 36-1301 requires MAJCOMs to ensure acquisition Key Leadership Positions are correctly coded in manpower and personnel systems (§1.4.7, T-3). AFI 36-2135 requires AF/A1M to ensure bi-annual updates of the Air Force Manpower Programming and Execution System for Joint Duty Assignment positions. Both instructions impose position-coding and tracking requirements on the same manpower systems through different offices (SAF/AQH vs AF/A1P), with no cross-reference to ensure coherent system maintenance.
-**Resolution:** Both publications should cross-reference each other regarding manpower system coding requirements, and AF/A1M should be identified as the single integrator for position-coding standards across both joint and acquisition KLP requirements.
-
-### Finding 12 — MWD Program DoD EA vs Integrated Defense Framework [LOW]
-**Pubs:** DAFI 31-126 vs AFPD 31-1
-**Issue:** DAFI 31-126 establishes the Secretary of the Air Force as DoD Executive Agent for the MWD Program with broad authority across all DoD Components, while AFPD 31-1 addresses integrated defense broadly and assigns AF/A4SP as OPR. The MWD program's DoD-wide EA responsibilities extend well beyond the Air Force integrated defense mission, yet both publications fall under the 31-series and AF/A4. The EA responsibilities in DAFI 31-126 are not reflected in AFPD 31-1's integrated defense framework.
-**Resolution:** AFPD 31-1 should acknowledge the DoD EA role for MWDs as part of the AF/A4 portfolio, or DAFI 31-126 should be repositioned under a DoD-level series to better reflect its cross-service scope.
-
-### Finding 13 — Geneva Convention Compliance Authority [HIGH]
-**Pubs:** AFJI 31-304 vs AFPD 31-1
-**Issue:** AFJI 31-304 assigns the Secretary of the Army as DoD Executive Agent for EPW/CI/RP programs and mandates Geneva Convention compliance across all services, with Army DCSOPS as the primary staff authority. AFPD 31-1 assigns Air Force installation commanders and multiple HAF offices responsibilities for integrated defense operations that may involve detainee handling in base security zones, but does not reference AFJI 31-304 or the Army EA role. This creates risk that Air Force personnel conducting security operations may not be aware of or properly integrated with the joint detainee management framework.
-**Resolution:** AFPD 31-1 and/or DAFI 31-118 should explicitly cross-reference AFJI 31-304 for any operations involving detention or custody of personnel, ensuring Air Force integrated defense plans account for Geneva Convention obligations and Army EA oversight.
-
-### Finding 14 — Warrant Officer Evaluation Forms vs Existing Evaluation System [MEDIUM]
+### Finding 1 — Warrant Officer Evaluation Systems Gap/Overlap [HIGH]
 **Pubs:** AFGM 2026-36-2033 vs AFI 36-2406
-**Issue:** AFI 36-2406 prescribes specific evaluation forms for officers (Officer ALQ Evaluations) and enlisted (Enlisted ALQ/EPBs), with detailed procedures for preparation, submission, and management. AFGM 2026-36-2033 addresses warrant officer evaluations as part of the full life cycle but the AFGM's temporary nature (void after one year) means evaluation procedures for warrant officers may lapse before AFI 36-2406 is updated to incorporate them, creating a potential policy gap.
-**Resolution:** AF/A1PPP should prioritize an interim change to AFI 36-2406 incorporating warrant officer evaluation provisions before the AFGM expires, ensuring continuity of evaluation policy.
+**Issue:** AFGM 2026-36-2033 establishes warrant officers across the Air Force and covers their entire personnel life cycle including "evaluations," yet AFI 36-2406 governs the Officer and Enlisted Evaluations Systems with no apparent provision for a warrant officer evaluation pathway. The AFGM states it prevails over inconsistent publications, but AFI 36-2406 (updated May 2026) does not reference warrant officers, creating ambiguity about which evaluation forms, rating chains, and processes apply to WOs.
+**Resolution:** AFI 36-2406 should be amended via interim change to incorporate warrant officer evaluation procedures, or the AFGM should explicitly defer evaluation mechanics to AFI 36-2406 with a cross-reference. AF/A1PPP and AF/A1 should coordinate to close this gap before the AFGM expires.
+
+### Finding 2 — Warrant Officer Promotion Authority Overlap [HIGH]
+**Pubs:** AFGM 2026-36-2033 vs AFI 36-2406
+**Issue:** AFGM 2026-36-2033 addresses warrant officer "promotions" as part of the personnel life cycle, while AFI 36-2406 governs promotion-related evaluations and boards for officers and enlisted members. The two publications create parallel but unintegrated promotion frameworks—the AFGM establishes WO-specific grade structure and promotion policy, while AFI 36-2406's promotion support processes (e.g., EPBs, officer ALQ evaluations feeding boards) have no WO analog, risking procedural gaps during actual promotion cycles.
+**Resolution:** A dedicated AFI or permanent chapter within the 36-24xx series should be established to codify WO promotion procedures, with AFI 36-2406 cross-referencing that authority. The AFGM's one-year sunset demands urgent action.
+
+### Finding 3 — Warrant Officer Classification vs Senior Enlisted Leadership [MEDIUM]
+**Pubs:** AFGM 2026-36-2033 vs AFI 36-2109
+**Issue:** AFGM 2026-36-2033 covers warrant officer "classification" and grade management under DAFPD 36-21 (Utilization and Classification of Military Personnel), the same parent directive that AFI 36-2109 implements for Chief Master Sergeant and senior enlisted leader positions. There is potential overlap in how WOs and senior enlisted leaders interact within command structures, particularly regarding advisory roles to commanders—the AFGM does not delineate boundaries between WO technical authority and CCM/SEL advisory responsibilities.
+**Resolution:** AFI 36-2109 should be updated to clarify the relationship between warrant officers and senior enlisted leaders in unit command structures. AF/CCC and AF/A1 should coordinate.
+
+### Finding 4 — AF/A1 Overlapping Policy Development Roles [MEDIUM]
+**Pubs:** AFGM 2026-36-2033 vs AFI 36-2135 vs AFI 36-2109
+**Issue:** AF/A1 is assigned policy development responsibility for warrant officer management (AFGM 2026-36-2033), joint officer management (AFI 36-2135), and senior enlisted leadership management (AFI 36-2109 — "develops guidance and procedures"). All three implement variants of DAFPD 36-21. While not contradictory, the overlapping assignment of broad personnel policy authority to AF/A1 across multiple publications without a single integrating instruction creates administrative friction in determining which AF/A1 directorate owns cross-cutting issues (e.g., WO joint duty credit, WO first sergeant eligibility).
+**Resolution:** DAFPD 36-21 or a single AF/A1 operating instruction should provide a consolidated responsibility matrix mapping AF/A1 sub-offices to specific personnel populations.
+
+### Finding 5 — Competency Modeling vs Career Broadening Program Redundancy [LOW]
+**Pubs:** AFH 36-2647 vs AFI 36-2112
+**Issue:** AFH 36-2647 defines occupational competency models and career-long competency development applicable to all Airmen, including frameworks for how career field managers build and execute competency models. AFI 36-2112 establishes a career-field-specific broadening program for 2S0X1 that includes its own developmental framework with functional advisory councils and career progression guidance, largely independent of the competency modeling framework in AFH 36-2647. There is no cross-reference between the publications.
+**Resolution:** AFI 36-2112 should reference AFH 36-2647's competency modeling framework to ensure the MMECBP's developmental objectives align with the service's overarching competency architecture. Low severity as AFH 36-2647 is non-directive.
+
+### Finding 6 — First Sergeant Program vs Senior Enlisted Leadership Management [MEDIUM]
+**Pubs:** AFI 36-2113 vs AFI 36-2109
+**Issue:** Both publications implement AFPD 36-21 and govern aspects of senior enlisted management. AFI 36-2109 covers CCMs, SELs, and senior enlisted councils, while AFI 36-2113 covers first sergeants including their relationship to commanders and unit leadership. Both address selection processes, tenure, assignment, and advisory roles of senior enlisted members, but the boundary between "senior enlisted leader" management and "first sergeant" management is not always clear—particularly regarding first sergeants at group level who may interact with or substitute for SEL functions.
+**Resolution:** Cross-references should be strengthened between the two publications. Consider consolidating into a single senior enlisted management instruction or establishing a clear delineation memo. AF/CCC owns both and should reconcile.
+
+### Finding 7 — Security Forces Governance Authority Chain [MEDIUM]
+**Pubs:** AFPD 31-1 vs DAFI 31-118
+**Issue:** AFPD 31-1 assigns AF/A4SP as OPR and establishes integrated defense responsibilities including Security Forces roles, while DAFI 31-118's DAFGM creates an elaborate Security Forces Enterprise Governance (SFEG) structure under AF/A4S with its own executive board, veto authorities, and decision-making processes. The SFEG structure in DAFI 31-118 effectively creates a governance layer not envisioned in AFPD 31-1, and the OPR designation differs (AF/A4SP vs AF/A4S), potentially creating confusion about which office has final authority on Security Forces policy.
+**Resolution:** AFPD 31-1 should be updated to reflect the SFEG governance construct, or the SFEG structure in DAFI 31-118 should explicitly map to the AFPD's authority framework. Clarify whether AF/A4SP and AF/A4S are the same or different offices.
+
+### Finding 8 — Motor Vehicle Supervision Joint Pub vs DAF Re-designation [LOW]
+**Pubs:** DAFI 31-218 vs AFI 31-213
+**Issue:** Both are joint-service publications re-designated or maintained under DAF auspices. DAFI 31-218 re-designates a joint AR/OPNAV/AFI/MCO/DLAR motor vehicle publication as a DAFI, while AFI 31-213 remains a joint publication certified current in 2026 without DAF re-designation. The inconsistent treatment of joint publications—one re-designated, one not—creates confusion about the DAF's approach to managing joint-service regulatory instruments.
+**Resolution:** AF/A4 should establish a consistent policy for whether joint-service publications are re-designated as DAFIs or maintained under their original joint designations. This is a publications management housekeeping issue.
+
+### Finding 9 — Manpower Account Responsibilities for Exchange Officers [MEDIUM]
+**Pubs:** AFI 36-2122 vs AFI 36-2135
+**Issue:** AFI 36-2122 assigns AF/A1M responsibility for establishing manpower accounts for interservice exchange officers, while AFI 36-2135 assigns AF/A1M responsibility for maintaining the AF Manpower Programming and Execution System for joint duty assignment (JDA) positions. Exchange duty officers and joint duty officers can overlap in practice (e.g., an exchange officer in a joint-qualifying billet), but the two publications create separate manpower tracking and accounting requirements under the same directorate without cross-referencing each other.
+**Resolution:** AFI 36-2122 should cross-reference AFI 36-2135 to address cases where exchange duty overlaps with joint duty qualification, and AF/A1M's responsibilities should be harmonized across both publications.
+
+### Finding 10 — Logistics Plans Personnel Development Overlap [LOW]
+**Pubs:** AFI 36-2129 vs AFH 36-2647
+**Issue:** AFI 36-2129 establishes career progression, training, and professional development requirements for Logistics Plans (2G0X1) personnel including career field entry requirements and career-long training plans. AFH 36-2647 provides the overarching competency modeling framework that should inform all career field development. AFI 36-2129 does not reference AFH 36-2647 or the competency modeling construct, creating a parallel development framework.
+**Resolution:** AFI 36-2129 should incorporate references to AFH 36-2647's competency modeling methodology. Low severity as the handbook is advisory.
+
+### Finding 11 — Acquisition KLP Management vs Officer Evaluation Interaction [MEDIUM]
+**Pubs:** AFI 36-1301 vs AFI 36-2406
+**Issue:** AFI 36-1301 establishes tenure requirements and selection/approval processes for acquisition key leadership positions, with the SAE retaining approval authority for specific PEO/PM positions. AFI 36-2406 governs officer evaluations that feed selection and promotion boards. The two publications do not cross-reference each other, creating a gap where KLP tenure decisions and performance evaluation processes could conflict—e.g., an officer's evaluation closeout timeline may not align with KLP tenure milestones, or the SAE's selection authority may not be informed by the evaluation system's outputs.
+**Resolution:** AFI 36-1301 should reference AFI 36-2406 evaluation procedures as inputs to KLP selection decisions. Administrative friction only; no direct conflict.
+
+### Finding 12 — MWD Program EA Designation vs Integrated Defense [MEDIUM]
+**Pubs:** DAFI 31-126 vs AFPD 31-1
+**Issue:** DAFI 31-126 designates the Secretary of the Air Force as DoD Executive Agent for the Military Working Dog Program, with AF/A4S housing the Program Manager. AFPD 31-1 establishes the integrated defense framework but does not specifically address the MWD program or the EA role, despite MWDs being a critical component of installation security. The omission in AFPD 31-1 means the policy directive does not account for the significant cross-DoD authority the AF holds for MWDs.
+**Resolution:** AFPD 31-1 should be updated to reference the MWD EA responsibility and DAFI 31-126 as an implementing publication, ensuring integrated defense planning accounts for the MWD program.
+
+### Finding 13 — EPW/Detainee Treatment vs Integrated Defense [MEDIUM]
+**Pubs:** AFJI 31-304 vs AFPD 31-1
+**Issue:** AFJI 31-304 governs treatment and administration of enemy prisoners of war, civilian internees, and other detainees, including their handling at military installations. AFPD 31-1 addresses integrated defense and base security operations but does not reference detainee operations or the Geneva Convention obligations codified in AFJI 31-304. Security forces conducting integrated defense operations could encounter detainee situations without clear linkage between these publications.
+**Resolution:** AFPD 31-1 or its implementing DAFI should cross-reference AFJI 31-304 for detainee handling scenarios within the base security zone. Medium severity due to operational and legal implications.
+
+### Finding 14 — Warrant Officer Accession Age Restriction Authority Fragmentation [LOW]
+**Pubs:** AFGM 2026-36-2033 (internal overlap)
+**Issue:** Within a single publication, AFGM 2026-36-2033 assigns authority to further restrict maximum WO accession age to three separate entities: NGB/CF (for ANG), AFRS Recruiting Operations Director (for RegAF), and 367th Recruiting Group Recruiting Operations Director (for AFR), all under §4.1.5. While not an inter-publication conflict, this fragmented delegation within one AFGM could lead to inconsistent age restrictions across components without a coordination mechanism.
+**Resolution:** The permanent AFI replacing this AFGM should establish a coordination requirement among the three authorities or designate AF/A1 as the harmonizing authority for accession age policy.
+
+### Finding 15 — DAFPD 36-21 Over-Implementation [HIGH]
+**Pubs:** AFI 36-2109, AFI 36-2113, AFI 36-2122, AFI 36-2129, AFI 36-2135, AFGM 2026-36-2033
+**Issue:** Six publications in this corpus implement DAFPD 36-21 (Utilization and Classification of Air Force Military Personnel), covering warrant officers, senior enlisted leaders, first sergeants, interservice exchange officers, logistics plans personnel, and joint officers. This extraordinary breadth under a single parent directive means DAFPD 36-21 lacks sufficient specificity to deconflict its implementing publications, and there is no master implementation map showing how these instructions relate to each other. This creates systemic risk of overlap and inconsistency as each publication independently interprets "utilization and classification."
+**Resolution:** DAFPD 36-21 should be revised to include an explicit list of implementing publications with defined lanes, or a companion DAFMAN should be established to serve as the integrating document. AF/A1 should conduct a holistic review of all DAFPD 36-21 implementing publications.
 
 ## Notes
 
-- **The 36-series has extensive fragmentation:** Multiple AFIs implement DAFPD 36-21 with overlapping AF/A1 authorities. The introduction of warrant officers via AFGM 2026-36-2033 dramatically amplifies this fragmentation, as the AFGM touches nearly every personnel life-cycle function already governed by separate publications.
-- **AFGM 2026-36-2033 is a corpus-wide disruptor:** As a temporary guidance memorandum with a one-year lifespan, it creates urgent integration challenges across at least six other publications in this corpus. Its "prevails over inconsistent publications" clause is powerful but creates uncertainty about which specific provisions of other AFIs are superseded.
-- **Joint/multi-service publications (AFI 31-213, AFJI 31-304, DAFI 31-218) present unique governance challenges:** The Air Force cannot unilaterally update these publications, yet DAF-specific guidance memoranda are modifying related AF-only publications without ensuring consistency with the joint baseline.
-- **The 31-series (Security/Integrated Defense) has a layered governance problem:** AFPD 31-1 provides the policy framework, but DAFI 31-118's SFEG governance structure, DAFI 31-126's DoD EA role, AFI 31-213's joint AFDCB process, and DAFI 31-218's motor vehicle supervision all operate somewhat independently with limited cross-referencing.
-- **Competency modeling (AFH 36-2647) exists as a handbook but assigns directive-level responsibilities** to AETC that overlap with CFM authorities embedded in multiple career-field-specific AFIs, suggesting the handbook may need elevation to an AFI or DAFMAN to properly establish binding authority.
+- **The 36-series has heavy overlap in personnel authority:** AF/A1 appears as a responsible office in nearly every 36-series publication reviewed, often with slightly different sub-directorates (A1P, A1D, A1M, A1PPP, A1LE) assigned overlapping functions. A consolidated AF/A1 responsibility matrix would significantly reduce ambiguity.
+- **AFGM 2026-36-2033 is a high-risk publication:** As a guidance memorandum with a one-year sunset, it establishes an entirely new personnel category (warrant officers) across all three components but lacks integration with existing evaluation (AFI 36-2406), promotion, first sergeant (AFI 36-2113), and senior enlisted leadership (AFI 36-2109) frameworks. Rapid permanent codification is essential.
+- **The 31-series has structural fragmentation:** AFPD 31-1 serves as the parent directive for integrated defense, but its implementing publications (DAFI 31-118, DAFI 31-126, DAFI 31-218, AFI 31-213, AFJI 31-304) span security forces procedures, MWD programs, motor vehicle supervision, disciplinary control boards, and detainee operations with minimal cross-referencing. A 31-series implementation map would improve coherence.
+- **Joint-service publications receive inconsistent treatment:** AFI 31-213 and AFJI 31-304 remain under legacy joint designations, while DAFI 31-218 was re-designated as a DAFI. The corpus lacks a consistent approach to managing multi-service regulatory instruments.
+- **Space Force applicability is inconsistently addressed:** Most 36-series publications explicitly exclude USSF, but DAFI 31-118 explicitly includes USSF. The 31-series publications vary in whether they address USSF applicability at all.

@@ -1,13 +1,13 @@
-# STOCKED_AND_ISSUED: 📋 Stocked and Issued
+# STOCKED_AND_ISSUED: Stocked and Issued
 
-**Status:** 📋 Stocked and Issued
+**Status:** Stocked and Issued
 **OPR:** Unknown
 **Detected:** 17 June 2026
 **Series:** ??-series
 
 ---
 
-> ⚠️ **Coverage Gap — PLACEHOLDER_OPR**
+> **Coverage Gap — PLACEHOLDER_OPR**
 >
 > This publication is stocked and issued by the OPR. Contact the OPR directly to request a copy. Digital text is not publicly available.
 >

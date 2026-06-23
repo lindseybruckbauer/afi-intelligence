@@ -1,13 +1,13 @@
-# RESTRICTED_ACCESS: 🔒 Restricted Access
+# RESTRICTED_ACCESS: Restricted Access
 
-**Status:** 🔒 Restricted Access
+**Status:** Restricted Access
 **OPR:** Unknown
 **Detected:** 17 June 2026
 **Series:** ??-series
 
 ---
 
-> ⚠️ **Coverage Gap — PLACEHOLDER_RESTRICTED**
+> **Coverage Gap — PLACEHOLDER_RESTRICTED**
 >
 > This publication has restricted access — it is either served from the Warehouse Management System or stocked and issued by the OPR. Content cannot be publicly accessed or analyzed.
 >

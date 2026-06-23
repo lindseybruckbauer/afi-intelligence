@@ -21,12 +21,12 @@ Ask anything about the 36-series AFI corpus. The assistant searches the full tex
     <button onclick="submitFeedback(5)"
       style="padding:6px 14px;border:1px solid #003F87;border-radius:4px;background:transparent;
              color:#003F87;cursor:pointer;font-size:0.9em;">
-      👍 Yes
+        Yes
     </button>
     <button onclick="submitFeedback(2)"
       style="padding:6px 14px;border:1px solid #888;border-radius:4px;background:transparent;
              color:var(--md-default-fg-color);cursor:pointer;font-size:0.9em;">
-      👎 Not really
+        Not really
     </button>
   </div>
   <textarea id="feedback-comment" rows="2"

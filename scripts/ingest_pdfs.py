@@ -168,29 +168,29 @@ Text (first 800 chars):
 
 _STUB_LABELS = {
     DOCTYPE_PLACEHOLDER_PHYSICAL: (
-        "⚠️ Physical Product Only",
+        "Physical Product Only",
         "This publication is only available as a physical product through the "
         "Air Force Publishing Distribution Center. Digital text cannot be analyzed.",
     ),
     DOCTYPE_PLACEHOLDER_RESTRICTED: (
-        "🔒 Restricted Access",
+        "Restricted Access",
         "This publication has restricted access — it is either served from the "
         "Warehouse Management System or stocked and issued by the OPR. "
         "Content cannot be publicly accessed or analyzed.",
     ),
     DOCTYPE_PLACEHOLDER_OPR: (
-        "📋 Stocked and Issued",
+        "Stocked and Issued",
         "This publication is stocked and issued by the OPR. "
         "Contact the OPR directly to request a copy. "
         "Digital text is not publicly available.",
     ),
     DOCTYPE_VISUAL_AID: (
-        "🖼️ Visual Aid",
+        "Visual Aid",
         "This is an image-based visual aid (e.g. poster, chart). "
         "Text extraction was insufficient for policy analysis.",
     ),
     DOCTYPE_UNKNOWN: (
-        "❓ Unknown Format",
+        "Unknown Format",
         "This document could not be classified. Manual review recommended.",
     ),
 }
@@ -203,7 +203,7 @@ def generate_stub_page(doc: AFIDocument, doc_type: str, reason: str) -> str:
     """
     import re as _re
     label, description = _STUB_LABELS.get(
-        doc_type, ("⚠️ Non-Standard", reason)
+        doc_type, ("Non-Standard", reason)
     )
     m = _re.search(r"(\d{2})-", doc.pub_number)
     series = m.group(1) if m else "??"
@@ -217,7 +217,7 @@ def generate_stub_page(doc: AFIDocument, doc_type: str, reason: str) -> str:
 
 ---
 
-> ⚠️ **Coverage Gap — {doc_type}**
+> **Coverage Gap — {doc_type}**
 >
 > {description}
 >
