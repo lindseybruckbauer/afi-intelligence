@@ -1,6 +1,6 @@
 # Publications
 
-*20 publications in corpus · 16 fully analyzed · 0 sparse · 4 coverage gaps · last updated 22 June 2026*
+*20 publications in corpus · 16 fully analyzed · 0 sparse · 4 coverage gaps · last updated 26 June 2026*
 
 <div class='usaf-disclaimer'>
 All source documents are publicly available via <a href='https://www.e-publishing.af.mil'>AF e-Publishing</a>. Coverage gaps (Restricted, Physical only, Contact OPR) indicate publications that exist in the catalog but are not digitally accessible for analysis.
@@ -12,7 +12,7 @@ All source documents are publicly available via <a href='https://www.e-publishin
 
 | Publication | Title | OPR | Status |
 |-------------|-------|-----|--------|
-| [AFI 31-213](afji31-213_cover_letter.md) |  | Unknown | Full |
+| [AFI 31-213](afi31-213.md) |  | Unknown | Full |
 | [AFPD 31-1](afpd31-1.md) |  | AF/A4SP | Full |
 | [DAFI 31-118](afi31-118.md) |  | Unknown | Full |
 | [DAFI 31-126](afi31-126.md) |  | Unknown | Full |

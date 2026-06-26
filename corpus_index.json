@@ -400,9 +400,7 @@
     "title": "Department of the Air Force Guidance Memorandum to DAFI 31-118, Security",
     "opr": "Unknown",
     "effective_date": "15 JANUARY 2026",
-    "implements": [
-      "DAFI 31-118"
-    ],
+    "implements": [],
     "supersedes": [],
     "references": [
       "AFI \n36-2654",
@@ -539,7 +537,7 @@
     "section_count": 0,
     "authority_statement_count": 0,
     "chunk_count": 1,
-    "wiki_file": "afji31-213_cover_letter.md",
+    "wiki_file": "afi31-213.md",
     "authority_statements": []
   },
   "AFJI31-304": {
