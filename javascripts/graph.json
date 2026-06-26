@@ -1,0 +1,1864 @@
+{
+  "nodes": [
+    {
+      "id": "AFGM 2026-36-2033",
+      "type": "AFGM",
+      "series": "36",
+      "title": "Air Force Guidance Memorandum Reimplementing Warrant Officers",
+      "opr": "Unknown",
+      "color": "#003F87",
+      "size": 7,
+      "shape": "circle",
+      "url": "../afgm2026-36-2033/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFH 36-2647",
+      "type": "AFH",
+      "series": "36",
+      "title": "Incorporating Change 1, 8 JULY 2025",
+      "opr": "AETC/A3J",
+      "color": "#003F87",
+      "size": 8,
+      "shape": "diamond",
+      "url": "../afh36-2647/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-1301",
+      "type": "AFI",
+      "series": "36",
+      "title": "MANAGEMENT OF ACQUISITION KEY",
+      "opr": "SAF/AQH",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-1301/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2109",
+      "type": "AFI",
+      "series": "36",
+      "title": "Incorporating Change 2, 1 February 2023",
+      "opr": "AF/CCC",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2109/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2112",
+      "type": "AFI",
+      "series": "36",
+      "title": "MATERIEL MANAGEMENT ENLISTED",
+      "opr": "AF/A4LR",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2112/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2113",
+      "type": "AFI",
+      "series": "36",
+      "title": "THE FIRST SERGEANT",
+      "opr": "HQ",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2113/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2122",
+      "type": "AFI",
+      "series": "36",
+      "title": "INTERSERVICE OFFICERS ON",
+      "opr": "AFPC/DPM",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2122/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2129",
+      "type": "AFI",
+      "series": "36",
+      "title": "www.e-publishing.af.mil.",
+      "opr": "AF/A4LX",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2129/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2135",
+      "type": "AFI",
+      "series": "36",
+      "title": "Incorporating Change 1, 12 November 2024",
+      "opr": "AF/A1P",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2135/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 36-2406",
+      "type": "AFI",
+      "series": "36",
+      "title": "Incorporating Change 1, 27 MAY 2026",
+      "opr": "AF/A1PPP",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi36-2406/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "DAFI 31-118",
+      "type": "DAFI",
+      "series": "31",
+      "title": "Department of the Air Force Guidance Memorandum to DAFI 31-118, Security",
+      "opr": "Unknown",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi31-118/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "DAFI 31-126",
+      "type": "DAFI",
+      "series": "31",
+      "title": "Department of the Air Force Guidance Memorandum to DAFI 31-126, DoD Military",
+      "opr": "Unknown",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afi31-126/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFI 31-213",
+      "type": "AFI",
+      "series": "31",
+      "title": "MCO 1620.2D",
+      "opr": "Unknown",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "../afji31-213_cover_letter/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFJI31-304",
+      "type": "OTHER",
+      "series": "??",
+      "title": "MCO 3461.1",
+      "opr": "Unknown",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "../afji31-304/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFPD 31-1",
+      "type": "AFPD",
+      "series": "31",
+      "title": "Unknown Title",
+      "opr": "AF/A4SP",
+      "color": "#C8102E",
+      "size": 9,
+      "shape": "triangle",
+      "url": "../afpd31-1/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "DAFI 31-218",
+      "type": "DAFI",
+      "series": "31",
+      "title": "Department of the Air Force Guidance Memorandum to DAFI 31-218, Motor",
+      "opr": "Unknown",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "../dafi31-218/",
+      "external": false,
+      "stub": false,
+      "doc_type": "POLICY_FULL"
+    },
+    {
+      "id": "AFVA31-106",
+      "type": "OTHER",
+      "series": "??",
+      "title": "[PLACEHOLDER_OPR]",
+      "opr": "AF/A4SP",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "../afva31-106/",
+      "external": false,
+      "stub": true,
+      "doc_type": "PLACEHOLDER_OPR"
+    },
+    {
+      "id": "AFVA31-107",
+      "type": "OTHER",
+      "series": "??",
+      "title": "[PLACEHOLDER_PHYSICAL]",
+      "opr": "Unknown",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "../afva31-107/",
+      "external": false,
+      "stub": true,
+      "doc_type": "PLACEHOLDER_PHYSICAL"
+    },
+    {
+      "id": "RESTRICTED_ACCESS",
+      "type": "OTHER",
+      "series": "??",
+      "title": "[PLACEHOLDER_RESTRICTED]",
+      "opr": "Unknown",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "../restricted_access/",
+      "external": false,
+      "stub": true,
+      "doc_type": "PLACEHOLDER_RESTRICTED"
+    },
+    {
+      "id": "STOCKED_AND_ISSUED",
+      "type": "OTHER",
+      "series": "??",
+      "title": "[PLACEHOLDER_OPR]",
+      "opr": "Unknown",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "../stocked_and_issued/",
+      "external": false,
+      "stub": true,
+      "doc_type": "PLACEHOLDER_OPR"
+    },
+    {
+      "id": "DAFPD 36-20",
+      "type": "DAFPD",
+      "series": "36",
+      "title": "DAFPD 36-20",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFPD 36-21",
+      "type": "DAFPD",
+      "series": "36",
+      "title": "DAFPD 36-21",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFPD 36-24",
+      "type": "DAFPD",
+      "series": "36",
+      "title": "DAFPD 36-24",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFPD 36-25",
+      "type": "DAFPD",
+      "series": "36",
+      "title": "DAFPD 36-25",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2504",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2504",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2110",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2110",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2501",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2501",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2903",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2903",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2907",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2907",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-3003",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-3003",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-3012",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-3012",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-3203",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-3203",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-3211",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-3211",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFMAN 36-2032",
+      "type": "DAFMAN",
+      "series": "36",
+      "title": "DAFMAN 36-2032",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFMAN 36-2905",
+      "type": "DAFMAN",
+      "series": "36",
+      "title": "DAFMAN 36-2905",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFPD 36-26",
+      "type": "DAFPD",
+      "series": "36",
+      "title": "DAFPD 36-26",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFMAN 36-2689",
+      "type": "DAFMAN",
+      "series": "36",
+      "title": "DAFMAN 36-2689",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFH36-2647",
+      "type": "AFH",
+      "series": "??",
+      "title": "AFH36-2647",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 8,
+      "shape": "diamond",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2670",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2670",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "HAF MD 1-10",
+      "type": "OTHER",
+      "series": "??",
+      "title": "HAF MD 1-10",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI36-2109",
+      "type": "AFI",
+      "series": "??",
+      "title": "AFI36-2109",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFPD 36-21",
+      "type": "AFPD",
+      "series": "36",
+      "title": "AFPD 36-21",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI \n36-2903",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI \n36-2903",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2502",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2502",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFMAN 36-2806",
+      "type": "DAFMAN",
+      "series": "36",
+      "title": "DAFMAN 36-2806",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFPD 36-26",
+      "type": "AFPD",
+      "series": "36",
+      "title": "AFPD 36-26",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2107",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2107",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2110",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2110",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2618",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2618",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2805",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2805",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2818",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2818",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2905",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2905",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI36-2113",
+      "type": "AFI",
+      "series": "??",
+      "title": "AFI36-2113",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFH 36-2618",
+      "type": "AFH",
+      "series": "36",
+      "title": "AFH 36-2618",
+      "opr": "",
+      "color": "#003F87",
+      "size": 8,
+      "shape": "diamond",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI \n36-2101",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI \n36-2101",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2101",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2101",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2502",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2502",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2606",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2606",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2806",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2806",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2903",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2903",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2909",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2909",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-3012",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-3012",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-3017",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-3017",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-3101",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-3101",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-8101",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-8101",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI36-2122",
+      "type": "DAFI",
+      "series": "??",
+      "title": "DAFI36-2122",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-3002",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-3002",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2640",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2640",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 36-2651",
+      "type": "AFI",
+      "series": "36",
+      "title": "AFI 36-2651",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI36-2135",
+      "type": "AFI",
+      "series": "??",
+      "title": "AFI36-2135",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI36-2406",
+      "type": "AFI",
+      "series": "??",
+      "title": "AFI36-2406",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFMAN 36-2905",
+      "type": "AFMAN",
+      "series": "36",
+      "title": "AFMAN 36-2905",
+      "opr": "",
+      "color": "#003F87",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI \n36-2603",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI \n36-2603",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI \n36-3211",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI \n36-3211",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2504",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2504",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2603",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2603",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2608",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2608",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-2710",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-2710",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 36-3026",
+      "type": "DAFI",
+      "series": "36",
+      "title": "DAFI 36-3026",
+      "opr": "",
+      "color": "#003F87",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-101",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-101",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-115",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-115",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-117",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-117",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-118",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-118",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-122",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-122",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-218",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-218",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFMAN 31-115",
+      "type": "AFMAN",
+      "series": "31",
+      "title": "AFMAN 31-115",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFMAN 31-116",
+      "type": "AFMAN",
+      "series": "31",
+      "title": "AFMAN 31-116",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFMAN 31-127",
+      "type": "AFMAN",
+      "series": "31",
+      "title": "AFMAN 31-127",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 9,
+      "shape": "square",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFI 31-122",
+      "type": "DAFI",
+      "series": "31",
+      "title": "DAFI 31-122",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DAFPD 31-1",
+      "type": "DAFPD",
+      "series": "31",
+      "title": "DAFPD 31-1",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 9,
+      "shape": "triangle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "AFI 31-126",
+      "type": "AFI",
+      "series": "31",
+      "title": "AFI 31-126",
+      "opr": "",
+      "color": "#C8102E",
+      "size": 10,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DODD 2310.1",
+      "type": "DODD",
+      "series": "??",
+      "title": "DODD 2310.1",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DODD 5100.77",
+      "type": "DODD",
+      "series": "??",
+      "title": "DODD 5100.77",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    },
+    {
+      "id": "DoD Directive 3025.13",
+      "type": "OTHER",
+      "series": "??",
+      "title": "DoD Directive 3025.13",
+      "opr": "",
+      "color": "#6B7280",
+      "size": 5,
+      "shape": "circle",
+      "url": "",
+      "external": true,
+      "stub": false,
+      "doc_type": "EXTERNAL"
+    }
+  ],
+  "edges": [
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFPD 36-20",
+      "type": "implements"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFPD 36-21",
+      "type": "implements"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFPD 36-24",
+      "type": "implements"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFPD 36-25",
+      "type": "implements"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "AFI 36-2406",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "AFI 36-2504",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-2110",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-2501",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-2903",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-2907",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-3003",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-3012",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-3203",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFI 36-3211",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFMAN 36-2032",
+      "type": "references"
+    },
+    {
+      "source": "AFGM 2026-36-2033",
+      "target": "DAFMAN 36-2905",
+      "type": "references"
+    },
+    {
+      "source": "AFH 36-2647",
+      "target": "DAFPD 36-26",
+      "type": "implements"
+    },
+    {
+      "source": "AFH 36-2647",
+      "target": "DAFMAN 36-2689",
+      "type": "implements"
+    },
+    {
+      "source": "AFH 36-2647",
+      "target": "AFH36-2647",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFH 36-2647",
+      "target": "DAFI 36-2670",
+      "type": "references"
+    },
+    {
+      "source": "AFH 36-2647",
+      "target": "DAFMAN 36-2689",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-1301",
+      "target": "HAF MD 1-10",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-1301",
+      "target": "AFI 36-1301",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "AFI36-2109",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "AFI 36-2113",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "AFPD 36-21",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "DAFI \n36-2903",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "DAFI 36-2110",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "DAFI 36-2502",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "DAFI 36-2903",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2109",
+      "target": "DAFMAN 36-2806",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFPD 36-26",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2107",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2110",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2406",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2618",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2805",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2818",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFI 36-2905",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2112",
+      "target": "AFPD 36-26",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFPD 36-21",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI36-2113",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFH 36-2618",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI \n36-2101",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2101",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2109",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2110",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2502",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2606",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2806",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2903",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2905",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-2909",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-3012",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-3017",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-3101",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFI 36-8101",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2113",
+      "target": "AFPD 36-21",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2122",
+      "target": "DAFPD 36-21",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-2122",
+      "target": "DAFI36-2122",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2122",
+      "target": "DAFI 36-3002",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2122",
+      "target": "DAFMAN 36-2806",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2129",
+      "target": "AFPD 36-21",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-2129",
+      "target": "AFI 36-2129",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2129",
+      "target": "AFI 36-2101",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2129",
+      "target": "AFI 36-2640",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2129",
+      "target": "AFI 36-2651",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2129",
+      "target": "AFPD 36-21",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2135",
+      "target": "DAFPD 36-21",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-2135",
+      "target": "AFI36-2135",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2135",
+      "target": "DAFI 36-2110",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2135",
+      "target": "DAFI 36-2670",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFPD 36-24",
+      "type": "implements"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "AFI36-2406",
+      "type": "supersedes"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "AFMAN 36-2905",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI \n36-2603",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI \n36-3211",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2110",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2501",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2504",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2603",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2608",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2710",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-2907",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-3026",
+      "type": "references"
+    },
+    {
+      "source": "AFI 36-2406",
+      "target": "DAFI 36-3211",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "DAFI 31-118",
+      "type": "implements"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 31-101",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 31-115",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 31-117",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 31-118",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 31-122",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 31-218",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 36-2101",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFI 36-2903",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFMAN 31-115",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFMAN 31-116",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFMAN 31-127",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "AFPD 31-1",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-118",
+      "target": "DAFI 31-122",
+      "type": "references"
+    },
+    {
+      "source": "DAFI 31-126",
+      "target": "DAFPD 31-1",
+      "type": "implements"
+    },
+    {
+      "source": "DAFI 31-126",
+      "target": "AFI 31-126",
+      "type": "references"
+    },
+    {
+      "source": "AFJI31-304",
+      "target": "DODD 2310.1",
+      "type": "references"
+    },
+    {
+      "source": "AFJI31-304",
+      "target": "DODD 5100.77",
+      "type": "references"
+    },
+    {
+      "source": "AFPD 31-1",
+      "target": "DoD Directive 3025.13",
+      "type": "implements"
+    },
+    {
+      "source": "DAFI 31-218",
+      "target": "AFI 31-218",
+      "type": "references"
+    }
+  ],
+  "generated": "2026-06-22",
+  "corpus_size": 20,
+  "series_colors": {
+    "31": "#C8102E",
+    "32": "#4CAF50",
+    "33": "#FF9800",
+    "34": "#9C27B0",
+    "35": "#00BCD4",
+    "36": "#003F87",
+    "38": "#795548",
+    "directive": "#A8B2C1"
+  }
+}

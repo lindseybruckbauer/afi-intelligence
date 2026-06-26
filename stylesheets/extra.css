@@ -1,0 +1,154 @@
+/* ============================================================
+   AFI Policy Intelligence — USAF Visual Theme
+   MkDocs Material CSS overrides
+   ============================================================ */
+
+/* USAF Blue palette */
+:root {
+  --usaf-blue:        #003F87;
+  --usaf-blue-light:  #0051A8;
+  --usaf-blue-dark:   #002D62;
+  --usaf-silver:      #A8B2C1;
+  --usaf-gold:        #C8A951;
+  --usaf-red:         #C8102E;   /* used for HIGH severity only */
+}
+
+/* --- Primary color overrides --- */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:         var(--usaf-blue);
+  --md-primary-fg-color--light:  var(--usaf-blue-light);
+  --md-primary-fg-color--dark:   var(--usaf-blue-dark);
+  --md-accent-fg-color:          var(--usaf-gold);
+  --md-typeset-a-color:          #5B9BD5;
+}
+
+/* --- Header --- */
+.md-header {
+  background-color: var(--usaf-blue-dark);
+  border-bottom: 3px solid var(--usaf-gold);
+}
+
+.md-header__title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* --- Navigation --- */
+.md-nav__title {
+  color: var(--usaf-silver);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- Disclaimer banner (appears on every page) --- */
+.usaf-disclaimer {
+  background: rgba(200, 169, 81, 0.12);
+  border-left: 4px solid var(--usaf-gold);
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  font-size: 0.78rem;
+  color: var(--usaf-silver);
+  margin-bottom: 1.5rem;
+}
+
+/* --- Severity badges in analysis pages --- */
+.severity-high   { color: var(--usaf-red);    font-weight: 700; }
+.severity-medium { color: var(--usaf-gold);   font-weight: 700; }
+.severity-low    { color: var(--usaf-silver); font-weight: 600; }
+
+/* --- Admonition color overrides --- */
+/* danger = HIGH findings */
+:root {
+  --md-admonition-icon--danger: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"/></svg>');
+}
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-color: var(--usaf-red);
+}
+.md-typeset .danger > .admonition-title,
+.md-typeset .danger > summary {
+  background-color: rgba(200, 16, 46, 0.15);
+}
+
+/* warning = MEDIUM findings */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--usaf-gold);
+}
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(200, 169, 81, 0.15);
+}
+
+/* --- Publication table --- */
+.md-typeset table:not([class]) {
+  font-size: 0.82rem;
+}
+.md-typeset table:not([class]) th {
+  background-color: var(--usaf-blue-dark);
+  color: white;
+}
+
+/* --- Home page hero --- */
+.afi-hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid rgba(168, 178, 193, 0.2);
+  margin-bottom: 2rem;
+}
+.afi-hero h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: white;
+}
+.afi-hero .subtitle {
+  color: var(--usaf-silver);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* --- Stat cards on home page --- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: rgba(0, 63, 135, 0.25);
+  border: 1px solid rgba(168, 178, 193, 0.2);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+.stat-card .number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--usaf-gold);
+  line-height: 1;
+}
+.stat-card .label {
+  font-size: 0.72rem;
+  color: var(--usaf-silver);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
+
+/* Markdown rendering inside chat responses */
+#messages div h2, #messages div h3 {
+  font-size: 0.9rem; font-weight: 700; margin: 0.7rem 0 0.3rem; }
+#messages div ul, #messages div ol { padding-left: 1.2rem; margin: 0.3rem 0; }
+#messages div li { margin: 0.15rem 0; }
+#messages div hr { border-color: rgba(255,255,255,0.15); margin: 0.5rem 0; }
+#messages div p { margin: 0.3rem 0; }
+#messages div p:first-child { margin-top: 0; }
+#messages div p:last-child { margin-bottom: 0; }
+#messages div strong { font-weight: 700; }
+#messages div code { 
+  background: rgba(0,0,0,0.3); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85em; }
