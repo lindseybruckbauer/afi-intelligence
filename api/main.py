@@ -31,8 +31,7 @@ from pydantic import BaseModel, Field, validator
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 sys.path.insert(0, str(Path(__file__).parent))
 
-from rag import query as rag_query, format_context, corpus_stats
-
+from rag import query as rag_query, graph_query, merge_chunks, format_context, corpus_stats
 # ---------------------------------------------------------------------------
 # Logging
 # ---------------------------------------------------------------------------
@@ -186,16 +185,28 @@ async def chat(req: ChatRequest, request: Request):
     request_id = str(uuid.uuid4())[:8]
     logger.info(f"[{request_id}] Chat request from {client_ip} — {len(req.message)} chars")
 
-    # RAG retrieval
+        # RAG retrieval — semantic + graph-augmented
+    graph_note = ""
     try:
-        chunks = rag_query(req.message, n_results=req.n_sources)
+        semantic_chunks = rag_query(req.message, n_results=req.n_sources)
+        graph_chunks, expanded_pubs = graph_query(req.message, n_results=req.n_sources)
+        chunks = merge_chunks(semantic_chunks, graph_chunks, max_chunks=req.n_sources + 4)
         context = format_context(chunks)
+ 
+        if expanded_pubs:
+            graph_note = (
+                f"\n\nNOTE: Query referenced specific publications. "
+                f"Graph traversal expanded context to include related pubs: "
+                f"{', '.join(sorted(expanded_pubs))}."
+            )
+            logger.info(f"[{request_id}] Graph traversal: {len(expanded_pubs)} related pubs added")
+ 
     except Exception as e:
         logger.error(f"[{request_id}] RAG error: {e}")
         context = "(Search unavailable — answering from general knowledge.)"
-        chunks = []
-
-    system_with_ctx = f"{_SYSTEM}\n\n---\nRELEVANT AFI EXCERPTS:\n{context}\n---"
+        chunks  = []
+ 
+    system_with_ctx = f"{_SYSTEM}\n\n---\nRELEVANT AFI EXCERPTS:\n{context}\n---{graph_note}"
 
     messages = [{"role": m.role, "content": m.content} for m in req.history]
     messages.append({"role": "user", "content": req.message})
