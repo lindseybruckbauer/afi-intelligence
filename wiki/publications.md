@@ -1,6 +1,6 @@
 # Publications
 
-*20 publications in corpus · 16 fully analyzed · 0 sparse · 4 coverage gaps · last updated 26 June 2026*
+*20 publications in corpus · 16 fully analyzed · 0 sparse · 4 coverage gaps · last updated 29 June 2026*
 
 <div class='usaf-disclaimer'>
 All source documents are publicly available via <a href='https://www.e-publishing.af.mil'>AF e-Publishing</a>. Coverage gaps (Restricted, Physical only, Contact OPR) indicate publications that exist in the catalog but are not digitally accessible for analysis.

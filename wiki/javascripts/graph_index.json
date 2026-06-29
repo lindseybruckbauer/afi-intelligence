@@ -498,12 +498,6 @@
     ]
   },
   "DAFI 31-118": {
-    "implements": [
-      "DAFI 31-118"
-    ],
-    "implemented_by": [
-      "DAFI 31-118"
-    ],
     "references": [
       "AFI 31-101",
       "AFI 31-115",

@@ -1,6 +1,6 @@
 # AFI Policy Intelligence — 36-Series Corpus
 
-*20 publications ingested · last updated 22 June 2026*
+*20 publications ingested · last updated 29 June 2026*
 
 ---
 
@@ -20,7 +20,7 @@ Individual wiki pages synthesized from source PDFs.
 
 | Publication | Title | OPR | Effective |
 |-------------|-------|-----|-----------|
-| [AFI 31-213](afji31-213_cover_letter.md) | MCO 1620.2D | Unknown | 27 JULY 2006 |
+| [AFI 31-213](afi31-213.md) | MCO 1620.2D | Unknown | 27 JULY 2006 |
 | [AFI 36-1301](afi36-1301.md) | MANAGEMENT OF ACQUISITION KEY | SAF/AQH | 23 JULY 2019 |
 | [AFI 36-2109](afi36-2109.md) | Incorporating Change 2, 1 February 2023 | AF/CCC | 7 FEBRUARY 2025 |
 | [AFI 36-2112](afi36-2112.md) | MATERIEL MANAGEMENT ENLISTED | AF/A4LR | 12 SEPTEMBER 2018 |

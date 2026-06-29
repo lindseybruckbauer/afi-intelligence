@@ -177,7 +177,7 @@
       "color": "#C8102E",
       "size": 10,
       "shape": "circle",
-      "url": "../afji31-213_cover_letter/",
+      "url": "../afi31-213/",
       "external": false,
       "stub": false,
       "doc_type": "POLICY_FULL"
@@ -1750,11 +1750,6 @@
     },
     {
       "source": "DAFI 31-118",
-      "target": "DAFI 31-118",
-      "type": "implements"
-    },
-    {
-      "source": "DAFI 31-118",
       "target": "AFI 31-101",
       "type": "references"
     },
@@ -1849,7 +1844,7 @@
       "type": "references"
     }
   ],
-  "generated": "2026-06-22",
+  "generated": "2026-06-29",
   "corpus_size": 20,
   "series_colors": {
     "31": "#C8102E",
