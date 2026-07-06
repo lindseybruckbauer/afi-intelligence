@@ -1,6 +1,6 @@
 # AFI Policy Intelligence — 36-Series Corpus
 
-*20 publications ingested · last updated 29 June 2026*
+*20 publications ingested · last updated 06 July 2026*
 
 ---
 
