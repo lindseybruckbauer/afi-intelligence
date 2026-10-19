@@ -8,103 +8,103 @@
 
 | Role / Office | Action / Function | Conditions or Limits | Source AFI | Section |
 |---|---|---|---|---|
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests submitted through chain of command | Tiered compliance items only | AFGM 2026-36-2033 | Waiver guidance |
-| AFGM OPR | Approve waiver requests for non-tiered compliance items | Only when not routed to tier waiver authority | AFGM 2026-36-2033 | Waiver guidance |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests must be submitted through the chain of command | AFGM 2026-36-2033 | Waiver guidance |
+| AFGM OPR | Approve waiver requests for non-tiered compliance items | Alternate path when tier waiver authority is not applicable | AFGM 2026-36-2033 | Waiver guidance |
 | The Air Force (AF) | Approve pre-accession requests for accommodation of religious practices | Unless accommodation adversely affects military necessity (unit readiness, individual readiness, unit cohesion, good order, discipline, health, and/or safety); IAW DAFI 52-201 | AFGM 2026-36-2033 | Religious accommodation |
-| Waiver Authority | Concur with attending physician's written approval for postpartum members to participate in training physical requirements | Member must be within 6 months postpartum; member must sign contractual statement IAW DAFMAN 36-2032; attending physician must first provide written approval | AFGM 2026-36-2033 | Postpartum training |
-| Appropriate Tier Waiver Authority | Approve waiver requests submitted through chain of command | Tiered compliance items | AFI 36-1301 | Waiver guidance |
-| Requestor's Commander | Approve waiver requests for non-tiered compliance items | Non-tiered items only; alternative to tier waiver authority | AFI 36-1301 | Waiver guidance |
-| Appropriate Senior Level Official (within the command) | Approve position and tenure waivers for key leadership positions not otherwise specified | Excludes positions specified in para 1.4.4 (SAE-controlled positions) | AFI 36-1301 | Key leadership |
-| Service Acquisition Executive (SAE) | Approve selection of PEO, Deputy PEO, ACAT I PM, ACAT I Deputy PM, and ACAT II PMs | Acquisition and Business Systems programs | AFI 36-1301 | 1.4.4 (approx.) |
-| Hiring Authority | Retain final selection approval authority for key leadership positions not identified in para 1.4.4 | All other key leadership positions covered in AFI | AFI 36-1301 | 1.4.5–1.4.6 |
-| Service Acquisition Executive (SAE) | Approve all position waivers for PEOs, Deputy PEOs, PMs, Deputy PMs (ACAT I), and PMs (ACAT II) | Acquisition and Business Systems Category I and ACAT II programs | AFI 36-1301 | Position waivers |
-| Appropriate Senior Level Official (within the command) | Approve position waivers for all other key leadership positions; provide copy to SAF/AQH | Must forward copy of approved waiver to SAF/AQH | AFI 36-1301 | Position waivers |
-| Service Acquisition Executive (SAE) | Approve waiver to release individual from tenure agreement before it ends | If warranted | AFI 36-1301 | 1.7.2 |
-| Service Acquisition Executive (SAE) | Approve all tenure waivers for PEOs, Deputy PEOs, PMs, Deputy PMs (ACAT I), and PMs (ACAT II) | Acquisition and Business Systems Category I and ACAT II programs | AFI 36-1301 | Tenure waivers |
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Submitted through chain of command | AFI 36-2109 | Waiver guidance |
-| CMSAF | Approve waiver requests for non-tiered compliance items | Submitted through chain of command; alternative to tier waiver authority | AFI 36-2109 | Waiver guidance |
+| Waiver Authority | Concur with attending physician's written approval for postpartum members to participate in training prior to 6 months postpartum | Member must sign appropriate contractual statement per DAFMAN 36-2032; requires written approval from attending physician first | AFGM 2026-36-2033 | Postpartum training |
+| Appropriate Tier Waiver Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | AFI 36-1301 | Waiver guidance |
+| Requestor's Commander | Approve waiver requests for non-tiered compliance items | Alternate path to tier waiver authority | AFI 36-1301 | Waiver guidance |
+| Appropriate Senior Level Official within the Command | Approve position and tenure waivers for key leadership positions (other than those in para 1.4.4) | Limited to positions not specifically assigned to the SAE | AFI 36-1301 | Key leadership |
+| Service Acquisition Executive (SAE) | Approve selection of PEO, Deputy PEO, ACAT I PM, ACAT I Deputy PM, and ACAT II PMs | Specific to Acquisition and Business Systems programs | AFI 36-1301 | 1.4.4 (approx.) |
+| Hiring Authority | Retain final selection approval authority for key leadership positions not identified in paragraph 1.4.4 | Residual authority for all other key leadership positions | AFI 36-1301 | 1.4.5 (approx.) |
+| Service Acquisition Executive (SAE) | Approve all position waivers for PEOs, Deputy PEOs, PMs and Deputy PMs of ACAT I programs, and PMs for ACAT II programs | Copy of approved waiver not required to SAF/AQH (that applies to other positions) | AFI 36-1301 | Position waivers |
+| Appropriate Senior Level Official within the Command | Approve position waivers for all other key leadership positions | Must provide a copy of approved waiver to SAF/AQH | AFI 36-1301 | Position waivers |
+| Service Acquisition Executive (SAE) | Approve waiver to release an individual from tenure agreement before it ends | Only if warranted | AFI 36-1301 | 1.7.2 (approx.) |
+| Service Acquisition Executive (SAE) | Approve all tenure waivers for PEOs, Deputy PEOs, PMs and Deputy PMs of ACAT I programs, and PMs for ACAT II programs | Specific to Acquisition and Business Systems Category I and ACAT II programs | AFI 36-1301 | Tenure waivers |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | AFI 36-2109 | Waiver guidance |
+| CMSAF | Approve waiver requests for non-tiered compliance items | Alternate path; requests submitted through chain of command | AFI 36-2109 | Waiver guidance |
 | 12 Outstanding Airmen of the Year (12 OAY) | Bring spouse, family member, or one person of their choosing | One person authorized | AFI 36-2109 | 12 OAY recognition |
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Submitted through chain of command | AFI 36-2113 | Waiver guidance |
-| Requestor's Commander | Approve waiver requests for non-tiered compliance items | Alternative to tier waiver authority | AFI 36-2113 | Waiver guidance |
-| Unnamed Approval Authority (context: likely AF/A1 or AFPC) | Approve RegAF requests to serve beyond four years in the 8F000 SDI | RegAF members only | AFI 36-2113 | 2.1.13–2.1.14 |
-| Unnamed Approval Authority (context: likely AF/A1 or AFPC) | Approve RegAF applications for members currently serving in another SDI | RegAF members only | AFI 36-2113 | 2.1.14–2.1.15 |
-| WG/CC or equivalent | Approve over-grade requests during rotation | Subject to FY manning policy in effect; requires recommendation by CCM and approval authority; delegable to WG/CC or equivalent | AFI 36-2113 | 6.4.7 |
-| AFPC/DP2OSS | Waive codes to facilitate needs of the Air Force | At AFPC/DP2OSS discretion | AFI 36-2113 | 6.8.3 |
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Submitted through chain of command | AFI 36-2122 | Waiver guidance |
-| AFPC/DPM | Final decision on non-tiered compliance item waivers | Must be staffed through applicable MAJCOM | AFI 36-2122 | Waiver guidance |
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Submitted through chain of command | AFI 36-2129 | Waiver guidance |
-| Publication OPR | Approve waivers for non-tiered compliance items | Alternative to tier waiver authority | AFI 36-2129 | Waiver guidance |
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Submitted through chain of command | AFI 36-2135 | Waiver guidance |
-| AFPC/DP3AM | Approve waivers for non-tiered compliance items | Must be staffed through applicable MAJCOM | AFI 36-2135 | Waiver guidance |
-| AFPC/DPPSP | Approve waivers for non-tiered items (RegAF evaluation system) | Requires concurrence of AF/A1P (or AF/REP and NGB/A1P as applicable) | AFI 36-2406 | Waiver guidance |
-| Wing Commander or equivalent | Final approval or disapproval of evaluation waiver requests when initial approval authority recommends disapproval | Delegable no lower than deputy wing commander or equivalent; initial approval authority must provide justification | AFI 36-2406 | Escalation provision |
-| AFPC/DPPSP | Serve as approval authority for RegAF courses requesting consideration for non-rated periods of supervision | RegAF members only | AFI 36-2406 | 1.4.11 area |
-| ARPC/DPTSE | Serve as approval authority for ARC courses requesting consideration for non-rated periods of supervision | ARC members only | AFI 36-2406 | 1.4.11 area |
-| Approval Authority (evaluation waiver) | Approve or deny criminal conviction comment waiver requests; decision is final and non-appealable | Must issue written finding that mandatory comments are not in best interests of the AF and inclusion would unduly harm the ratee | AFI 36-2406 | 1.8.1.1.1.3.1 |
-| Referral Reviewer | Grant extension of time for ratee rebuttal | When ratee needs additional time (e.g., ADC unavailable, rebuttal returned for exceeding 10 pages) | AFI 36-2406 | Referral process |
-| Ratee | Grant access to completed evaluation forms at their discretion | At ratee's discretion | AFI 36-2406 | 2.9.3 |
-| Rater or HLR | Use stratification statement that comes from someone between the rater and the HLR | Only when stratification originates from someone between rater and HLR in chain | AFI 36-2406 | 3.15.6.7.2 |
-| AFELM/CC (on G-series orders) | Sign ALQ evaluations in lieu of the forced distributor | Joint agencies only; when forced distributor signs the MEL | AFI 36-2406 | 4.12.5.4 |
-| AFPC MLR Office | Approve exceptions to maintain integrity in the Officer Evaluation System | To ensure fair and proper consideration for all affected officers | AFI 36-2406 | MLR process |
-| AFPC MLR Office | Approve changes up to one duty day prior to central selection board | Extreme circumstances only; case-by-case basis | AFI 36-2406 | Pre-board changes |
-| ARPC/PB | Approve changes up to one duty day prior to central selection board | Extreme circumstances only; case-by-case basis (ARC) | AFI 36-2406 | Pre-board changes |
-| ERAB (Evaluation Review Appeals Board) | Modify evaluations that differ from the applicant's request | May deny applicant's specific request and direct alternative correction | AFI 36-2406 | 10.2.4 |
-| AFPC or ARPC | Make corrections to digitally signed evaluations after transmission | Only AFPC/ARPC authorized once evaluation has been transmitted | AFI 36-2406 | Minor Errors rule |
-| CSAF | Approve exceptions to evaluation policy | General authority for exceptions | AFI 36-2406 | Exception authority |
-| HAF Deputy Chief of Staff, Personnel | Exercise exception authority similar to CSAF | Limited to cases involving management levels of general officers | AFI 36-2406 | Exception authority |
-| Proponent (AFJI 31-304) | Approve exceptions to the regulation | Must be consistent with controlling law and regulation | AFJI 31-304 | Regulatory exceptions |
-| Proponent (AFJI 31-304) | Delegate approval authority for exceptions | In writing; to a division chief within proponent agency; grade of colonel or civilian equivalent | AFJI 31-304 | Regulatory exceptions |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | AFI 36-2113 | Waiver guidance |
+| Requestor's Commander | Approve waiver requests for non-tiered compliance items | Alternate path | AFI 36-2113 | Waiver guidance |
+| Approval Authority (unnamed role, context: 8F000 SDI) | Approve RegAF requests to serve beyond four years in the 8F000 SDI | RegAF members only | AFI 36-2113 | 2.1.13 (approx.) |
+| Approval Authority (unnamed role, context: SDI) | Approve RegAF applications for members currently serving in another SDI | RegAF members only | AFI 36-2113 | 2.1.14 (approx.) |
+| WG/CC or Equivalent | Approve over-grade requests during rotation | Requires recommendation by CCM; subject to FY manning policy in effect at the time; approval authority involved | AFI 36-2113 | 6.4.7 |
+| AFPC/DP2OSS | Waive codes to facilitate needs of the Air Force | Discretionary; needs of the Air Force justification | AFI 36-2113 | 6.8.3 |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | AFI 36-2122 | Waiver guidance |
+| AFPC/DPM | Final decision on non-tiered compliance items | Requests staffed through applicable MAJCOM | AFI 36-2122 | Waiver guidance |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | AFI 36-2129 | Waiver guidance |
+| Publication OPR | Approve waiver requests for non-tiered compliance items | Alternate path | AFI 36-2129 | Waiver guidance |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | AFI 36-2135 | Waiver guidance |
+| AFPC/DP3AM | Approve non-tiered compliance item waivers | Requests routed through applicable MAJCOM | AFI 36-2135 | Waiver guidance |
+| AFPC/DPPSP | Approve waiver requests for non-tiered items (RegAF) | Requires concurrence of AF/A1P (or AF/REP and NGB/A1P as applicable) | AFI 36-2406 | Waiver guidance |
+| Wing Commander or Equivalent | Final approval or disapproval when initial approval authority recommends disapproval | Delegable no lower than deputy wing commander or equivalent; approval authority must provide justification for disapproval recommendation | AFI 36-2406 | Escalation |
+| AFPC/DPPSP | Approval authority for RegAF members for courses requesting consideration for non-rated periods of supervision | RegAF members only | AFI 36-2406 | 1.4.11 area |
+| ARPC/DPTSE | Approval authority for ARC members for courses requesting consideration for non-rated periods of supervision | ARC members only | AFI 36-2406 | 1.4.11 area |
+| Approval Authority (waiver – criminal conviction comments) | Approve waiver of mandatory comments for specific criminal convictions | Must issue written finding that mandatory comments are not in best interests of the AF and inclusion would unduly harm the ratee; decision is final and not appealable | AFI 36-2406 | 1.8.1.1.1.3.1 area |
+| Referral Reviewer | Grant extension of time for ratee rebuttal | When ratee needs additional time (e.g., non-availability of Area Defense Counsel or rebuttal returned for exceeding 10 pages) | AFI 36-2406 | Rebuttal process |
+| Ratee | Grant access to completed evaluation forms | At ratee's discretion | AFI 36-2406 | 2.9.3 |
+| Rater or HLR | Use stratification statement originating from someone between the rater and HLR | Only when the stratification statement comes from an intermediate level | AFI 36-2406 | 3.15.6.7.2 |
+| AFELM/CC (on G-series orders) | Sign ALQ evaluations in lieu of forced distributor | Joint agencies only; when forced distributor signs the MEL | AFI 36-2406 | 4.12.5.4 |
+| AFPC MLR Office | Approve exceptions to maintain integrity of Officer Evaluation System | To ensure fair and proper consideration for all affected officers | AFI 36-2406 | MLR exceptions |
+| AFPC MLR Office | Approve changes to evaluation records up to one duty day prior to central selection board | Extreme circumstances only; case-by-case basis | AFI 36-2406 | MLR pre-board |
+| ARPC/PB | Approve changes to evaluation records up to one duty day prior to central selection board | Extreme circumstances only; case-by-case basis | AFI 36-2406 | ARC pre-board |
+| ERAB | Modify evaluations that differ from applicant's request | May deny applicant's specific request and direct alternative correction (e.g., correct feedback date instead of voiding report) | AFI 36-2406 | 10.2.4 |
+| AFPC or ARPC | Make corrections to digitally signed evaluations after transmission | Only AFPC or ARPC authorized once evaluation is transmitted | AFI 36-2406 | Minor errors |
+| CSAF | Approve exceptions to evaluation system rules | General authority; only CSAF may approve | AFI 36-2406 | Exceptions |
+| HAF Deputy Chief of Staff, Personnel | Exercise exception authority similar to CSAF for general officer management levels | Limited to cases involving management levels of general officers | AFI 36-2406 | Exceptions |
+| Proponent (AFJI 31-304) | Approve exceptions to the regulation | Must be consistent with controlling law and regulation | AFJI 31-304 | Exception authority |
+| Proponent (AFJI 31-304) | Delegate approval authority for exceptions | Delegation must be in writing; delegable to division chief (grade of colonel or civilian equivalent) within proponent agency | AFJI 31-304 | Exception authority |
 | EPW's Command | Transfer injured, sick, and wounded EPWs to other commands | With advice of military medical authority | AFJI 31-304 | EPW management |
-| Unnamed Chair (SB/SFEC/meeting) | Approve meeting minutes/decision sheet; call upon other attendees/SMEs as necessary | — | DAFI 31-118 | 3.3.5.2.2.2 |
-| Security Forces (SF) | Enforce aspects of federal law not covered by the UCMJ | Authority limited to federal law outside UCMJ | DAFI 31-118 | 3.1.2.1 |
-| SB Chair | Authority over all SB permanent voting membership changes | — | DAFI 31-118 | SB governance |
-| SFEC Chair | Approve meeting minutes/decision sheet; call upon other attendees/SMEs as necessary | — | DAFI 31-118 | SFEC governance |
-| SWG Chair | Authority over all SWG permanent voting membership changes | — | DAFI 31-118 | SWG governance |
-| SFTWG Chair | Authority over all SFTWG permanent voting membership changes | — | DAFI 31-118 | SFTWG governance |
-| EWG Chair | Authority over all EWG permanent voting membership changes | — | DAFI 31-118 | EWG governance |
-| HQ AF/A4S/CFM, Security (Law Enforcement) | Process and coordinate waivers where waiver authority is not otherwise defined | Default waiver authority for undefined SF policies | DAFI 31-118 | Waiver policy |
-| HQ AF/A4S/CFM, Security (Law Enforcement) | Approval authority for AFCS GS-0083 position actions | — | DAFI 31-118 | Classification |
-| HQ AF/A4S/CFM, Security (Law Enforcement) | Evaluate and approve/disapprove waiver requests within their approval authority | Per Table 6.1 | DAFI 31-118 | Table 6.1/6.2 area |
-| Civilian Defender | Take the Physical Ability Test (PAT) twice | Second PAT must be accomplished within 90 days of original test date | DAFI 31-118 | PAT requirements |
-| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Submitted through chain of command | DAFI 31-126 | Waiver guidance |
-| Requestor's Commander | Approve waivers for non-tiered compliance items | Alternative to tier waiver authority | DAFI 31-126 | Waiver guidance |
-| CCB Chairperson (or designated representative) | Approve or disapprove the actions of the CCB | Only CCB Chairperson or designated representative has this authority | DAFI 31-126 | CCB governance |
-| Attending Veterinarian | Euthanize MWD without prior consultation with DoD MWD VS personnel | Only when MWD is experiencing undue suffering with poor prognosis for return to duty; T-0 requirement | DAFI 31-126 | MWD care |
+| SB Chair | Authority over all SB permanent voting membership changes | Retained authority; not delegated | DAFI 31-118 | SB governance |
+| SFEC Chair | Approve meeting minutes/decision sheet; call upon other attendees/SMEs as necessary | — | DAFI 31-118 | 3.3.5.2.2.2 area |
+| SWG Chair | Authority over all SWG permanent voting membership changes | Retained authority | DAFI 31-118 | SWG governance |
+| SFTWG Chair | Authority over all SFTWG permanent voting membership changes | Retained authority | DAFI 31-118 | SFTWG governance |
+| EWG Chair | Authority over all EWG permanent voting membership changes | Retained authority | DAFI 31-118 | EWG governance |
+| SF (Security Forces) | Enforce aspects of federal law not covered by the UCMJ | Authority extends beyond UCMJ enforcement | DAFI 31-118 | 3.1.2.1 |
+| HQ AF/A4S/CFM, Security (Law Enforcement) | Process and coordinate waiver requests where waiver authority is not otherwise defined | Residual/default waiver authority | DAFI 31-118 | Waiver policy |
+| HQ AF/A4S/CFM, Security (Law Enforcement) | Approval authority for AFCS GS-0083 | Specific to civilian classification series GS-0083 | DAFI 31-118 | Civilian SF |
+| Civilian Defender | Take the Physical Abilities Test (PAT) twice | Second PAT must be accomplished within 90 days of original test date | DAFI 31-118 | PAT policy |
+| CCB Chairperson (or designated representative) | Approve or disapprove actions of the CCB | Exclusive authority; no other person authorized | DAFI 31-126 | CCB governance |
+| Appropriate Tier Waiver Approval Authority | Approve waiver requests for tiered compliance items | Requests submitted through chain of command | DAFI 31-126 | Waiver guidance |
+| Requestor's Commander | Approve waiver requests for non-tiered compliance items | Alternate path | DAFI 31-126 | Waiver guidance |
+| Attending Veterinarian | Euthanize MWD without prior consultation with DoD MWD VS personnel | Only when MWD is experiencing undue suffering with poor prognosis for return to duty (T-0) | DAFI 31-126 | MWD care |
 
 ---
 
 # PART 2 — CONFLICTING OR AMBIGUOUS AUTHORITIES
 
-- **Non-tiered waiver approval authority is inconsistently assigned across publications.** Multiple AFIs route non-tiered waivers to different authorities: the requestor's commander (AFI 36-1301, AFI 36-2113, DAFI 31-126), the AFGM OPR (AFGM 2026-36-2033), the CMSAF (AFI 36-2109), the publication OPR (AFI 36-2129), AFPC/DPM via MAJCOM (AFI 36-2122), AFPC/DP3AM via MAJCOM (AFI 36-2135), and AFPC/DPPSP with AF/A1P concurrence (AFI 36-2406). While each applies to its own functional area, the lack of a standardized non-tiered waiver routing framework creates confusion for units managing multiple programs. — See AFGM 2026-36-2033 vs AFI 36-1301 vs AFI 36-2109 vs AFI 36-2113 vs AFI 36-2122 vs AFI 36-2129 vs AFI 36-2135 vs AFI 36-2406 vs DAFI 31-126.
+- **Non-tiered waiver approval authority is inconsistently assigned across publications.** Multiple AFIs designate different offices/roles as the approval authority for non-tiered compliance item waivers: the "AFGM OPR" (AFGM 2026-36-2033), the "requestor's commander" (AFI 36-1301, AFI 36-2113, DAFI 31-126), the "CMSAF" (AFI 36-2109), "AFPC/DPM" via MAJCOM (AFI 36-2122), the "publication OPR" (AFI 36-2129), "AFPC/DP3AM" via MAJCOM (AFI 36-2135), and "AFPC/DPPSP with AF/A1P concurrence" (AFI 36-2406). While these likely reflect different functional areas, there is no overarching framework clarifying when each path applies, creating potential confusion for members determining the correct routing. — See AFGM 2026-36-2033 vs AFI 36-1301 vs AFI 36-2109 vs AFI 36-2113 vs AFI 36-2122 vs AFI 36-2129 vs AFI 36-2135 vs AFI 36-2406 vs DAFI 31-126.
 
-- **Ambiguous role for "approval authority" on 8F000 SDI matters.** AFI 36-2113 states that an entity "serves as the approval authority" for RegAF requests to serve beyond four years in the 8F000 SDI and for applications from members in another SDI (paras 2.1.13–2.1.15), but the extracted text does not identify which specific office or role holds this authority. The paragraph numbering suggests it falls under a higher-level role description (possibly AFPC or a functional authority manager), but the role is not explicitly named in the extract. — See AFI 36-2113, §§ 2.1.13–2.1.15.
+- **"Appropriate senior level official within the command" is ambiguously defined for key leadership position and tenure waivers.** AFI 36-1301 assigns approval authority for position waivers and tenure waivers for non-ACAT I/II key leadership positions to "the appropriate senior level official within the command" without specifying the grade, title, or organizational level required. This could be interpreted as a MAJCOM/CC, NAF/CC, Center/CC, or other senior official. — See AFI 36-1301 (multiple sections).
 
-- **Over-grade approval during rotation involves multiple roles with unclear primacy.** AFI 36-2113 § 6.4.7 states that over-grade requests require "a recommendation by the CCM, approval authority, WG/CC or equivalent," but it is unclear whether these are three separate sequential approvals, whether the CCM and WG/CC are the same approval chain, or whether "approval authority" is a distinct role from the WG/CC. — See AFI 36-2113, § 6.4.7.
+- **Approval authority for 8F000 SDI service beyond four years and cross-SDI applications is unnamed.** AFI 36-2113 references an approval authority for RegAF requests to serve beyond four years in the 8F000 SDI (para 2.1.13 area) and for applications from members in another SDI (para 2.1.14 area), but the extracted statements do not identify which specific role or office holds this authority. — See AFI 36-2113, sections 2.1.13–2.1.15.
 
-- **CSAF vs. HAF Deputy Chief of Staff, Personnel exception authority overlap.** AFI 36-2406 states "only the CSAF may approve exceptions" but then grants the HAF Deputy Chief of Staff, Personnel "similar authority" for cases involving general officers. The scope of "similar authority" is undefined — it is unclear whether this is a full delegation or limited to specific general officer management actions. — See AFI 36-2406, exception authority provision.
+- **Over-grade approval during rotation involves multiple parties with unclear primacy.** AFI 36-2113 states over-grade requests require "a recommendation by the CCM, approval authority, WG/CC or equivalent," but the comma-separated list is ambiguous as to whether the CCM recommends, the "approval authority" is a distinct role, and the WG/CC is the final approver—or whether these are listed as alternatives. — See AFI 36-2113, section 6.4.7.
 
-- **Senior level official position waiver authority vs. SAE authority.** Both the SAE and "the appropriate senior level official within the command" are granted position and tenure waiver authority in AFI 36-1301, distinguished only by program category. For positions at the boundary (e.g., a PM reassigned between ACAT levels), it may be ambiguous which authority applies. — See AFI 36-1301, position/tenure waiver sections.
+- **CSAF vs. HAF Deputy Chief of Staff, Personnel exception authority overlap.** AFI 36-2406 states "only the CSAF may approve exceptions" but then grants the HAF Deputy Chief of Staff, Personnel "similar authority" for general officer management cases. The word "similar" is imprecise—it is unclear whether this is full delegation, limited delegation, or concurrent authority. — See AFI 36-2406 (exceptions section).
 
-- **Meeting minutes/decision sheet approval authority is duplicated with minor variation.** DAFI 31-118 contains two nearly identical provisions — one for an unnamed chair (§ 3.3.5.2.2.2, marked "ADDED") and one for the SFEC chair — both granting authority to approve meeting minutes/decision sheets and call upon SMEs. It is unclear whether these refer to the same body or represent overlapping grants to different working group chairs. — See DAFI 31-118, § 3.3.5.2.2.2 vs SFEC chair provision.
+- **AFPC MLR Office and ARPC/PB both have authority to approve pre-board evaluation changes under extreme circumstances**, but the boundary between RegAF and ARC jurisdiction, while implied, is not explicitly delineated in the extracted statements. — See AFI 36-2406 (MLR/pre-board sections).
 
-- **Wing Commander escalation authority vs. initial approval authority on evaluation waivers.** AFI 36-2406 states that when the "approval authority" recommends disapproval, the request goes to the wing commander or equivalent for final decision. However, in some organizational structures the initial approval authority could be the wing commander, creating a circular delegation. The AFI does not specify what happens when the initial approval authority *is* the wing commander. — See AFI 36-2406, escalation provision.
+- **Dual authority for approval of meeting minutes/decision sheet (DAFI 31-118).** Two nearly identical statements assign the SFEC chair authority to approve meeting minutes—one with an "(ADDED)" tag and one without—suggesting a supplemental or interim change may overlap with the base instruction. It is unclear whether these refer to the same body or different governance bodies. — See DAFI 31-118, sections 3.3.5.2.2.2 and SFEC chair provisions.
+
+- **AFI 36-2406 references an unnamed "approval authority" for criminal conviction comment waivers** and states the decision is final and not appealable, but the specific role/office is not identified in the extracted statement, only referenced by cross-reference to paragraph 1.4.11.1.2. — See AFI 36-2406, section 1.8.1.1.1.3.1 area.
 
 ---
 
 # PART 3 — AUTHORITY GAPS
 
-- **Pre-accession religious accommodation: specific approval office not identified.** AFGM 2026-36-2033 states "the AF will approve" religious accommodation requests but does not identify a specific office, role, or decision authority responsible for adjudicating individual requests. The approving entity is defined only as "the AF."
+- **No clear authority assigned for final adjudication of conflicting waiver routing paths.** When a member's request could reasonably be routed through multiple AFI waiver channels (e.g., personnel action touching both AFI 36-2406 and AFI 36-2113), no single authority is identified to resolve routing disputes or conflicting decisions.
 
-- **Postpartum training participation: "waiver authority" not defined.** AFGM 2026-36-2033 requires concurrence from "the waiver authority" for postpartum members participating in training prior to 6 months, but does not identify which specific role or office constitutes the waiver authority in this context (e.g., recruiting squadron commander, MEPS physician, AFRS authority).
+- **Pre-accession religious accommodation approval authority is vaguely assigned to "the AF."** AFGM 2026-36-2033 states "the AF will approve pre-accession requests for accommodation of religious practices," but does not specify which office, role, or organizational level within the Air Force is the approving authority (e.g., accession group commander, AFRS/CC, AF/A1, SAF/MR).
 
-- **8F000 SDI approval authority: role identity missing.** AFI 36-2113 references an approval authority for RegAF beyond-4-year service and cross-SDI applications (paras 2.1.13–2.1.15) but the extracted text does not name the specific office or role. This creates a gap for units attempting to route requests.
+- **No authority identified for disapproval of CCB actions.** DAFI 31-126 states only the CCB Chairperson (or designated representative) can approve or disapprove CCB actions, but there is no identified appellate or oversight authority if a CCB decision is contested.
 
-- **AFI 36-2406 variable approval authority.** The statement "the documentation and/or approval authority required will vary depending on the nature of the circumstances" provides no actionable guidance on which role holds authority under which specific circumstances, leaving a functional gap for implementation.
+- **Waiver authority for DAFI 31-118 mandatory training requirements for civilians is referenced in Tables 6.1 and 6.2 but the specific approving roles are not fully enumerated in the extracted statements.** The instruction references approval authority and procedures in tables, but the extracted text does not provide the complete table content, leaving the specific role assignments unclear.
 
-- **DAFI 31-118 waiver authority for mandatory training (military members).** The publication references "Waiver Authority for Mandatory Training Requirements—Civilians" (Table 6.2) but no corresponding explicit authority grant for military member mandatory training waivers is identified in the extracted statements. It is unclear whether military SF training waivers follow the same table or a different authority chain.
+- **No authority identified for revoking or modifying an ERAB decision.** AFI 36-2406 authorizes the ERAB to modify evaluations differing from the applicant's request, but no appellate or oversight authority is identified for challenging or overturning ERAB decisions.
 
-- **CCB designated representative selection authority.** DAFI 31-126 states the CCB Chairperson "or designated representative" may approve/disapprove CCB actions, but no provision in the extracted statements identifies who has the authority to designate that representative or what grade/position requirements apply.
+- **Selection authority for CMSAF, CCM, and group SEL positions is referenced but not specifically assigned in the extracted statements.** AFI 36-2109 states it "establishes the selection and approval authority" for these positions but the extracted text does not identify which specific role holds that authority.
 
-- **AFPC MLR Office exception criteria.** AFI 36-2406 grants AFPC MLR Office authority to "approve exceptions" to maintain OES integrity, but no criteria, thresholds, or conditions are defined for when such exceptions are warranted beyond the general statement of "maintaining integrity" and "fair and proper consideration."
+- **No authority explicitly assigned for denying an EPW transfer when military medical authority advises against it.** AFJI 31-304 authorizes the EPW's command to transfer EPWs with medical advice, but does not address who has authority to deny or override such a transfer recommendation.
 
-- **Selection authority for CMSAF, CCM, and Group SEL positions.** AFI 36-2109 states
+- **Default waiver authority for undefined policies in DAFI 31-118 is assigned to HQ AF/A4S/CFM, but no authority is identified for resolving disputes between that office and MAJCOM-level security forces leadership** on waiver determinations.
